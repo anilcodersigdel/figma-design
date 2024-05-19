@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: rgb(246, 247, 249);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px 40px 60px;
+  background-color: white;
+}
+nav .nav-logo-search {
+  width: 50%;
+  display: flex;
+  gap: 60px;
+}
+nav .search_icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  border-radius: 70px;
+  width: 80%;
+  padding: 12px 12px 12px 17px;
+}
+nav .search_icon input {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  border: none;
+  width: 85%;
+}
+nav .search_icon input:focus {
+  outline: none;
+}
+nav span {
+  width: 148px;
+  color: rgb(53, 99, 233);
+  font-size: 32px;
+}
+nav .setting_icon {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav .setting_icon i {
+  color: rgb(89, 103, 128);
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.hero {
+  padding: 32px 64px 0 64px;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+.hero .hero_section1, .hero .hero_section2 {
+  width: 640px;
+  height: 360px;
+  border-radius: 10px;
+  background: rgb(84, 166, 255) url(../assets/images/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero .hero_section2 {
+  background: rgb(53, 99, 233) url(../assets/images/BG2.png);
+}
+.hero .hero_content {
+  width: 284px;
+  padding: 24px 0 0 24px;
+}
+.hero .hero_content h1 {
+  font-size: 32px;
+  width: 277px;
+  line-height: 48px;
+}
+.hero .hero_content p {
+  font-size: 16px;
+  width: 320px;
+  line-height: 24px;
+}
+.hero .hero_content .btn1, .hero .hero_content .btn2 {
+  margin-top: 24px;
+}
+.hero .hero_content .btn1 button, .hero .hero_content .btn2 button {
+  background-color: rgb(53, 99, 233);
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 10px;
+  border: none;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hero .hero_content .btn2 button {
+  background-color: rgb(84, 166, 255);
+}/*# sourceMappingURL=main.css.map */

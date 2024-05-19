@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: rgba(246, 247, 249, 1);
+}
+
+$headingFontsize: 32px;
+$normalFontsize: 16px;
+$smalltextFontsize: 14px;
+$myFont: "Plus Jakarta Sans", sans-serif;
+
+nav{
+    display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 40px 40px 40px 60px;
+     background-color: white;
+     
+    .nav-logo-search{
+        width: 50%;
+        display: flex;
+        gap: 60px;
+    }
+    
+     .search_icon{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid rgba(195, 212, 233, 0.4);
+        border-radius: 70px;
+        width: 80%;
+        padding: 12px 12px 12px 17px;
+
+        input{
+            font-family: $myFont;
+            font-size: $smalltextFontsize;
+            border: none;
+            width: 85%;
+        }
+
+        input:focus{
+            outline: none;
+        }
+
+     }
+    span{
+        width: 148px;
+        color: rgba(53, 99, 233, 1);
+        font-size: $headingFontsize;
+    }
+    .setting_icon{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+
+        i{
+            color: rgba(89, 103, 128, 1);
+            border: 1px solid rgba(195, 212, 233, 0.4);
+            padding: 10px;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+
+.hero{
+    padding: 32px 64px 0 64px;
+     display: flex;
+     justify-content: space-around;
+     gap: 30px;
+
+
+     .hero_section1{
+
+        width: 640px;
+        height: 360px;
+        border-radius: 10px;
+        background:rgba(84, 166, 255, 1) url(../assets/images/BG.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+     }
+
+     .hero_section2{
+        @extend .hero_section1; 
+        background:rgba(53, 99, 233, 1) url(../assets/images/BG2.png);
+     }
+
+     .hero_content{
+        width: 284px;
+        padding: 24px 0 0 24px;
+
+        h1{
+            font-size: $headingFontsize;
+            width: 277px;
+            line-height: 48px;
+        }
+        p{
+            font-size: $normalFontsize;
+            width: 320px;
+            line-height: 24px;
+        }
+        .btn1{
+            margin-top: 24px;
+
+            button{
+                background-color: rgba(53, 99, 233, 1);
+                font-size: $normalFontsize;
+                font-family: $myFont;
+                padding: 10px;
+                border: none;
+                color: rgba(255, 255, 255, 1);
+                border-radius: 4px;
+                cursor: pointer
+            }
+         }
+
+         .btn2{
+            @extend .btn1;
+
+            button{
+                @extend button;
+                background-color: rgba(84, 166, 255, 1);
+            }
+         }
+     }
+ 
+}
