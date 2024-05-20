@@ -104,4 +104,123 @@ nav .setting_icon i {
 }
 .hero .hero_content .btn2 button {
   background-color: rgb(84, 166, 255);
+}
+
+.address {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 58px 32px 64px;
+}
+.address .design {
+  padding: 50px;
+  margin: 36px 44px;
+  background: rgb(53, 99, 233) url(../assets/images/Swap.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.address .location {
+  background-color: rgb(255, 255, 255);
+  line-height: 24px;
+  padding: 24px;
+  border-radius: 10px;
+}
+.address .location label {
+  font-weight: 600;
+}
+.address .location form {
+  display: flex;
+  padding-top: 13px;
+  gap: 3rem;
+}
+.address .location form .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-right: 1px solid rgba(195, 212, 233, 0.4);
+}
+.address .location form .form-item select {
+  border: none;
+  color: rgb(144, 163, 191);
+}
+
+.body-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 84px;
+}
+.body-content .body-p1 {
+  color: rgb(144, 163, 191);
+}
+.body-content .body-p2 {
+  font-weight: 600;
+  color: rgb(53, 99, 233);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  padding: 20px 64px 42px 64px;
+}
+.grid-container .grid-item {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 24px;
+}
+.grid-container .grid-item .cart-love {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.grid-container .grid-item .cart-love i {
+  color: rgb(237, 63, 63);
+}
+.grid-container .grid-item .grid-item-p2 {
+  color: rgb(144, 163, 191);
+  font-size: 14px;
+  font-weight: 700;
+}
+.grid-container .grid-item img {
+  width: 232px;
+  height: 180px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.grid-container .grid-item .grid-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(144, 163, 191);
+}
+.grid-container .grid-item .grid-content p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.grid-container .grid-item .grid-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  align-items: center;
+}
+.grid-container .grid-item .grid-footer p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.2px;
+  color: black;
+}
+.grid-container .grid-item .grid-footer span {
+  color: rgb(144, 163, 191);
+  font-size: 14px;
+}
+.grid-container .grid-item .grid-footer button {
+  padding: 10px 20px;
+  background-color: rgb(53, 99, 233);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
 }/*# sourceMappingURL=main.css.map */

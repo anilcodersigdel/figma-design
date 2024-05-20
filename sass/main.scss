@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 body{
+    // overflow-x: hidden;
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: rgba(246, 247, 249, 1);
 }
@@ -135,3 +136,159 @@ nav{
      }
  
 }
+
+
+.address{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 58px 32px 64px;
+    // background-color: rgba(255, 255, 255, 1);
+
+
+    .design{
+        padding: 50px;
+        margin: 36px 44px;
+        background:rgba(53, 99, 233, 1) url(../assets/images/Swap.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    .location{
+        background-color: rgba(255, 255, 255, 1);
+        line-height: 24px;
+         padding: 24px;
+         border-radius: 10px;
+
+         label{
+            font-weight: 600;
+         }
+ 
+      form{
+        display: flex;
+        padding-top: 13px;
+        gap: 3rem;
+
+        .form-item{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-right: 1px solid rgba(195, 212, 233, 0.4);
+         
+            select{
+                border: none;
+                color: rgba(144, 163, 191, 1);
+            }
+        }
+
+      }
+     
+    }
+}
+
+
+
+.body-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 84px;
+
+    .body-p1{
+        color: rgba(144, 163, 191, 1);
+    }
+    .body-p2{
+        font-weight: 600;
+        color: rgba(53, 99, 233, 1);
+    }
+}
+
+
+
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  padding: 20px 64px 42px 64px ;
+
+
+
+.grid-item{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    padding: 24px;
+  
+
+    .cart-love{
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        i{
+            color:rgba(237, 63, 63, 1);
+        }
+    }
+    .grid-item-p2{
+        color: rgba(144, 163, 191, 1);
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    img{
+        width: 232px;
+        height: 180px;
+       object-fit: contain;
+        
+    }
+
+    .grid-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // gap: 16px;
+            color: rgba(144, 163, 191, 1);
+
+            p{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+ 
+    }
+
+    .grid-footer{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 24px;
+        align-items: center;
+
+        p{
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 25.2px;
+            color: black;
+        }
+        span{
+            color: rgba(144, 163, 191, 1);
+            font-size: 14px;
+        }
+      
+
+        button{
+            padding: 10px 20px;
+            background-color: rgba(53, 99, 233, 1);
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-family: $myFont;
+            font-size: $normalFontsize;
+        }
+    }
+}
+}
+
+
+
+
