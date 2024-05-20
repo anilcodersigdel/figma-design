@@ -59,12 +59,12 @@ nav .setting_icon i {
 }
 
 .hero {
-  padding: 32px 64px 0 64px;
+  padding: 32px 64px 32px 64px;
   display: flex;
   justify-content: space-around;
   gap: 30px;
 }
-.hero .hero_section1, .hero .hero_section2 {
+.hero .hero_section-first, .hero .hero_section-second {
   width: 640px;
   height: 360px;
   border-radius: 10px;
@@ -72,11 +72,10 @@ nav .setting_icon i {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.hero .hero_section2 {
+.hero .hero_section-second {
   background: rgb(53, 99, 233) url(../assets/images/BG2.png);
 }
 .hero .hero_content {
-  width: 284px;
   padding: 24px 0 0 24px;
 }
 .hero .hero_content h1 {
@@ -109,15 +108,7 @@ nav .setting_icon i {
 .address {
   display: flex;
   justify-content: space-between;
-  padding: 32px 58px 32px 64px;
-}
-.address .design {
-  padding: 50px;
-  margin: 36px 44px;
-  background: rgb(53, 99, 233) url(../assets/images/Swap.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
+  padding: 24px 64px 0 64px;
 }
 .address .location {
   background-color: rgb(255, 255, 255);
@@ -145,77 +136,80 @@ nav .setting_icon i {
 }
 
 .body-content {
+  padding: 36px 64px 32px 64px;
+}
+.body-content .body-content-first {
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  padding: 25px 84px;
 }
-.body-content .body-p1 {
+.body-content .body-content-first .body-para1 {
   color: rgb(144, 163, 191);
 }
-.body-content .body-p2 {
+.body-content .body-content-first .body-para2 {
+  padding: 10px 20px 10px 20px;
   font-weight: 600;
   color: rgb(53, 99, 233);
 }
-
-.grid-container {
+.body-content .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 20px;
-  padding: 20px 64px 42px 64px;
+  grid-gap: 15px;
+  padding: 24px 0;
 }
-.grid-container .grid-item {
+.body-content .grid-container .grid-item {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 24px;
 }
-.grid-container .grid-item .cart-love {
+.body-content .grid-container .grid-item .cart-love {
   font-weight: bold;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
 }
-.grid-container .grid-item .cart-love i {
+.body-content .grid-container .grid-item .cart-love .red-love {
   color: rgb(237, 63, 63);
 }
-.grid-container .grid-item .grid-item-p2 {
+.body-content .grid-container .grid-item .grid-item-p2 {
   color: rgb(144, 163, 191);
   font-size: 14px;
   font-weight: 700;
 }
-.grid-container .grid-item img {
-  width: 232px;
+.body-content .grid-container .grid-item img {
+  width: 223px;
   height: 180px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.grid-container .grid-item .grid-content {
+.body-content .grid-container .grid-item .grid-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: rgb(144, 163, 191);
 }
-.grid-container .grid-item .grid-content p {
+.body-content .grid-container .grid-item .grid-content p {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 1.5px;
 }
-.grid-container .grid-item .grid-footer {
+.body-content .grid-container .grid-item .grid-footer {
   display: flex;
   justify-content: space-between;
   padding-top: 24px;
   align-items: center;
 }
-.grid-container .grid-item .grid-footer p {
+.body-content .grid-container .grid-item .grid-footer p {
   font-size: 20px;
   font-weight: 700;
   line-height: 25.2px;
   color: black;
 }
-.grid-container .grid-item .grid-footer span {
+.body-content .grid-container .grid-item .grid-footer span {
   color: rgb(144, 163, 191);
   font-size: 14px;
 }
-.grid-container .grid-item .grid-footer button {
+.body-content .grid-container .grid-item .grid-footer button {
   padding: 10px 20px;
   background-color: rgb(53, 99, 233);
   border: none;
@@ -223,4 +217,78 @@ nav .setting_icon i {
   color: white;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
+  cursor: pointer;
+}
+.body-content .body-content-middle {
+  color: rgb(144, 163, 191);
+}
+.body-content .body-content-middle p {
+  padding: 10px 20px;
+}
+.body-content .body-content-last {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body-content .body-content-last p {
+  color: rgb(144, 163, 191);
+}
+.body-content .body-content-last button, .body-content .body-content-last .hero .hero_content .btn2 button, .hero .hero_content .btn2 .body-content .body-content-last button {
+  padding: 10px 20px;
+  background-color: rgb(53, 99, 233);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+footer {
+  padding: 80px 70px 30px 70px;
+  background-color: rgb(255, 255, 255);
+}
+footer .footer-body {
+  padding-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-body .footer-title {
+  width: 25%;
+}
+footer .footer-body .footer-title h2 {
+  color: rgb(53, 99, 233);
+  line-height: 48px;
+}
+footer .footer-body .footer-title p {
+  font-size: 16px;
+  line-height: 30px;
+  color: rgba(19, 19, 19, 0.6);
+}
+footer .footer-body .footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+footer .footer-body .footer-content h3 {
+  line-height: 70px;
+  font-size: 20px;
+}
+footer .footer-body .footer-content p {
+  line-height: 35px;
+  color: rgba(19, 19, 19, 0.6);
+}
+footer .footer-border {
+  border: 1px solid rgba(19, 19, 19, 0.16);
+}
+footer .footer-last {
+  color: rgb(26, 32, 44);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 36px;
+}
+footer .footer-last .rules-policy {
+  justify-content: space-between;
+  width: 30%;
+  display: flex;
 }/*# sourceMappingURL=main.css.map */
