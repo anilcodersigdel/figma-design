@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@mix;
 * {
   margin: 0;
   padding: 0;
@@ -7,31 +8,33 @@
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: rgb(246, 247, 249);
+  background-color: #F6F7F9;
 }
 
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 40px 40px 40px 60px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 nav .nav-logo-search {
-  width: 50%;
+  width: 80%;
   display: flex;
-  gap: 60px;
+  gap: 100px;
 }
 nav .search_icon {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
-  border: 1px solid rgba(195, 212, 233, 0.4);
+  border: 1px solid #C3D4E9;
   border-radius: 70px;
-  width: 80%;
+  width: 45%;
   padding: 12px 12px 12px 17px;
 }
 nav .search_icon input {
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 14px;
   border: none;
   width: 85%;
@@ -40,20 +43,21 @@ nav .search_icon input:focus {
   outline: none;
 }
 nav span a {
-  font-weight: 600;
-  font-size: 32px;
   text-decoration: none;
-  color: rgb(53, 99, 233);
+  font-weight: 700;
+  font-size: 32px;
+  color: #3563E9;
 }
 nav .setting_icon {
   width: 20%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   justify-content: space-evenly;
 }
 nav .setting_icon i {
-  color: rgb(89, 103, 128);
-  border: 1px solid rgba(195, 212, 233, 0.4);
+  color: #596780;
+  border: 1px solid #C3D4E9;
   padding: 10px;
   border-radius: 50%;
 }
@@ -61,22 +65,24 @@ nav .setting_icon i {
 .hero {
   padding: 32px 64px 32px 64px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   gap: 30px;
 }
 .hero .hero_section-first, .hero .hero_section-second {
   width: 640px;
   height: 360px;
   border-radius: 10px;
-  background: rgb(84, 166, 255) url(../assets/images/BG.png);
+  background: #54A6FF url(../assets/images/BG.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero .hero_section-second {
-  background: rgb(53, 99, 233) url(../assets/images/BG2.png);
+  background: #3563E9 url(../assets/images/BG2.png);
 }
 .hero .hero_content {
   padding: 24px 0 0 24px;
+  color: #FFFFFF;
 }
 .hero .hero_content h1 {
   font-size: 32px;
@@ -84,32 +90,34 @@ nav .setting_icon i {
   line-height: 48px;
 }
 .hero .hero_content p {
+  font-weight: 500;
   font-size: 16px;
-  width: 320px;
   line-height: 24px;
 }
 .hero .hero_content .btn1, .hero .hero_content .btn2 {
   margin-top: 24px;
 }
 .hero .hero_content .btn1 button, .hero .hero_content .btn2 button {
-  background-color: rgb(53, 99, 233);
+  background-color: #3563E9;
 }
 .hero .hero_content .btn2 button {
-  background-color: rgb(84, 166, 255);
+  background-color: #54A6FF;
 }
 
 .address {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 24px 64px 0 64px;
 }
 .address .location {
-  background-color: rgb(255, 255, 255);
+  background-color: #FFFFFF;
   line-height: 24px;
   padding: 24px;
   border-radius: 10px;
 }
 .address .location label {
+  font-size: 16px;
   font-weight: 600;
 }
 .address .location form {
@@ -121,11 +129,16 @@ nav .setting_icon i {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  border-right: 1px solid rgba(195, 212, 233, 0.4);
+  border-right: 1px solid #C3D4E9;
+  padding-right: 35px;
+}
+.address .location form .form-item .no-border-right {
+  border-right: none;
 }
 .address .location form .form-item select {
+  font-size: 12px;
   border: none;
-  color: rgb(144, 163, 191);
+  color: #90A3BF;
 }
 
 .body-content {
@@ -135,14 +148,16 @@ nav .setting_icon i {
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.body-content .body-content-first .body-para1 {
-  color: rgb(144, 163, 191);
+.body-content .body-content-first .body-para1 a {
+  text-decoration: none;
+  color: #90A3BF;
 }
-.body-content .body-content-first .body-para2 {
-  padding: 10px 20px 10px 20px;
+.body-content .body-content-first .body-para2 a {
+  text-decoration: none;
   font-weight: 600;
-  color: rgb(53, 99, 233);
+  color: #3563E9;
 }
 .body-content .grid-container {
   display: grid;
@@ -151,7 +166,7 @@ nav .setting_icon i {
   padding: 24px 0;
 }
 .body-content .grid-container .grid-item {
-  background-color: rgb(255, 255, 255);
+  background-color: #FFFFFF;
   border-radius: 10px;
   padding: 24px;
 }
@@ -160,12 +175,13 @@ nav .setting_icon i {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .body-content .grid-container .grid-item .cart-love .red-love {
   color: rgb(237, 63, 63);
 }
 .body-content .grid-container .grid-item .grid-item-p2 {
-  color: rgb(144, 163, 191);
+  color: #90A3BF;
   font-size: 14px;
   font-weight: 700;
 }
@@ -179,18 +195,19 @@ nav .setting_icon i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(144, 163, 191);
+  color: #90A3BF;
 }
 .body-content .grid-container .grid-item .grid-content p {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.5px;
+  gap: 5px;
 }
 .body-content .grid-container .grid-item .grid-footer {
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
   align-items: center;
+  padding-top: 24px;
 }
 .body-content .grid-container .grid-item .grid-footer p {
   font-size: 20px;
@@ -199,18 +216,17 @@ nav .setting_icon i {
   color: black;
 }
 .body-content .grid-container .grid-item .grid-footer span {
-  color: rgb(144, 163, 191);
+  color: #90A3BF;
   font-size: 14px;
 }
 .body-content .grid-container .grid-item .grid-footer button {
   padding: 10px 20px;
-  background-color: rgb(53, 99, 233);
+  background-color: #3563E9;
 }
-.body-content .body-content-middle {
-  color: rgb(144, 163, 191);
-}
-.body-content .body-content-middle p {
+.body-content .body-content-middle p a {
+  text-decoration: none;
   padding: 10px 20px;
+  color: #90A3BF;
 }
 .body-content .body-content-last {
   width: 100%;
@@ -218,60 +234,76 @@ nav .setting_icon i {
   justify-content: space-between;
   align-items: center;
 }
-.body-content .body-content-last p {
-  color: rgb(144, 163, 191);
+.body-content .body-content-last p a {
+  text-decoration: none;
+  color: #90A3BF;
 }
+.body-content .body-content-last button {
+  background-color: #3563E9;
+}
+
 footer {
   padding: 80px 70px 30px 70px;
-  background-color: rgb(255, 255, 255);
+  background-color: #FFFFFF;
 }
 footer .footer-body {
   padding-bottom: 36px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 footer .footer-body .footer-title {
   width: 25%;
 }
 footer .footer-body .footer-title h2 {
-  color: rgb(53, 99, 233);
+  color: #3563E9;
   line-height: 48px;
 }
 footer .footer-body .footer-title p {
   font-size: 16px;
   line-height: 30px;
-  color: rgba(19, 19, 19, 0.6);
+  color: #90A3BF;
 }
 footer .footer-body .footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 40%;
 }
 footer .footer-body .footer-content h3 {
   line-height: 70px;
   font-size: 20px;
 }
-footer .footer-body .footer-content p {
+footer .footer-body .footer-content a {
+  font-size: 16px;
+  font-weight: 500;
   line-height: 35px;
   color: rgba(19, 19, 19, 0.6);
+  text-decoration: none;
 }
 footer .footer-border {
-  border: 1px solid rgba(19, 19, 19, 0.16);
+  border: 1px solid rgba(19, 19, 19, 0.1607843137);
 }
 footer .footer-last {
-  color: rgb(26, 32, 44);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
   padding-top: 36px;
 }
 footer .footer-last .rules-policy {
-  justify-content: space-between;
-  width: 30%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+footer .footer-last .rules-policy a {
+  text-decoration: none;
+  color: #131313;
 }
 
-.anil, .hero .hero_content .btn1 button, .hero .hero_content .btn2 button, .body-content .grid-container .grid-item .grid-footer button, .body-content .body-content-last button {
-  background-color: rgb(53, 99, 233);
+.btn, .hero .hero_content .btn1 button, .hero .hero_content .btn2 button, .body-content .grid-container .grid-item .grid-footer button, .body-content .body-content-last button {
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
   padding: 10px;
   border: none;

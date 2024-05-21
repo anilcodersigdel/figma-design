@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+@import 'variables';
+@import 'colors';
+@import 'mixins';
+
+
 *{
     margin: 0;
     padding: 0;
@@ -8,37 +13,32 @@
 body{
 
     font-family: "Plus Jakarta Sans", sans-serif;
-    background-color:rgba(246, 247, 249, 1)
+    background-color: $bgColor;
     
 }
 
-$headingFontsize: 32px;
-$normalFontsize: 16px;
-$smalltextFontsize: 14px;
-
 nav{
-    display: flex;
-     align-items: center;
-     justify-content: space-between;
+    @include flex-between;
      padding: 40px 40px 40px 60px;
-     background-color: white;
+     background-color: $contentBgcolor;
      
     .nav-logo-search{
-        width: 50%;
+        width: 80%;
         display: flex;
-        gap: 60px;
+        // justify-content: space-between
+        gap: 100px;
     }
     
      .search_icon{
-        display: flex;
-        align-items: center;
+        @include flex-between;
         gap: 10px;
-        border: 1px solid rgba(195, 212, 233, 0.4);
+        border: 1px solid $borderColor;
         border-radius: 70px;
-        width: 80%;
+        width: 45%;
         padding: 12px 12px 12px 17px;
 
         input{
+            font-family: $myFont;
             font-size: $smalltextFontsize;
             border: none;
             width: 85%;
@@ -49,25 +49,21 @@ nav{
         }
 
      }
-    span{
-        a{
-    
-            font-weight: 600;
+    span a{
+            @include text-none;
+            font-weight: 700;
             font-size: $headingFontsize;
-            text-decoration: none;
-            color: rgba(53, 99, 233, 1);
-        }
+            color: $color1;       
     }
+
     .setting_icon{
         width: 20%;
-        display: flex;
-        align-items: center;
+        @include flex-between;
         justify-content: space-evenly;
 
-
         i{
-            color: rgba(89, 103, 128, 1);
-            border: 1px solid rgba(195, 212, 233, 0.4);
+            color: $iconColor;
+            border: 1px solid $borderColor;
             padding: 10px;
             border-radius: 50%;
         }
@@ -79,8 +75,7 @@ nav{
 
 .hero{
     padding: 32px 64px 32px 64px;
-     display: flex;
-     justify-content: space-around;
+    @include flex-between;
      gap: 30px;
 
 
@@ -89,19 +84,19 @@ nav{
         width: 640px;
         height: 360px;
         border-radius: 10px;
-        background:rgba(84, 166, 255, 1) url(../assets/images/BG.png);
+        background: $color2 url(../assets/images/BG.png);
         background-repeat: no-repeat;
         background-size: cover;
      }
 
      .hero_section-second{
         @extend .hero_section-first; 
-        background:rgba(53, 99, 233, 1) url(../assets/images/BG2.png);
+        background : $color1 url(../assets/images/BG2.png);
      }
 
      .hero_content{
-        // width: 284px;
         padding: 24px 0 0 24px;
+        color: $contentBgcolor;
 
         h1{
             font-size: $headingFontsize;
@@ -109,17 +104,16 @@ nav{
             line-height: 48px;
         }
         p{
+            font-weight: $myFontweight3;
             font-size: $normalFontsize;
-            width: 320px;
             line-height: 24px;
         }
         .btn1{
             margin-top: 24px;
 
             button{
-
-                @extend .anil;
-                background-color: rgba(53, 99, 233, 1);
+               @extend .btn;
+                background-color: $color1;
             }
          }
 
@@ -127,8 +121,8 @@ nav{
             @extend .btn1;
 
             button{
-                @extend .anil;
-                background-color: rgba(84, 166, 255, 1);
+                @extend .btn;
+                background-color: $color2;
             }
          }
      }
@@ -137,18 +131,19 @@ nav{
 
 
 .address{
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
     padding: 24px 64px 0 64px;
 
     .location{
-        background-color: rgba(255, 255, 255, 1);
-        line-height: 24px;
+         background-color: $contentBgcolor;
+         line-height: 24px;
          padding: 24px;
          border-radius: 10px;
 
+
          label{
-            font-weight: 600;
+            font-size: $normalFontsize;
+            font-weight: $myFontweight2;
          }
  
       form{
@@ -160,11 +155,17 @@ nav{
             display: flex;
             flex-direction: column;
             gap: 8px;
-            border-right: 1px solid rgba(195, 212, 233, 0.4);
+            border-right: 1px solid $borderColor;
+            padding-right: 35px;
+
+            .no-border-right{
+                border-right: none;
+               }
          
             select{
+                font-size: $selectText;
                 border: none;
-                color: rgba(144, 163, 191, 1);
+                color: $textColor;         
             }
         }
 
@@ -180,17 +181,16 @@ nav{
  
     .body-content-first{
         padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
+        @include flex-between;
        
-
-        .body-para1{
-            color: rgba(144, 163, 191, 1);
+        .body-para1 a{
+            @include text-none;
+            color: $textColor;
         }
-        .body-para2{
-            padding: 10px 20px 10px 20px;
+        .body-para2 a{
+            @include text-none;
             font-weight: 600;
-            color: rgba(53, 99, 233, 1);
+            color: $color1;
         }
     }
     .grid-container{
@@ -202,25 +202,24 @@ nav{
       
       
       .grid-item{
-          background-color: rgba(255, 255, 255, 1);
+          background-color: $contentBgcolor;
           border-radius: 10px;
           padding: 24px;
         
       
           .cart-love{
               font-weight: bold;
-              font-size: 20px;
-              display: flex;
-              justify-content: space-between;
+              font-size: $myFontsize;
+              @include flex-between;
       
               .red-love{
                   color:rgba(237, 63, 63, 1);
               }
           }
           .grid-item-p2{
-              color: rgba(144, 163, 191, 1);
-              font-size: 14px;
-              font-weight: 700;
+              color: $textColor;
+              font-size: $smalltextFontsize;
+              font-weight: $myFontweight;
           }
       
           img{
@@ -231,68 +230,61 @@ nav{
           }
       
           .grid-content{
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  color: rgba(144, 163, 191, 1);
+                  @include flex-between;
+                  color: $textColor;
       
-                  p{
-                      display: flex;
-                      align-items: center;
-                      gap: 1.5px;
+                  p {
+                    @include flex-between;
+                      gap: 5px;
                   }
        
           }
       
           .grid-footer{
-              display: flex;
-              justify-content: space-between;
+               @include flex-between;
               padding-top: 24px;
-              align-items: center;
       
               p{
-                  font-size: 20px;
-                  font-weight: 700;
+                  font-size: $myFontsize;
+                  font-weight: $myFontweight;
                   line-height: 25.2px;
                   color: black;
               }
               span{
-                  color: rgba(144, 163, 191, 1);
-                  font-size: 14px;
+                  color: $textColor;
+                  font-size: $smalltextFontsize;
               }
             
       
               button{
                   padding: 10px 20px;
-                  background-color: rgba(53, 99, 233, 1);
-                  @extend .anil;
+                  background-color: $color1;
+                  @extend .btn;
               }
           }
       }
       
       }
 
-      .body-content-middle{
+      .body-content-middle  p a{
       
-        color: rgba(144, 163, 191, 1);
-
-        p{
+            @include text-none;
             padding: 10px 20px;
-        }
+            color: $textColor;
       }
 
       .body-content-last{
         width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+        @include flex-between;
 
-      p{
-        color: rgba(144, 163, 191, 1);
+      p a{
+        @include text-none;
+        color: $textColor;
       }
 
       button{
-        @extend .anil;
+        background-color: $color1;
+        @extend .btn;
       }
     }
 
@@ -301,33 +293,29 @@ nav{
 
 footer{
     padding: 80px 70px 30px 70px;
-    background-color: rgba(255, 255, 255, 1);
-
+    background-color: $contentBgcolor;
 
 
 .footer-body{
    padding-bottom: 36px;
-    display: flex;
-    justify-content: space-between;
+   @include flex-between;
 
     .footer-title{
         width: 25%;
 
         h2{
-            color: rgba(53, 99, 233, 1);
+            color: $color1;
             line-height: 48px;
         }
         p{
-         
             font-size: $normalFontsize;
             line-height: 30px;
-            color: rgba(19, 19, 19, 0.6);
+            color: $textColor;
         }
     }
 
    .footer-content{
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
     width: 40%;
 
     h3{
@@ -335,35 +323,45 @@ footer{
         font-size: 20px;
     }
 
-    p{
-        line-height: 35px;
-        color: rgba(19, 19, 19, 0.6);
-    }
+        a{
+            font-size: $normalFontsize;
+            font-weight: $myFontweight3;
+            line-height: 35px;
+            color: $footerTextcolor;
+            @include text-none;
+        }
+    
    }
 }
 
 .footer-border{
-    border: 1px solid rgba(19, 19, 19, 0.16);
+    border: 1px solid #13131329;
 }
 
 .footer-last{
-    color: rgba(26, 32, 44, 1);
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
+    font-weight: $myFontweight2;
     padding-top: 36px;
 
 
     .rules-policy{
-        justify-content: space-between;
+        @include flex-between;
         width: 30%;
-        display: flex;
+     
+
+        a{
+            @include text-none;
+            color: #131313;
+        }
     }
+
 }
 }
 
+// utility class
 
-.anil{
-    background-color: rgba(53, 99, 233, 1);
+.btn{
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: $normalFontsize;
     padding: 10px;
     border: none;
@@ -371,6 +369,8 @@ footer{
     border-radius: 4px;
     cursor: pointer
 }
+
+
 
 
 
