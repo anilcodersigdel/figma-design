@@ -32,7 +32,6 @@ nav .search_icon {
   padding: 12px 12px 12px 17px;
 }
 nav .search_icon input {
-  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 14px;
   border: none;
   width: 85%;
@@ -40,10 +39,11 @@ nav .search_icon input {
 nav .search_icon input:focus {
   outline: none;
 }
-nav span {
-  width: 148px;
-  color: rgb(53, 99, 233);
+nav span a {
+  font-weight: 600;
   font-size: 32px;
+  text-decoration: none;
+  color: rgb(53, 99, 233);
 }
 nav .setting_icon {
   width: 20%;
@@ -93,13 +93,6 @@ nav .setting_icon i {
 }
 .hero .hero_content .btn1 button, .hero .hero_content .btn2 button {
   background-color: rgb(53, 99, 233);
-  font-size: 16px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  padding: 10px;
-  border: none;
-  color: rgb(255, 255, 255);
-  border-radius: 4px;
-  cursor: pointer;
 }
 .hero .hero_content .btn2 button {
   background-color: rgb(84, 166, 255);
@@ -212,12 +205,6 @@ nav .setting_icon i {
 .body-content .grid-container .grid-item .grid-footer button {
   padding: 10px 20px;
   background-color: rgb(53, 99, 233);
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 16px;
-  cursor: pointer;
 }
 .body-content .body-content-middle {
   color: rgb(144, 163, 191);
@@ -234,16 +221,6 @@ nav .setting_icon i {
 .body-content .body-content-last p {
   color: rgb(144, 163, 191);
 }
-.body-content .body-content-last button, .body-content .body-content-last .hero .hero_content .btn2 button, .hero .hero_content .btn2 .body-content .body-content-last button {
-  padding: 10px 20px;
-  background-color: rgb(53, 99, 233);
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-
 footer {
   padding: 80px 70px 30px 70px;
   background-color: rgb(255, 255, 255);
@@ -291,4 +268,14 @@ footer .footer-last .rules-policy {
   justify-content: space-between;
   width: 30%;
   display: flex;
+}
+
+.anil, .hero .hero_content .btn1 button, .hero .hero_content .btn2 button, .body-content .grid-container .grid-item .grid-footer button, .body-content .body-content-last button {
+  background-color: rgb(53, 99, 233);
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
