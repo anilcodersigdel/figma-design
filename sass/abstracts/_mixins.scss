@@ -1,9 +1,7 @@
+
+
 @mixin flex-between{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-@mixin text-none{
-    text-decoration: none;
 }

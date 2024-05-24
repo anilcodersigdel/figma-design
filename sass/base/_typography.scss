@@ -1,0 +1,13 @@
+@import '../abstracts/variables';
+
+.nav-logo a{
+    font-size:$base-font-size *2;
+    color: $primary-color;
+    font-weight: 700;
+}
+
+i{
+    color: rgba(89, 103, 128, 1);
+}
+
+
