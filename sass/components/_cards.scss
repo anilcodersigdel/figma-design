@@ -1,0 +1,75 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.car-item{
+    background-color: $content-background-color;
+    padding: 24px;
+    @include radius;
+
+    .car-love{
+        @include flex-between;
+
+        p{
+            font-size: 20px;
+            font-weight: $primary-font-weight;
+        }
+
+        .red-love{
+            color: red;
+        }
+    }
+
+    img{
+        width: 242px;
+        height: 130px;
+        object-fit: contain;
+    }
+    .car-class{
+            color: $icon-color;
+            font-weight: $primary-font-weight;
+    }
+
+    .car-content{
+        @include flex-between;
+   
+
+        p{
+            @include flex-between;
+            gap: 6px;
+            color: $icon-color;          
+            font-size: 14px;
+            font-weight: $secondary-font-weight;
+            padding: 6px;
+
+            i{
+                color: $icon-color;
+            }
+        }
+    }
+
+
+    .car-item-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 24px;
+
+        p{
+            font-size: 20px;
+            font-weight: $primary-font-weight;
+
+            span{
+                font-size: 14px;
+                font-weight: $primary-font-weight;
+                color: $icon-color;
+
+            }
+        }
+
+        button{
+
+            background-color: $primary-color;
+        }
+    }
+}
+

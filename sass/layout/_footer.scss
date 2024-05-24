@@ -1,0 +1,33 @@
+@import '../abstracts/variables'; 
+
+footer{
+    padding: 80px 60px 60px 60px;
+    // display: flex;
+
+    .footer-head{
+        display: flex;
+        justify-content: space-between;
+
+
+        .footer-title p{
+            color: $footer-text-color;
+        }
+    
+
+    .footer-about{
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+
+
+        p a{
+            font-size: $base-font-size;
+            font-weight: $low-font-weight;
+            color: $footer-text-color;
+        }
+    }
+
+
+
+}
+}

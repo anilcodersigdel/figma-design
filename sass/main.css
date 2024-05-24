@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +29,13 @@ nav .nav-logo {
   display: flex;
   gap: 65px;
 }
-nav .nav-search {
-  width: 70%;
+nav .nav-logo .logo a {
+  font-size: 32px;
+  color: rgb(53, 99, 233);
+  font-weight: 700;
+}
+nav .nav-logo .nav-search {
+  width: 55%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,12 +43,11 @@ nav .nav-search {
   padding: 12px 10px 13px 22px;
   border-radius: 70px;
 }
-nav .nav-search input {
+nav .nav-logo .nav-search input {
   width: 85%;
-  border: none;
 }
-nav .nav-search input :focus {
-  outline: none;
+nav .nav-logo .nav-search a i {
+  font-size: 20px;
 }
 nav .profile-notification {
   width: 15%;
@@ -51,12 +56,248 @@ nav .profile-notification {
   align-items: center;
 }
 
-.nav-logo a {
-  font-size: 32px;
-  color: rgb(53, 99, 233);
-  font-weight: 700;
+.popular-car-rent {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+}
+
+.recommendation-car-rent {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  padding-top: 24px;
+}
+
+footer {
+  padding: 80px 60px 60px 60px;
+}
+footer .footer-head {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-head .footer-title p {
+  color: rgba(19, 19, 19, 0.6);
+}
+footer .footer-head .footer-about {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-head .footer-about p a {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(19, 19, 19, 0.6);
 }
 
 i {
   color: rgb(89, 103, 128);
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input {
+  font-size: 14px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+select {
+  border: none;
+  font-size: 12px;
+  color: rgb(144, 163, 191);
+}
+
+.hero {
+  padding: 32px 64px 0 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.hero .hero-section.first {
+  width: 640px;
+  height: 360px;
+  background: rgb(84, 166, 255) url("/assets/images/BG.png");
+  border-radius: 10px;
+}
+.hero .hero-section.second {
+  width: 640px;
+  height: 360px;
+  background: rgb(53, 99, 233) url("/assets/images/BG2.png");
+  border-radius: 10px;
+}
+.hero .hero-content {
+  color: white;
+  padding: 24px 250px 16px 24px;
+}
+.hero .hero-content .btn {
+  padding-top: 20px;
+}
+.hero .hero-content .btn .btn1 {
+  background-color: rgb(53, 99, 233);
+}
+.hero .hero-content .btn .btn2 {
+  background-color: rgb(84, 166, 255);
+}
+
+.address {
+  padding: 32px 64px 0 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.address .location {
+  width: 582px;
+  border-radius: 10px;
+  padding: 24px 48px;
+  background-color: rgb(255, 255, 255);
+}
+.address .location .input-label {
+  font-size: 16px;
+  color: rgb(26, 32, 44);
+  font-weight: 600;
+}
+.address .location form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+}
+.address .location form .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 24px;
+  border-right: 1px solid rgba(195, 212, 233, 0.4);
+}
+.address .location form .form-item.third {
+  border-right: none;
+}
+.address .location form .form-item label {
+  font-size: 16px;
+  color: rgb(26, 32, 44);
+  font-weight: 700;
+}
+
+.catalogue-car {
+  padding: 32px 64px;
+}
+.catalogue-car .popular {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalogue-car .popular .popular-car a {
+  color: rgb(144, 163, 191);
+}
+.catalogue-car .popular .view-all a {
+  color: rgb(53, 99, 233);
+}
+.catalogue-car .popular a {
+  font-weight: 600;
+}
+.catalogue-car .recommendation-car {
+  padding: 10px 20px;
+}
+.catalogue-car .recommendation-car p a {
+  color: rgb(144, 163, 191);
+  font-weight: 600;
+}
+.catalogue-car .show-more {
+  padding-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalogue-car .show-more button {
+  background-color: rgb(53, 99, 233);
+}
+.catalogue-car .show-more p a {
+  color: rgb(144, 163, 191);
+  font-size: 14px;
+}
+
+button {
+  font-size: 16px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.car-item {
+  background-color: rgb(255, 255, 255);
+  padding: 24px;
+  border-radius: 10px;
+}
+.car-item .car-love {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.car-item .car-love p {
+  font-size: 20px;
+  font-weight: 700;
+}
+.car-item .car-love .red-love {
+  color: red;
+}
+.car-item img {
+  width: 242px;
+  height: 130px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.car-item .car-class {
+  color: rgb(144, 163, 191);
+  font-weight: 700;
+}
+.car-item .car-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.car-item .car-content p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  color: rgb(144, 163, 191);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px;
+}
+.car-item .car-content p i {
+  color: rgb(144, 163, 191);
+}
+.car-item .car-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+.car-item .car-item-footer p {
+  font-size: 20px;
+  font-weight: 700;
+}
+.car-item .car-item-footer p span {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(144, 163, 191);
+}
+.car-item .car-item-footer button {
+  background-color: rgb(53, 99, 233);
 }/*# sourceMappingURL=main.css.map */

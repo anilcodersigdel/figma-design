@@ -1,0 +1,88 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.hero{
+    padding: 32px 64px 0 64px;
+    display: flex;
+    justify-content: space-between;
+
+    .hero-section.first{
+        width: 640px;
+       height: 360px;
+       background: $secondary-color url("/assets/images/BG.png");
+       @include radius;
+     
+ 
+    }
+       .hero-section.second{
+        width: 640px;
+        height: 360px;
+        background: $primary-color url("/assets/images/BG2.png");
+        @include radius;
+    }
+    
+.hero-content {
+    color: white;
+    padding: 24px 250px 16px 24px;
+
+
+.btn{
+    padding-top: 20px;
+
+    .btn1{
+        background-color: $primary-color;
+    }
+    .btn2{
+        background-color: $secondary-color;
+    }
+}
+
+}
+}
+
+
+
+
+
+.address{
+    padding: 32px 64px 0 64px;
+    display: flex;
+    justify-content: space-between;
+
+
+    .location{
+        width: 582px;
+        @include radius;
+        padding: 24px 48px;
+        background-color: $content-background-color;
+
+      .input-label{
+          font-size: 16px;
+          color: rgba(26, 32, 44, 1);
+          font-weight: $secondary-font-weight;
+      }
+
+      form{
+           @include flex-between;
+            padding-top: 16px;
+
+        .form-item{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding-right: 24px;
+            border-right: 1px solid $border-color;
+
+            &.third{
+                border-right: none;
+            }
+
+            label{
+                font-size: $base-font-size;
+                color: rgba(26, 32, 44, 1);
+                font-weight: $primary-font-weight;
+            }
+        }
+      } 
+    }
+}

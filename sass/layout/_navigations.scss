@@ -4,43 +4,38 @@
 
 nav{
     @include flex-between;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
 
     .nav-logo{
         width: 50%;
         display: flex;
         gap: 65px;
-        // justify-content: space-between;
+
+        .logo a{
+            font-size:$base-font-size *2;
+            color: $primary-color;
+            font-weight: 700;
     }
 
     .nav-search{
-        width: 70%;
+        width: 55%;
         @include flex-between;
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
         border: 1px solid $border-color;
         padding: 12px 10px 13px 22px;
         border-radius: 70px;
-        // width: 30%;
 
-        input{
-            width: 85%;
-            border: none;
-
-            & :focus{
-                outline: none;
-            }
-        }
+    input{
+        width: 85%;
+    }
+     a i{
+        font-size: 20px;
+       } 
+    }
 }
 
     .profile-notification{
         width: 15%;
         @include flex-between;
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
+
     }
 }
+

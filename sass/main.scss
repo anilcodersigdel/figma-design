@@ -4,9 +4,18 @@
 
 @import 
 'layout/header',
-'layout/navigations';
+'layout/navigations',
+'layout/grid',
+ 'layout/footer';
 
 
 @import 'base/typography';
 
 @import 'abstracts/mixins';
+
+@import 
+    'pages/home',
+    'pages/about';
+
+@import 'components/buttons',
+        'components/cards';

@@ -1,13 +1,35 @@
 @import '../abstracts/variables';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-.nav-logo a{
-    font-size:$base-font-size *2;
-    color: $primary-color;
-    font-weight: 700;
-}
+
 
 i{
     color: rgba(89, 103, 128, 1);
 }
 
+h1{
+    font-size: $base-font-size * 2;
+    line-height: 48px;
+   
+}
+p{
+    font-size: $base-font-size;
+    line-height: 24px;
+
+}
+
+input{
+    font-size: 14px;
+    font-family: "Plus Jakarta Sans", sans-serif; 
+    border: none;
+    &:focus{
+        outline:none;
+    }
+}
+
+select{
+    border: none;
+    font-size: 12px;
+    color: rgba(144, 163, 191, 1);
+}
 
