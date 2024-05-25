@@ -1,11 +1,12 @@
 @import '../abstracts/mixins';
 
 .popular-car-rent{
-    padding: 24px;
-    @include grid;
+    padding-top: 20px;
+    @include grid; 
 }
 
 .recommendation-car-rent{
     @include grid;
     padding-top: 24px;
 }
+

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -57,7 +58,7 @@ nav .profile-notification {
 }
 
 .popular-car-rent {
-  padding: 24px;
+  padding-top: 20px;
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 20px;
@@ -70,25 +71,87 @@ nav .profile-notification {
   padding-top: 24px;
 }
 
+i {
+  color: rgb(89, 103, 128);
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input {
+  font-size: 14px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+select {
+  border: none;
+  font-size: 12px;
+  color: rgb(144, 163, 191);
+}
+
 footer {
-  padding: 80px 60px 60px 60px;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
 }
 footer .footer-head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 36px;
 }
-footer .footer-head .footer-title p {
+footer .footer-head .footer-logo {
+  width: 25%;
+}
+footer .footer-head .footer-logo h1 {
+  color: rgb(53, 99, 233);
+}
+footer .footer-head .footer-logo p {
   color: rgba(19, 19, 19, 0.6);
 }
-footer .footer-head .footer-about {
-  width: 40%;
+footer .footer-head .footer-content {
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }
-footer .footer-head .footer-about p a {
-  font-size: 16px;
+footer .footer-head .footer-content h3 {
+  line-height: 48px;
+  font-size: 20px;
+  color: rgb(26, 32, 44);
+  font-weight: 700;
+}
+footer .footer-head .footer-content p a {
   font-weight: 500;
+  line-height: 40px;
   color: rgba(19, 19, 19, 0.6);
+}
+footer .footer-border {
+  border: 1px solid rgba(19, 19, 19, 0.16);
+}
+footer .footer-last {
+  padding-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+footer .footer-last p, footer .footer-last a {
+  color: rgb(26, 32, 44);
+  font-weight: 600;
+}
+footer .rules-policy {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
 }
 
 i {
@@ -124,22 +187,26 @@ select {
   padding: 32px 64px 0 64px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 24px;
 }
 .hero .hero-section.first {
-  width: 640px;
+  width: 100%;
   height: 360px;
   background: rgb(84, 166, 255) url("/assets/images/BG.png");
+  background-repeat: no-repeat;
   border-radius: 10px;
 }
 .hero .hero-section.second {
-  width: 640px;
+  width: 100%;
   height: 360px;
   background: rgb(53, 99, 233) url("/assets/images/BG2.png");
+  background-repeat: no-repeat;
   border-radius: 10px;
 }
 .hero .hero-content {
   color: white;
-  padding: 24px 250px 16px 24px;
+  padding: 24px 200px 16px 24px;
 }
 .hero .hero-content .btn {
   padding-top: 20px;
@@ -155,9 +222,10 @@ select {
   padding: 32px 64px 0 64px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .address .location {
-  width: 582px;
+  width: 100%;
   border-radius: 10px;
   padding: 24px 48px;
   background-color: rgb(255, 255, 255);
@@ -190,7 +258,7 @@ select {
 }
 
 .catalogue-car {
-  padding: 32px 64px;
+  padding: 32px 64px 64px 64px;
 }
 .catalogue-car .popular {
   padding: 10px 20px;
@@ -228,6 +296,12 @@ select {
   font-size: 14px;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   font-size: 16px;
   color: white;
@@ -240,7 +314,7 @@ button {
 
 .car-item {
   background-color: rgb(255, 255, 255);
-  padding: 24px;
+  padding: 20px;
   border-radius: 10px;
 }
 .car-item .car-love {
@@ -256,8 +330,8 @@ button {
   color: red;
 }
 .car-item img {
-  width: 242px;
-  height: 130px;
+  width: 170px;
+  height: 120px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -274,19 +348,18 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   color: rgb(144, 163, 191);
   font-size: 14px;
   font-weight: 600;
-  padding: 6px;
 }
 .car-item .car-content p i {
   color: rgb(144, 163, 191);
 }
 .car-item .car-item-footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding-top: 24px;
 }
 .car-item .car-item-footer p {

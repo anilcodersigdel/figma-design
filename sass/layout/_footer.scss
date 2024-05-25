@@ -1,33 +1,73 @@
 @import '../abstracts/variables'; 
+@import '../base/typography';
 
 footer{
-    padding: 80px 60px 60px 60px;
+    padding:50px;
+    background-color: $content-background-color;
     // display: flex;
 
     .footer-head{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding-bottom: 36px;
+        // width: 20%;
 
+        .footer-logo{
+            width: 25%;
 
-        .footer-title p{
+        h1{
+            color: $primary-color;     
+        }
+        p{
             color: $footer-text-color;
         }
-    
 
-    .footer-about{
-        width: 40%;
+        }
+
+    .footer-content{
+        width: 50%;
         display: flex;
         justify-content: space-between;
 
-
+        h3{
+            line-height: 48px;
+            font-size: 20px;
+            color: rgba(26, 32, 44, 1);
+            font-weight: $primary-font-weight;
+        }
         p a{
-            font-size: $base-font-size;
             font-weight: $low-font-weight;
+            line-height: 40px;
             color: $footer-text-color;
         }
+
     }
 
 
+}
 
+.footer-border{
+       border: 1px solid rgba(19, 19, 19, 0.16);
+}
+
+.footer-last{
+    padding-top: 36px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+
+p , a{
+    color: rgba(26, 32, 44, 1);
+    font-weight: $secondary-font-weight;
+
+    
+}
+}
+
+.rules-policy{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
 }
 }

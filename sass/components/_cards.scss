@@ -3,10 +3,13 @@
 
 .car-item{
     background-color: $content-background-color;
-    padding: 24px;
+    padding: 20px;
     @include radius;
 
     .car-love{
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
         @include flex-between;
 
         p{
@@ -20,8 +23,8 @@
     }
 
     img{
-        width: 242px;
-        height: 130px;
+        width: 170px;
+        height: 120px;
         object-fit: contain;
     }
     .car-class{
@@ -33,13 +36,13 @@
         @include flex-between;
    
 
-        p{
+        p {
             @include flex-between;
-            gap: 6px;
+            gap: 4px;
             color: $icon-color;          
             font-size: 14px;
             font-weight: $secondary-font-weight;
-            padding: 6px;
+     
 
             i{
                 color: $icon-color;
@@ -49,9 +52,7 @@
 
 
     .car-item-footer{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-between;
         padding-top: 24px;
 
         p{

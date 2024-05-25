@@ -1,88 +1,102 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-.hero{
+.hero {
     padding: 32px 64px 0 64px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
+    gap: 24px;
 
-    .hero-section.first{
-        width: 640px;
-       height: 360px;
-       background: $secondary-color url("/assets/images/BG.png");
-       @include radius;
-     
- 
+
+    .hero-section.first {
+        // width: 640px;
+        width: 100%;
+           height: 360px;
+        // aspect-ratio: 85/24;
+        background: $secondary-color url("/assets/images/BG.png");
+        background-repeat: no-repeat;
+        @include radius;
+
+
     }
-       .hero-section.second{
-        width: 640px;
+
+    .hero-section.second {
+        // width: 640px;
+        width: 100%;
         height: 360px;
         background: $primary-color url("/assets/images/BG2.png");
+        background-repeat: no-repeat;
         @include radius;
+        // aspect-ratio: 85/24;
     }
-    
-.hero-content {
-    color: white;
-    padding: 24px 250px 16px 24px;
+
+    .hero-content {
+        color: white;
+        padding: 24px 200px 16px 24px;
 
 
-.btn{
-    padding-top: 20px;
+        .btn {
+            padding-top: 20px;
 
-    .btn1{
-        background-color: $primary-color;
-    }
-    .btn2{
-        background-color: $secondary-color;
+            .btn1 {
+                background-color: $primary-color;
+            }
+
+            .btn2 {
+                background-color: $secondary-color;
+            }
+        }
+
     }
 }
 
-}
-}
 
 
 
 
-
-.address{
+.address {
     padding: 32px 64px 0 64px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
 
 
-    .location{
-        width: 582px;
+
+    .location {
+        // width: 35.5%;
+        width: 100%;
         @include radius;
         padding: 24px 48px;
         background-color: $content-background-color;
 
-      .input-label{
-          font-size: 16px;
-          color: rgba(26, 32, 44, 1);
-          font-weight: $secondary-font-weight;
-      }
+        .input-label {
+            font-size: 16px;
+            color: rgba(26, 32, 44, 1);
+            font-weight: $secondary-font-weight;
+        }
 
-      form{
-           @include flex-between;
+        form {
+            @include flex-between;
             padding-top: 16px;
 
-        .form-item{
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            padding-right: 24px;
-            border-right: 1px solid $border-color;
+            .form-item {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding-right: 24px;
+                border-right: 1px solid $border-color;
 
-            &.third{
-                border-right: none;
-            }
+                &.third {
+                    border-right: none;
+                }
 
-            label{
-                font-size: $base-font-size;
-                color: rgba(26, 32, 44, 1);
-                font-weight: $primary-font-weight;
+                label {
+                    font-size: $base-font-size;
+                    color: rgba(26, 32, 44, 1);
+                    font-weight: $primary-font-weight;
+                }
             }
         }
-      } 
     }
 }
+
+
+
+
