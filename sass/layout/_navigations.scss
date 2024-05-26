@@ -3,39 +3,51 @@
 
 
 nav{
-    @include flex-between;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    .nav-logo{
-        width: 50%;
+    .nav-logo{     
         display: flex;
-        gap: 65px;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
 
-        .logo a{
+         a {
             font-size:$base-font-size *2;
             color: $primary-color;
             font-weight: 700;
     }
 
-    .nav-search{
-        width: 55%;
+    .nav-search{    
         @include flex-between;
         border: 1px solid $border-color;
-        padding: 12px 10px 13px 22px;
         border-radius: 70px;
+        width: 60%;
+        padding:8px 10px;
 
     input{
-        width: 85%;
+        // margin: auto;
+        padding: 8px 0;
+        width: 80%;
     }
-     a i{
-        font-size: 20px;
+      a i{
+        padding: 8px 10px;
+        font-size: 27px;
        } 
     }
-}
 
+    }
     .profile-notification{
-        width: 15%;
+        width: 20%;
         @include flex-between;
 
+        a i{
+            font-size: 20px;
+            border: 1px solid $border-color;
+            padding: 10px;
+            border-radius: 90px;
+        }
     }
 }
 
