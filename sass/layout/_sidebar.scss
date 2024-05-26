@@ -1,14 +1,9 @@
 @import '../abstracts/variables';
 
+.content{
 
-
-
-
-
-// aside{
-//     display: flex;
-//     // flex-direction:  column;
-//     width: 20%;
-//     background-color: $content-background-color;
-
-// }
+    aside{
+        background-color: $content-background-color;
+        width: 20%;
+    }
+}

@@ -296,12 +296,6 @@ select {
   font-size: 14px;
 }
 
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 button {
   font-size: 16px;
   color: white;
@@ -373,4 +367,9 @@ button {
 }
 .car-item .car-item-footer button {
   background-color: rgb(53, 99, 233);
+}
+
+.content aside {
+  background-color: rgb(255, 255, 255);
+  width: 20%;
 }/*# sourceMappingURL=main.css.map */
