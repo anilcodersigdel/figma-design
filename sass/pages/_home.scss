@@ -2,14 +2,17 @@
 @import '../abstracts/mixins';
 
 .hero {
+ 
     padding: 32px 64px 0 64px;
-    @include flex-between;
+    display: flex;
+    // @include flex-between;
     gap: 24px;
 
 
     .hero-section.first{   
         min-height: 360px;
-        min-width: 640px;
+        width: 50%;
+       
         background: $secondary-color url("/assets/images/BG.png");
         background-repeat: no-repeat;
         @include radius;
@@ -19,10 +22,15 @@
 
     .hero-section.second {
         min-height: 360px;
-        min-width: 640px;
+        width: 50%;     
         background: $primary-color url("/assets/images/BG2.png");
         background-repeat: no-repeat;
         @include radius;
+
+
+        @media (max-width: 768px){
+            display: none;
+        }
     }
 
     .hero-content {
@@ -45,6 +53,10 @@
 
     }
 
+
+
+    
+
 }
 
 
@@ -53,13 +65,18 @@
 
 
 .address {
+    position: relative;
     padding: 32px 64px 0 64px;
     @include flex-between;
 
 
+    @include respond-to('mobile'){
+        flex-wrap: wrap;
+    }
+
 
     .location {
-        // width: 60%;
+       
         @include radius;
         padding: 24px 48px;
         background-color: $content-background-color;
@@ -94,7 +111,12 @@
         }
     }
 
-    .design {
+    .switch{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+
         .arrow-btn {
             @include radius;
             background-color: $primary-color;

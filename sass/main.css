@@ -19,6 +19,42 @@ header {
   background-color: rgb(255, 255, 255);
   padding: 40px 40px 40px 60px;
 }
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+header .nav-search-mobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-search-mobile .seach-input {
+  display: flex;
+  gap: 15px;
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  padding: 12px 12px 12px 24px;
+  border-radius: 10px;
+  width: 62%;
+}
+header .nav-search-mobile .seach-input input {
+  width: 85%;
+}
+header .nav-search-mobile .filters {
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  padding: 12px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  header .nav-search-mobile {
+    display: none;
+  }
+}
 
 nav {
   display: flex;
@@ -31,10 +67,15 @@ nav .nav-logo {
   align-items: center;
   width: 50%;
 }
-nav .nav-logo a {
+nav .nav-logo span a {
   font-size: 32px;
   color: rgb(53, 99, 233);
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  nav .nav-logo span a {
+    font-size: 25px;
+  }
 }
 nav .nav-logo .nav-search {
   display: flex;
@@ -43,7 +84,13 @@ nav .nav-logo .nav-search {
   border: 1px solid rgba(195, 212, 233, 0.4);
   border-radius: 70px;
   width: 60%;
+  display: flex;
   padding: 8px 10px;
+}
+@media (max-width: 768px) {
+  nav .nav-logo .nav-search {
+    display: none;
+  }
 }
 nav .nav-logo .nav-search input {
   padding: 8px 0;
@@ -51,7 +98,6 @@ nav .nav-logo .nav-search input {
 }
 nav .nav-logo .nav-search a i {
   padding: 8px 10px;
-  font-size: 27px;
 }
 nav .profile-notification {
   width: 20%;
@@ -60,10 +106,14 @@ nav .profile-notification {
   align-items: center;
 }
 nav .profile-notification a i {
-  font-size: 20px;
   border: 1px solid rgba(195, 212, 233, 0.4);
   padding: 10px;
   border-radius: 90px;
+}
+@media (max-width: 768px) {
+  nav .profile-notification a i {
+    display: none;
+  }
 }
 
 .popular-car-rent {
@@ -72,12 +122,22 @@ nav .profile-notification a i {
   grid-template-columns: auto auto auto auto;
   grid-gap: 20px;
 }
+@media (max-width: 480px) {
+  .popular-car-rent {
+    grid-template-columns: auto;
+  }
+}
 
 .recommendation-car-rent {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 20px;
   padding-top: 24px;
+}
+@media (max-width: 480px) {
+  .recommendation-car-rent {
+    grid-template-columns: auto;
+  }
 }
 
 i {
@@ -195,23 +255,26 @@ select {
 .hero {
   padding: 32px 64px 0 64px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 24px;
 }
 .hero .hero-section.first {
   min-height: 360px;
-  min-width: 640px;
+  width: 50%;
   background: rgb(84, 166, 255) url("/assets/images/BG.png");
   background-repeat: no-repeat;
   border-radius: 10px;
 }
 .hero .hero-section.second {
   min-height: 360px;
-  min-width: 640px;
+  width: 50%;
   background: rgb(53, 99, 233) url("/assets/images/BG2.png");
   background-repeat: no-repeat;
   border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .hero .hero-section.second {
+    display: none;
+  }
 }
 .hero .hero-content {
   color: white;
@@ -228,10 +291,16 @@ select {
 }
 
 .address {
+  position: relative;
   padding: 32px 64px 0 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 480px) {
+  .address {
+    flex-wrap: wrap;
+  }
 }
 .address .location {
   border-radius: 10px;
@@ -264,13 +333,19 @@ select {
   color: rgb(26, 32, 44);
   font-weight: 700;
 }
-.address .design .arrow-btn {
+.address .switch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.address .switch .arrow-btn {
   border-radius: 10px;
   background-color: rgb(53, 99, 233);
   padding: 22px;
   display: flex;
 }
-.address .design .arrow-btn i {
+.address .switch .arrow-btn i {
   color: white;
   font-size: 22px;
   transform: rotate(90deg);

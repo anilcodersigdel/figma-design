@@ -1,8 +1,51 @@
 @import '../abstracts/variables';
+@import '../abstracts/mixins';
 
 header{
     background-color: $content-background-color;
     padding: 40px 40px 40px 60px;
+
+   
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 12px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .nav-search-mobile{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .seach-input{
+            display: flex;
+            gap: 15px;
+            border: 1px solid $border-color;
+            padding: 12px 12px 12px 24px;
+            border-radius: 10px;
+            width: 62%;
+
+            input{
+                width: 85%;
+            }
+        }
+
+        .filters{
+            border: 1px solid $border-color;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+      }
+
+      @media (min-width: 768px) {
+         .nav-search-mobile{
+            display: none;
+         }
+
 }
-
-
+}

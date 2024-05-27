@@ -4,9 +4,9 @@
     padding-top: 20px;
     @include grid; 
 
-    // @media only screen and (max-width: 767px) {
-    //   grid-template-columns: auto;
-    //   }
+   @include respond-to('mobile'){
+    grid-template-columns: auto
+   }
 }
 
 .recommendation-car-rent{
@@ -14,9 +14,9 @@
     padding-top: 24px;
 
 
-    // @media only screen and (max-width: 767px) {
-    //     grid-template-columns: auto;
-    //     }
+    @include respond-to('mobile'){
+        grid-template-columns: auto
+       }
 
 }
 
