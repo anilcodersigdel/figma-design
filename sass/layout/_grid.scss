@@ -4,19 +4,28 @@
     padding-top: 20px;
     @include grid; 
 
-   @include respond-to('mobile'){
-    grid-template-columns: auto
-   }
-}
+
+    @media (max-width:768px) {
+        display: flex;
+        overflow-x: scroll;
+        padding-bottom: 32px;
+        // background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+        
+    }
+
+  
+
 
 .recommendation-car-rent{
     @include grid;
     padding-top: 24px;
 
+    @media (max-width:768px){
+        grid-template-columns: auto;
+    }
 
-    @include respond-to('mobile'){
-        grid-template-columns: auto
-       }
+
 
 }
 

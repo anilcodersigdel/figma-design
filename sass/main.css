@@ -21,7 +21,6 @@ header {
 }
 @media (max-width: 768px) {
   header {
-    width: 100%;
     padding: 12px 24px;
     display: flex;
     flex-direction: column;
@@ -74,7 +73,7 @@ nav .nav-logo span a {
 }
 @media (max-width: 768px) {
   nav .nav-logo span a {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
 nav .nav-logo .nav-search {
@@ -122,9 +121,11 @@ nav .profile-notification a i {
   grid-template-columns: auto auto auto auto;
   grid-gap: 20px;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .popular-car-rent {
-    grid-template-columns: auto;
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 32px;
   }
 }
 
@@ -134,7 +135,7 @@ nav .profile-notification a i {
   grid-gap: 20px;
   padding-top: 24px;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .recommendation-car-rent {
     grid-template-columns: auto;
   }
@@ -148,10 +149,22 @@ h1 {
   font-size: 32px;
   line-height: 48px;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 
 p {
   font-size: 16px;
   line-height: 24px;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 12px;
+    line-height: 19.2px;
+  }
 }
 
 input {
@@ -166,6 +179,7 @@ input:focus {
 select {
   border: none;
   font-size: 12px;
+  line-height: 24px;
   color: rgb(144, 163, 191);
 }
 
@@ -179,8 +193,18 @@ footer .footer-head {
   align-items: center;
   padding-bottom: 36px;
 }
+@media (max-width: 768px) {
+  footer .footer-head {
+    flex-direction: column;
+  }
+}
 footer .footer-head .footer-logo {
   width: 25%;
+}
+@media (max-width: 768px) {
+  footer .footer-head .footer-logo {
+    width: 100%;
+  }
 }
 footer .footer-head .footer-logo h1 {
   color: rgb(53, 99, 233);
@@ -231,10 +255,22 @@ h1 {
   font-size: 32px;
   line-height: 48px;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 
 p {
   font-size: 16px;
   line-height: 24px;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 12px;
+    line-height: 19.2px;
+  }
 }
 
 input {
@@ -249,20 +285,36 @@ input:focus {
 select {
   border: none;
   font-size: 12px;
+  line-height: 24px;
   color: rgb(144, 163, 191);
 }
 
 .hero {
+  position: relative;
   padding: 32px 64px 0 64px;
   display: flex;
   gap: 24px;
 }
+@media (max-width: 768px) {
+  .hero {
+    padding: 32px 24px 0 24px;
+  }
+}
 .hero .hero-section.first {
-  min-height: 360px;
+  min-height: 243px;
   width: 50%;
   background: rgb(84, 166, 255) url("/assets/images/BG.png");
   background-repeat: no-repeat;
   border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .hero .hero-section.first {
+    background-size: contain;
+    background-position: bottom;
+    min-height: 243px;
+    min-width: 100%;
+    aspect-ratio: 157/90;
+  }
 }
 .hero .hero-section.second {
   min-height: 360px;
@@ -278,13 +330,28 @@ select {
 }
 .hero .hero-content {
   color: white;
-  padding: 24px 0 16px 24px;
+  padding: 16px 0 0 24px;
+}
+.hero .hero-content .title {
+  padding-right: 200px;
+}
+@media (max-width: 768px) {
+  .hero .hero-content .title {
+    padding-right: 71px;
+  }
 }
 .hero .hero-content .btn {
   padding-top: 20px;
 }
 .hero .hero-content .btn .btn1 {
   background-color: rgb(53, 99, 233);
+}
+@media (max-width: 768px) {
+  .hero .hero-content .btn .btn1 {
+    position: relative;
+    padding: 10px 17px;
+    top: 50%;
+  }
 }
 .hero .hero-content .btn .btn2 {
   background-color: rgb(84, 166, 255);
@@ -297,9 +364,11 @@ select {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .address {
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 24px 0 24px;
   }
 }
 .address .location {
@@ -307,37 +376,62 @@ select {
   padding: 24px 48px;
   background-color: rgb(255, 255, 255);
 }
+@media (max-width: 768px) {
+  .address .location {
+    padding: 16px;
+  }
+}
 .address .location .input-label {
   font-size: 16px;
   color: rgb(26, 32, 44);
   font-weight: 600;
 }
-.address .location form {
+.address .location .location-form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 24px;
   padding-top: 16px;
 }
-.address .location form .form-item {
+.address .location .location-form .form-item {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding-right: 24px;
   border-right: 1px solid rgba(195, 212, 233, 0.4);
 }
-.address .location form .form-item.third {
+.address .location .location-form .form-item.third {
   border-right: none;
+  padding-right: 10px;
 }
-.address .location form .form-item label {
+.address .location .location-form .form-item.second {
+  padding-right: 15px;
+}
+.address .location .location-form .form-item label {
   font-size: 16px;
   color: rgb(26, 32, 44);
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  .address .location .location-form {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .address .location .location-form-mobile {
+    display: none;
+  }
 }
 .address .switch {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .address .switch {
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 .address .switch .arrow-btn {
   border-radius: 10px;
@@ -351,8 +445,37 @@ select {
   transform: rotate(90deg);
 }
 
+@media (max-width: 768px) {
+  .address {
+    justify-content: center;
+  }
+  .address .location-form-mobile {
+    position: relative;
+    display: flex;
+    gap: 20px;
+  }
+  .address .location-form-mobile .form-item {
+    padding-top: 10px;
+    border-right: 1px solid rgba(195, 212, 233, 0.4);
+  }
+  .address .location-form-mobile .form-item.third {
+    border-right: none;
+  }
+  .address .location-form-mobile .form-item label {
+    font-weight: 600;
+  }
+  .address .location-form-mobile .form-item select {
+    font-weight: 400;
+    color: rgb(144, 163, 191);
+  }
+}
 .catalogue-car {
   padding: 32px 64px 64px 64px;
+}
+@media (max-width: 768px) {
+  .catalogue-car {
+    padding: 32px 24px 32px 24px;
+  }
 }
 .catalogue-car .popular {
   padding: 10px 20px;
@@ -369,12 +492,23 @@ select {
 .catalogue-car .popular a {
   font-weight: 600;
 }
+@media (max-width: 768px) {
+  .catalogue-car .popular a {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
 .catalogue-car .recommendation-car {
   padding: 10px 20px;
 }
 .catalogue-car .recommendation-car p a {
   color: rgb(144, 163, 191);
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .catalogue-car .recommendation-car p a {
+    font-size: 14px;
+  }
 }
 .catalogue-car .show-more {
   padding-top: 64px;
@@ -399,11 +533,22 @@ button {
   border-radius: 4px;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+@media (max-width: 768px) {
+  button {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+}
 
 .car-item {
   background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .car-item {
+    padding: 12px;
+  }
 }
 .car-item .car-love {
   display: flex;
@@ -413,6 +558,11 @@ button {
 .car-item .car-love p {
   font-size: 20px;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  .car-item .car-love p {
+    font-size: 15px;
+  }
 }
 .car-item .car-love .red-love {
   color: red;
@@ -432,6 +582,12 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .car-item .car-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .car-item .car-content p {
   display: flex;
   justify-content: space-between;
@@ -444,6 +600,13 @@ button {
 .car-item .car-content p i {
   color: rgb(144, 163, 191);
 }
+@media (max-width: 768px) {
+  .car-item .car-content p {
+    font-size: 12px;
+    gap: 2px;
+    font-weight: 600;
+  }
+}
 .car-item .car-item-footer {
   display: flex;
   justify-content: space-between;
@@ -454,10 +617,21 @@ button {
   font-size: 20px;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  .car-item .car-item-footer p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
 .car-item .car-item-footer p span {
   font-size: 14px;
   font-weight: 700;
   color: rgb(144, 163, 191);
+}
+@media (max-width: 768px) {
+  .car-item .car-item-footer p span {
+    font-size: 12px;
+  }
 }
 .car-item .car-item-footer button {
   background-color: rgb(53, 99, 233);

@@ -11,10 +11,21 @@ footer{
         justify-content: space-between;
         align-items: center;
         padding-bottom: 36px;
-        // width: 20%;
+     
+
+        @media (max-width: 768px){
+            flex-direction: column;
+
+        }
 
         .footer-logo{
             width: 25%;
+
+
+            @media (max-width: 768px){
+                width: 100%;
+
+            }
 
         h1{
             color: $primary-color;     

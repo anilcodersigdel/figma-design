@@ -6,21 +6,29 @@
     padding: 20px;
     @include radius;
 
+
+    @media (max-width: 768px){
+        padding: 12px;
+    }
+
     .car-love{
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
         @include flex-between;
 
         p{
             font-size: 20px;
             font-weight: $primary-font-weight;
+
+
+            @media (max-width: 768px){
+                font-size: 15px;
+            }
         }
 
         .red-love{
             color: red;
         }
     }
+
 
     img{
         width: 170px;
@@ -34,6 +42,12 @@
 
     .car-content{
         @include flex-between;
+
+
+        @media (max-width:768px){
+            display: flex;
+            flex-direction: column;
+        }
    
 
         p {
@@ -47,8 +61,18 @@
             i{
                 color: $icon-color;
             }
+
+            @media (max-width: 768px){
+                  font-size: 12px;
+                  gap: 2px;
+                  font-weight: $secondary-font-weight;
+
+            }
+
+
         }
     }
+
 
 
     .car-item-footer{
@@ -59,10 +83,22 @@
             font-size: 20px;
             font-weight: $primary-font-weight;
 
+
+            @media (max-width: 768px){
+                  font-size: 14px;
+                  font-weight: $secondary-font-weight;
+
+            }
+
             span{
                 font-size: 14px;
                 font-weight: $primary-font-weight;
                 color: $icon-color;
+
+                @media (max-width: 768px){
+                 font-size: 12px;
+    
+                }
 
             }
         }
@@ -74,3 +110,8 @@
     }
 }
 
+// @media (max-width:768px){
+//     .card-car-image{
+//         display: flex;
+//     }
+// }

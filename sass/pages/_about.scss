@@ -5,6 +5,10 @@
 .catalogue-car{
     padding: 32px 64px 64px 64px;
 
+    @media (max-width:768px){
+        padding: 32px 24px 32px 24px;
+    }
+
     
 
     .popular{
@@ -19,6 +23,11 @@
         }
         a{
             font-weight: $secondary-font-weight;
+
+            @media (max-width:768px){
+                font-size: 14px;
+                font-weight: 600;
+            }
         }
     }
 
@@ -30,6 +39,12 @@
         p a{
             color: $icon-color;
             font-weight: $secondary-font-weight;
+
+
+
+            @media (max-width: 768px){
+                  font-size: 14px;
+            }
         }
 
     
@@ -51,5 +66,8 @@
 
 
 }
+
+
+
 
 

@@ -2,20 +2,33 @@
 @import '../abstracts/mixins';
 
 .hero {
- 
+   position: relative;
     padding: 32px 64px 0 64px;
     display: flex;
-    // @include flex-between;
     gap: 24px;
 
+    @media (max-width: 768px){
+        padding: 32px 24px 0 24px;
+    }
 
-    .hero-section.first{   
-        min-height: 360px;
+
+    .hero-section.first{  
+   
+        min-height: 243px;
         width: 50%;
        
         background: $secondary-color url("/assets/images/BG.png");
         background-repeat: no-repeat;
         @include radius;
+
+
+        @media (max-width: 768px){
+            background-size: contain;
+            background-position: bottom;
+            min-height: 243px;
+            min-width: 100%;
+            aspect-ratio: 157/90;
+        }
 
 
     }
@@ -26,7 +39,7 @@
         background: $primary-color url("/assets/images/BG2.png");
         background-repeat: no-repeat;
         @include radius;
-
+    
 
         @media (max-width: 768px){
             display: none;
@@ -34,15 +47,32 @@
     }
 
     .hero-content {
-  
         color: white;
-        padding: 24px 0 16px 24px;
+        padding: 16px 0 0 24px;
+
+        .title{
+            padding-right: 200px;   
+
+
+            @media (max-width: 768px){
+                padding-right: 71px;
+            }
+
+        }
 
 
         .btn {
+
             padding-top: 20px;
 
             .btn1 {
+
+                @media (max-width: 768px){
+                    position: relative;
+                    padding: 10px 17px;
+                    top: 50%;
+                 
+                }
                 background-color: $primary-color;
             }
 
@@ -59,19 +89,17 @@
 
 }
 
-
-
-
-
-
 .address {
     position: relative;
     padding: 32px 64px 0 64px;
     @include flex-between;
 
 
-    @include respond-to('mobile'){
-        flex-wrap: wrap;
+
+    @media (max-width: 768px){
+        flex-direction: column;
+        gap: 32px;
+        padding: 32px 24px 0 24px;
     }
 
 
@@ -81,14 +109,21 @@
         padding: 24px 48px;
         background-color: $content-background-color;
 
+        @media (max-width: 768px){
+            // width: 327px;
+            padding: 16px;
+        }
+
         .input-label {
             font-size: 16px;
             color: rgba(26, 32, 44, 1);
             font-weight: $secondary-font-weight;
         }
 
-        form {
-            @include flex-between;
+         .location-form{
+            // @include flex-between;
+            display: flex;
+            gap: 24px;
             padding-top: 16px;
 
             .form-item {
@@ -100,6 +135,11 @@
 
                 &.third {
                     border-right: none;
+                    padding-right: 10px;
+                }
+
+                &.second {
+                    padding-right: 15px;
                 }
 
                 label {
@@ -108,7 +148,22 @@
                     font-weight: $primary-font-weight;
                 }
             }
+
+            @media (max-width: 768px){
+                display: none;
+            }
+      
+
         }
+
+              
+        @media (min-width:768px){
+            .location-form-mobile{
+                display: none;
+            }
+        }
+
+
     }
 
     .switch{
@@ -117,6 +172,13 @@
         left: 50%;
         transform: translate(-50% , -50%);
 
+
+        @media (max-width: 768px){
+            top: 57%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+        
         .arrow-btn {
             @include radius;
             background-color: $primary-color;
@@ -130,4 +192,40 @@
             }
         }
     }
+}
+
+
+
+@media (max-width:768px){
+
+    .address{
+        justify-content: center;
+
+   
+
+.location-form-mobile{
+    position: relative;
+    display: flex;
+    gap: 20px;
+
+
+    .form-item{
+     padding-top: 10px;
+    border-right: 1px solid $border-color;
+
+    &.third{
+        border-right: none;
+    }
+
+        label{
+            font-weight: 600;
+
+        }
+        select{
+            font-weight: 400;
+            color: rgba(144, 163, 191, 1);
+        }
+    }
+}
+}
 }
