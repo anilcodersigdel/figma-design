@@ -139,6 +139,7 @@ nav .profile-notification a i {
     grid-gap: 20px;
   }
 }
+
 i {
   color: rgb(89, 103, 128);
 }
@@ -200,7 +201,7 @@ footer .footer-head {
 @media (max-width: 768px) {
   footer .footer-head {
     flex-direction: column;
-    gap: 30px;
+    gap: 1.5rem;
   }
 }
 footer .footer-head .footer-logo {
@@ -208,7 +209,8 @@ footer .footer-head .footer-logo {
 }
 @media (max-width: 768px) {
   footer .footer-head .footer-logo {
-    width: 100%;
+    width: 80%;
+    margin-right: auto;
   }
 }
 footer .footer-head .footer-logo h1 {
@@ -225,7 +227,6 @@ footer .footer-head .footer-logo p {
 }
 @media (max-width: 768px) {
   footer .footer-head .footer-logo p {
-    width: 80%;
     line-height: 24px;
   }
 }
@@ -236,10 +237,10 @@ footer .footer-head .footer-content {
 }
 @media (max-width: 768px) {
   footer .footer-head .footer-content {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
     width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
 }
 footer .footer-head .footer-content h3 {
@@ -275,17 +276,27 @@ footer .footer-last {
 }
 @media (max-width: 768px) {
   footer .footer-last {
+    flex-direction: column;
+    gap: 0.8rem;
     padding: 0;
   }
+  footer .footer-last .copyright {
+    order: 2;
+  }
 }
-footer .footer-last p, footer .footer-last a {
+footer .footer-last p,
+footer .footer-last a {
   color: rgb(26, 32, 44);
   font-weight: 600;
 }
 footer .rules-policy {
-  width: 30%;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  footer .rules-policy {
+    order: 1;
+  }
 }
 
 i {
@@ -619,14 +630,14 @@ button {
   color: red;
 }
 .car-item img {
-  width: 170px;
+  width: 100%;
   height: 120px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media (max-width: 768px) {
   .car-item img {
-    width: 110px;
+    width: 100%;
     height: 70px;
   }
 }
@@ -643,10 +654,11 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4px;
+  gap: 0.2rem;
   color: rgb(144, 163, 191);
   font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .car-item .car-content p i {
   color: rgb(144, 163, 191);
@@ -654,7 +666,6 @@ button {
 @media (max-width: 768px) {
   .car-item .car-content p {
     font-size: 12px;
-    gap: 2px;
     font-weight: 600;
   }
 }
@@ -700,19 +711,20 @@ button {
   }
   .car-flex .car-content {
     display: flex;
-    gap: 10px;
+    gap: 0.5rem;
   }
 }
 @media (max-width: 768px) {
   .car-flex {
     display: flex;
-    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
   }
   .car-flex .car-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 0.2rem;
   }
 }
 .content aside {
