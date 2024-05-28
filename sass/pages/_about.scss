@@ -6,7 +6,7 @@
     padding: 32px 64px 64px 64px;
 
     @media (max-width:768px){
-        padding: 32px 24px 32px 24px;
+        padding: 32px 24px 48px 24px;
     }
 
     
@@ -34,7 +34,7 @@
 
 
     .recommendation-car{
-        padding: 10px 20px;
+        padding: 42px 20px;
 
         p a{
             color: $icon-color;
@@ -61,6 +61,11 @@
         p a{
             color: $icon-color;
             font-size: 14px;
+        }
+
+
+        @media (max-width:768px){
+            padding-top: 48px;
         }
     }
 

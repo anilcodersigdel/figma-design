@@ -6,6 +6,13 @@ footer{
     background-color: $content-background-color;
     // display: flex;
 
+    @media (max-width:768px){
+        background-color: $background-color;
+        padding: 0 24px 24px 24px;
+
+
+    }
+
     .footer-head{
         display: flex;
         justify-content: space-between;
@@ -15,6 +22,8 @@ footer{
 
         @media (max-width: 768px){
             flex-direction: column;
+            gap: 30px;
+      
 
         }
 
@@ -28,10 +37,22 @@ footer{
             }
 
         h1{
-            color: $primary-color;     
+            color: $primary-color;  
+            
+            @media (max-width: 768px){
+                font-size: 24px;
+                line-height: 36px;
+            }
         }
         p{
             color: $footer-text-color;
+
+            @media (max-width: 768px){
+               width: 80%;
+                line-height: 24px;
+            }
+
+
         }
 
         }
@@ -41,11 +62,24 @@ footer{
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 768px){
+          display: flex;
+          gap: 30px;
+            flex-wrap: wrap;
+       width: 100%;
+        }
+
         h3{
             line-height: 48px;
             font-size: 20px;
             color: rgba(26, 32, 44, 1);
             font-weight: $primary-font-weight;
+
+            @media (max-width: 768px){
+                font-size: 16px;
+                line-height: 30px;
+            }
+
         }
         p a{
             font-weight: $low-font-weight;
@@ -60,6 +94,11 @@ footer{
 
 .footer-border{
        border: 1px solid rgba(19, 19, 19, 0.16);
+
+
+       @media (max-width: 768px){
+    display: none;
+    }
 }
 
 .footer-last{
@@ -67,6 +106,11 @@ footer{
     display: flex;
     justify-content: space-between;
     font-weight: 600;
+
+
+    @media (max-width:768px){
+        padding: 0;
+    }
 
 p , a{
     color: rgba(26, 32, 44, 1);
@@ -81,9 +125,7 @@ p , a{
     display: flex;
     justify-content: space-between;
 }
-
-
-// media screen 
+ 
 
 
 

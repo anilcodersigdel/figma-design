@@ -125,7 +125,6 @@ nav .profile-notification a i {
   .popular-car-rent {
     display: flex;
     overflow-x: scroll;
-    padding-bottom: 32px;
   }
 }
 
@@ -133,14 +132,13 @@ nav .profile-notification a i {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 20px;
-  padding-top: 24px;
 }
 @media (max-width: 768px) {
   .recommendation-car-rent {
     grid-template-columns: auto;
+    grid-gap: 20px;
   }
 }
-
 i {
   color: rgb(89, 103, 128);
 }
@@ -187,6 +185,12 @@ footer {
   padding: 50px;
   background-color: rgb(255, 255, 255);
 }
+@media (max-width: 768px) {
+  footer {
+    background-color: rgb(246, 247, 249);
+    padding: 0 24px 24px 24px;
+  }
+}
 footer .footer-head {
   display: flex;
   justify-content: space-between;
@@ -196,6 +200,7 @@ footer .footer-head {
 @media (max-width: 768px) {
   footer .footer-head {
     flex-direction: column;
+    gap: 30px;
   }
 }
 footer .footer-head .footer-logo {
@@ -209,19 +214,45 @@ footer .footer-head .footer-logo {
 footer .footer-head .footer-logo h1 {
   color: rgb(53, 99, 233);
 }
+@media (max-width: 768px) {
+  footer .footer-head .footer-logo h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
 footer .footer-head .footer-logo p {
   color: rgba(19, 19, 19, 0.6);
+}
+@media (max-width: 768px) {
+  footer .footer-head .footer-logo p {
+    width: 80%;
+    line-height: 24px;
+  }
 }
 footer .footer-head .footer-content {
   width: 50%;
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  footer .footer-head .footer-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
 footer .footer-head .footer-content h3 {
   line-height: 48px;
   font-size: 20px;
   color: rgb(26, 32, 44);
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  footer .footer-head .footer-content h3 {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
 footer .footer-head .footer-content p a {
   font-weight: 500;
@@ -231,11 +262,21 @@ footer .footer-head .footer-content p a {
 footer .footer-border {
   border: 1px solid rgba(19, 19, 19, 0.16);
 }
+@media (max-width: 768px) {
+  footer .footer-border {
+    display: none;
+  }
+}
 footer .footer-last {
   padding-top: 36px;
   display: flex;
   justify-content: space-between;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  footer .footer-last {
+    padding: 0;
+  }
 }
 footer .footer-last p, footer .footer-last a {
   color: rgb(26, 32, 44);
@@ -298,6 +339,11 @@ select {
 @media (max-width: 768px) {
   .hero {
     padding: 32px 24px 0 24px;
+  }
+}
+@media (max-width: 468px) {
+  .hero {
+    padding: 32px 15px 0 24px;
   }
 }
 .hero .hero-section.first {
@@ -474,7 +520,7 @@ select {
 }
 @media (max-width: 768px) {
   .catalogue-car {
-    padding: 32px 24px 32px 24px;
+    padding: 32px 24px 48px 24px;
   }
 }
 .catalogue-car .popular {
@@ -499,7 +545,7 @@ select {
   }
 }
 .catalogue-car .recommendation-car {
-  padding: 10px 20px;
+  padding: 42px 20px;
 }
 .catalogue-car .recommendation-car p a {
   color: rgb(144, 163, 191);
@@ -522,6 +568,11 @@ select {
 .catalogue-car .show-more p a {
   color: rgb(144, 163, 191);
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .catalogue-car .show-more {
+    padding-top: 48px;
+  }
 }
 
 button {
@@ -573,6 +624,12 @@ button {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media (max-width: 768px) {
+  .car-item img {
+    width: 110px;
+    height: 70px;
+  }
+}
 .car-item .car-class {
   color: rgb(144, 163, 191);
   font-weight: 700;
@@ -581,12 +638,6 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-@media (max-width: 768px) {
-  .car-item .car-content {
-    display: flex;
-    flex-direction: column;
-  }
 }
 .car-item .car-content p {
   display: flex;
@@ -636,7 +687,34 @@ button {
 .car-item .car-item-footer button {
   background-color: rgb(53, 99, 233);
 }
+@media (max-width: 768px) {
+  .car-item .car-item-footer button {
+    padding: 10px 16px;
+  }
+}
 
+@media (min-width: 768px) {
+  .car-flex {
+    align-items: center;
+    justify-content: space-around;
+  }
+  .car-flex .car-content {
+    display: flex;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .car-flex {
+    display: flex;
+    gap: 50px;
+  }
+  .car-flex .car-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
 .content aside {
   background-color: rgb(255, 255, 255);
   width: 20%;
