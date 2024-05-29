@@ -183,13 +183,13 @@ select {
 }
 
 footer {
-  padding: 50px;
+  padding: 48px;
   background-color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
   footer {
     background-color: rgb(246, 247, 249);
-    padding: 0 24px 24px 24px;
+    padding: 0 24px 48px 24px;
   }
 }
 footer .footer-head {
@@ -239,7 +239,7 @@ footer .footer-head .footer-content {
   footer .footer-head .footer-content {
     width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 1.6rem;
     flex-wrap: wrap;
   }
 }
@@ -290,11 +290,13 @@ footer .footer-last a {
   font-weight: 600;
 }
 footer .rules-policy {
+  width: 30%;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
   footer .rules-policy {
+    width: 100%;
     order: 1;
   }
 }
@@ -526,6 +528,76 @@ select {
     color: rgb(144, 163, 191);
   }
 }
+.content {
+  display: flex;
+  justify-content: center;
+}
+.content aside {
+  width: 15%;
+  padding: 24px 0 0 24px;
+}
+@media (max-width: 768px) {
+  .content aside {
+    display: none;
+  }
+}
+.content .category {
+  width: 85%;
+}
+@media (max-width: 768px) {
+  .content .category {
+    width: auto;
+  }
+}
+.content .category .address {
+  position: relative;
+  padding: 24px;
+}
+@media (max-width: 768px) {
+  .content .category .address {
+    width: auto;
+  }
+}
+.content .category .address .location {
+  position: relative;
+  padding: 24px;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .content .category .address .location {
+    padding: 18px 16px;
+  }
+}
+.content .category .address .location .radio-input {
+  display: flex;
+  gap: 0.3rem;
+}
+.content .category .address .switch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .content .category .address .switch {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.content .category .catalogue-car {
+  padding: 0 24px 64px 24px;
+}
+.content .category .catalogue-car .recommendation-car-rent {
+  grid-template-columns: auto auto auto;
+}
+@media (max-width: 768px) {
+  .content .category .catalogue-car .recommendation-car-rent {
+    grid-template-columns: auto;
+    padding-bottom: 48px;
+  }
+}
+
 .catalogue-car {
   padding: 32px 64px 64px 64px;
 }
@@ -659,6 +731,7 @@ button {
   font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
+  margin-right: auto;
 }
 .car-item .car-content p i {
   color: rgb(144, 163, 191);
@@ -700,7 +773,8 @@ button {
 }
 @media (max-width: 768px) {
   .car-item .car-item-footer button {
-    padding: 10px 16px;
+    padding: 10px;
+    white-space: nowrap;
   }
 }
 
@@ -725,6 +799,7 @@ button {
     flex-direction: column;
     justify-content: center;
     gap: 0.2rem;
+    margin-right: auto;
   }
 }
 .content aside {

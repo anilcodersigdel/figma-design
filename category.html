@@ -1,211 +1,619 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Category car rent</title>
-        <link rel="stylesheet" href="sass/main.css">
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category car rent</title>
+    <link rel="stylesheet" href="sass/main.css">
 
-    </head>
-    <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <header>
-            <nav>
-                <div class="nav-logo">
-                    <div class="logo">
-                        <span><a href="#">MORENT</a></span>
-                    </div>
+</head>
 
-                    <div class="nav-search">
+<body>
 
-                        <a href="#"><i
-                                class="fa-solid fa-magnifying-glass"></i></a>
-                        <input type="text" placeholder="Search something here">
-                        <a href="category.html"><i
-                                class="fa-solid fa-sliders"></i></a>
-                    </div>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <div class="logo">
+                    <span><a href="#">MORENT</a></span>
                 </div>
 
-                <div class="profile-notification">
+                <div class="nav-search">
 
-                    <a href="#"><i class="fa-solid fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-bell"></i></a>
-                    <a href="#"><i class="fa-solid fa-gear"></i></a>
-                    <img class="logo" src="assets/images/Image.png"
-                        alt="logo images">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <input type="text" placeholder="Search something here">
+                    <a href="detail.html"><i class="fa-solid fa-sliders"></i></a>
                 </div>
-            </nav>
-        </header>
+            </div>
 
-        <section class="content">
+            <div class="profile-notification">
 
-            <aside>
-                <div class="category-type">
-                    Type
-                    <p>Sport (10)</p>
-                    <p>SUV (12)</p>
-                    <p>MPV (16)</p>
-                    <p>Sedan (20)</p>
-                    <p>Coupe (14)</p>
-                    <p>Hatchback (14)</p>
-                </div>
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-bell"></i></a>
+                <a href="#"><i class="fa-solid fa-gear"></i></a>
+                <img class="logo" src="assets/images/Image.png" alt="logo images">
+            </div>
+        </nav>
+        <div class="nav-search-mobile">
 
-                <div class="capacity">
+            <div class="seach-input">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <input type="text" placeholder="Search something here ">
+            </div>
 
-                    capacity
-                    <p>2 Person (10)</p>
-                    <p>4 Person (14)</p>
-                    <p>6 Person (12)</p>
-                    <p>8 or More (16)</p>
+            <div class="filters">
+                <a href="category.html"><i class="fa-solid fa-sliders"></i></a>
+            </div>
 
-                </div>
+        </div>
 
-            </aside>
+    </header>
 
-            <div class="address"> 
+    <section class="content">
 
-                <div class="location">
+        <aside>
 
-                    <input type="radio" id="Pick-Up" name="Pick-Up"
-                        value="Pick-Up">
+            <div class="category-type">
+
+                <p>Type</p>
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">Sport (10)</label>
+                </p>
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">SUV (12)</label>
+                </p>
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">MPV (16)</label>
+                </p>
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">Sedan (20)</label>
+                </p>
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">Coupe (14)</label>
+                </p>
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">Hatchback (14)</label>
+                </p>
+
+            </div>
+
+            <div class="capacity">
+
+                <p>capacity</p>
+
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport" style="background-color: blue;">
+                    <label for="vehicle1">2 Person (10)</label>
+                </p>
+
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">4 Person (14)</label>
+                </p>
+
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">6 Person (12)</label>
+                </p>
+
+
+                <p><input type="checkbox" id="Sport" name="Sport" value="Sport">
+                    <label for="vehicle1">8 or More (16)</label>
+                </p>
+
+            </div>
+
+        </aside>
+
+        <section class="category">
+
+             <section class="address">
+
+
+              <div class="location">
+                <div class="radio-input">
+                    <input type="radio" id="Pick-Up" name="Pick-Up" value="Pick-Up">
                     <label class="input-label" for="Pick-Up">Pick-Up</label>
-
-                    <form>
-
-                        <div class="form-item">
-
-                            <label for="location">Locations</label>
-                            <select name="Locations" id="Locations">
-                                <option value="city">Select your city</option>
-                            </select>
-                        </div>
-
-                        <div class="form-item">
-
-                            <label for="Date">Date</label>
-                            <select name="Locations" id="Locations">
-                                <option value="Date">Select your Date</option>
-                            </select>
-                        </div>
-
-                        <div class="form-item third">
-
-                            <label for="Time">Time</label>
-                            <select name="Locations" id="Locations">
-                                <option value="Time">Select your Time</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="switch">
-                    <button class="arrow-btn">
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                    </button>
                 </div>
 
-                <div class="location">
+                <form class="location-form">
 
-                    <input type="radio" id="Drop-Off" name="Drop-Off"
-                        value="Drop-Off">
+                    <div class="form-item">
+
+                        <label for="location">Locations</label>
+                        <select name="Locations" id="Locations">
+                            <option value="city">Select your city</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item second">
+
+                        <label for="Date">Date</label>
+                        <select name="Locations" id="Locations">
+                            <option value="Date">Select your Date</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item third">
+
+                        <label for="Time">Time</label>
+                        <select name="Locations" id="Locations">
+                            <option value="Time">Select your Time</option>
+                        </select>
+                    </div>
+                </form>
+
+
+
+                <form class="location-form-mobile">
+
+                    <div class="form-item">
+
+                        <label for="location">Locations</label>
+                        <select name="Locations" id="Locations">
+                            <option value="city">Semarang</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item second">
+
+                        <label for="Date">Date</label>
+                        <select name="Locations" id="Locations">
+                            <option value="Date">20 july 2022</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item third">
+
+                        <label for="Time">Time</label>
+                        <select name="Locations" id="Locations">
+                            <option value="Time">07.00</option>
+                        </select>
+                    </div>
+                </form>
+
+
+             </div>
+
+              <div class="switch">
+                <button class="arrow-btn">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+              </div>
+
+              <div class="location">
+                <div class="radio-input">
+                    <input type="radio" id="Drop-Off" name="Drop-Off" value="Drop-Off">
                     <label class="input-label" for="drop-off">Drop-Off</label>
-
-                    <form>
-
-                        <div class="form-item">
-
-                            <label for="location">Locations</label>
-                            <select name="Locations" id="Locations">
-                                <option value="city">Select your city</option>
-                            </select>
-                        </div>
-
-                        <div class="form-item">
-
-                            <label for="Date">Date</label>
-                            <select name="Locations" id="Locations">
-                                <option value="Date">Select your Date</option>
-                            </select>
-                        </div>
-
-                        <div class="form-item third">
-
-                            <label for="Time">Time</label>
-                            <select name="Locations" id="Locations">
-                                <option value="Time">Select your Time</option>
-                            </select>
-                        </div>
-
-                    </form>
-
-                </div>
-            </div> 
-
-        </section>
-
-
-
-        <!-- <footer>
-
-            <div class="footer-head">
-                <div class="footer-logo">
-
-                    <h1>MORENT</h1>
-                    <p>Our vision is to provide convenience and help increase
-                        your sales business.</p>
                 </div>
 
+                <form class="location-form">
+
+                    <div class="form-item">
+
+                        <label for="location">Locations</label>
+                        <select name="Locations" id="Locations">
+                            <option value="city">Select your city</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item">
+
+                        <label for="Date">Date</label>
+                        <select name="Locations" id="Locations">
+                            <option value="Date">Select your Date</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item third">
+
+                        <label for="Time">Time</label>
+                        <select name="Locations" id="Locations">
+                            <option value="Time">Select your time</option>
+                        </select>
+                    </div>
+
+                </form>
+
+
+                <form class="location-form-mobile">
+
+                    <div class="form-item">
+
+                        <label for="location">Locations</label>
+                        <select name="Locations" id="Locations">
+                            <option value="city">Semarang</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item second">
+
+                        <label for="Date">Date</label>
+                        <select name="Locations" id="Locations">
+                            <option value="Date">20 july 2022</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item third">
+
+                        <label for="Time">Time</label>
+                        <select name="Locations" id="Locations">
+                            <option value="Time">07.00</option>
+                        </select>
+                    </div>
+              </div>
+
+              </div>
+
+
+        
+
+            </section>
+
+    
+            <section class="catalogue-car">
+    
+            <div class="recommendation-car-rent">
+    
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>All New Rush</p>
+                        <i class=" red-love fa-solid fa-heart"></i>
+                    </div>
+                    <p class="car-class">Sport</p>
+    
+                    <div class="car-flex">
+                    <img src="assets/images/car5.png" alt="car image">
+    
+                    <div class="car-content">
+    
+                        <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                        <p><i class="fa-solid fa-circle-radiation"></i>
+                            Manual</p>
+                        <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+    
+                    </div>
+                </div>
+    
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                  
+                    </div>
+    
+                </div>
+    
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>CR - V</p>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <p class="car-class">Sport</p>
+    
+                    <div class="car-flex">
+                        <img src="assets/images/car6.png" alt="car image">
+        
+                        <div class="car-content">
+        
+                            <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                            <p><i class="fa-solid fa-circle-radiation"></i>
+                                Manual</p>
+                            <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+        
+                        </div>
+                    </div>
+    
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                        
+                    </div>
+    
+                </div>
+    
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>All New Terios</p>
+                        <i class="red-love fa-solid fa-heart"></i>
+                    </div>
+                    <p class="car-class">Sport</p>
+    
+                    <div class="car-flex">
+                        <img src="assets/images/car7.png" alt="car image">
+        
+                        <div class="car-content">
+        
+                            <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                            <p><i class="fa-solid fa-circle-radiation"></i>
+                                Manual</p>
+                            <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+        
+                        </div>
+                    </div>
+    
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                   
+                    </div>
+    
+                </div>
+    
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>CR - V</p>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <p class="car-class">Sport</p>
+    
+    
+                  <div class="car-flex">
+                    <img src="assets/images/car8.png" alt="car image">
+    
+                    <div class="car-content">
+    
+                        <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                        <p><i class="fa-solid fa-circle-radiation"></i>
+                            Manual</p>
+                        <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+    
+                    </div>
+                </div>
+    
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                    </div>
+    
+                </div>
+    
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>MG ZX Exclusice</p>
+                        <i class="red-love fa-solid fa-heart"></i>
+                    </div>
+                    <p class="car-class">Sport</p>
+    
+    
+                   <div class="car-flex">
+                    <img src="assets/images/car9.png" alt="car image">
+    
+                    <div class="car-content">
+    
+                        <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                        <p><i class="fa-solid fa-circle-radiation"></i>
+                            Manual</p>
+                        <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+    
+                    </div>
+                </div>
+    
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                    </div>
+    
+                </div>
+    
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>New MG ZS</p>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <p class="car-class">Sport</p>
+    
+                    <div class="car-flex">
+                        <img src="assets/images/car10.png" alt="car image">
+        
+                        <div class="car-content">
+        
+                            <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                            <p><i class="fa-solid fa-circle-radiation"></i>
+                                Manual</p>
+                            <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+        
+                        </div>
+                    </div>
+    
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                    </div>
+    
+                </div>
+    
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>MG ZX Excite</p>
+                        <i class="red-love fa-solid fa-heart"></i>
+                    </div>
+                    <p class="car-class">Sport</p>
+    
+    
+                   <div class="car-flex">
+                    <img src="assets/images/car11.png" alt="car image">
+    
+                    <div class="car-content">
+    
+                        <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                        <p><i class="fa-solid fa-circle-radiation"></i>
+                            Manual</p>
+                        <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+    
+                    </div>
+                </div>
+    
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                    </div>
+    
+                </div>
+    
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>New MG ZS</p>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+    
+                    <p class="car-class">Sport</p>
+    
+    
+                    <div class="car-flex">
+                    <img src="assets/images/car12.png" alt="car image">
+    
+                    <div class="car-content">
+    
+                        <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                        <p><i class="fa-solid fa-circle-radiation"></i>
+                            Manual</p>
+                        <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+    
+                    </div>
+                </div>
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                     
+                    </div>
+    
+                </div>
+
+                <div class="car-item">
+    
+                    <div class="car-love">
+                        <p>Nissan GT - R</p>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                        <p class="car-class">Sport</p>
+                        <img src="assets/images/car4.png" alt="car image">
+                    </div>
+    
+                    <div class="car-content">
+    
+                        <p><i class="fa-solid fa-gas-pump"></i>90L</p>
+                        <p><i class="fa-solid fa-circle-radiation"></i>
+                            Manual</p>
+                        <p><i class="fa-solid fa-user-group"></i> 2 People</p>
+    
+                    </div>
+    
+                    <div class="car-item-footer">
+    
+                        <p>$99.00/<span>day</span></p>
+                        <button>Rent Now</button>
+                      
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="show-more">
+    
                 <div></div>
+    
+                <div><button>Show more car</button></div>
+    
+                <div>
+                    <p><a href="#">120 car</a></p>
+                </div>
+    
+             </div>
+       
+          </section>
 
-                <div class="footer-content">
-                    <div class="footer-about">
+       </section>
+
+
+    </section>
+
+
+
+
+    <footer>
+
+        <div class="footer-head">
+            <div class="footer-logo">
+
+                <h1>MORENT</h1>
+                <p>Our vision is to provide convenience and help increase
+                    your sales business.</p>
+            </div>
+
+            <div></div>
+
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div>
                         <h3>About</h3>
                         <p><a href="#">How it works</a></p>
                         <p><a href="#">Featured</a></p>
                         <p><a href="#">Patnership</a></p>
                         <p><a href="#">Bussiness Relation</a></p>
                     </div>
+                </div>
 
-                    <div class="footer-community">
+                <div class="footer-community">
+                    <div>
                         <h3>Community</h3>
                         <p><a href="#">Events</a></p>
                         <p><a href="#">Blog</a></p>
                         <p><a href="#">Podcast</a></p>
                         <p><a href="#">Invite a friend</a></p>
                     </div>
+                </div>
 
-                    <div class="footer-socials">
+                <div class="footer-socials">
+                    <div>
                         <h3>Socials</h3>
                         <p><a href="#">Discord</a></p>
                         <p><a href="#">Instagram</a></p>
                         <p><a href="#">Twitter</a></p>
                         <p><a href="#">Facebook</a></p>
                     </div>
-
                 </div>
 
             </div>
 
-            <div class="footer-border"></div>
+        </div>
 
-            <div class="footer-last">
-                <div>
-                    <p><i class="fa-regular fa-copyright"></i> <span
-                            id="copyrightYear"></span> MORENT. All Rights
-                        reserved</p>
-                </div>
+        <div class="footer-border"></div>
 
-                <div class="rules-policy">
-                    <p><a href="#">Privacy & Policy</a></p>
-                    <p><a href="#">Terms and Conditions</a></p>
-                </div>
-
+        <div class="footer-last">
+            <div class="copyright">
+                <p><i class="fa-regular fa-copyright"></i> <span id="copyrightYear"></span> MORENT. All Rights
+                    reserved</p>
             </div>
-        </footer> -->
 
-    </body>
+            <div class="rules-policy">
+                <p><a href="#">Privacy & Policy</a></p>
+                <p><a href="#">Terms and Conditions</a></p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+</body>
+
 </html>

@@ -60,6 +60,7 @@
             font-size: 14px;
             font-weight: $secondary-font-weight;
             white-space: nowrap;
+            margin-right: auto;
 
 
             i {
@@ -113,7 +114,8 @@
 
             @media (max-width:768px) {
                 // display: none;
-                padding: 10px 16px;
+                padding: 10px;
+                white-space: nowrap;
 
             }
 
@@ -150,6 +152,7 @@
             flex-direction: column;
             justify-content: center;
             gap: 0.2rem;
+            margin-right: auto;
         }
     
     }

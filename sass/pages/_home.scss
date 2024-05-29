@@ -232,3 +232,108 @@
 }
 }
 }
+
+// category car rent
+
+
+
+
+
+.content{
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+
+    @media (max-width:768px){
+        // justify-content: center;
+    }
+    
+
+    aside{
+        width: 15%;
+        padding: 24px 0 0 24px;
+
+
+        @media (max-width:768px){
+            display: none;
+        }
+    }
+
+    .category{
+       width: 85%;
+
+       @media (max-width:768px){
+        width: auto;
+       }
+
+
+        .address{
+ 
+        position: relative;
+        padding: 24px;    
+        // align-items: flex-start;
+
+        @media (max-width:768px){
+          width: auto;
+        }
+
+
+
+        .location{
+            position: relative;
+            padding: 24px;
+            z-index: -1;
+
+
+        @media (max-width:768px){
+            padding:18px 16px;
+        }
+           
+           
+           
+            .radio-input{
+                display: flex;
+                gap: 0.3rem;
+            }
+
+
+        }
+
+        .switch{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+
+
+            @media (max-width:768px){
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+            }
+        }
+    }
+
+
+   
+
+        .catalogue-car{
+          padding: 0 24px 64px 24px;
+
+
+
+
+        .recommendation-car-rent{
+            grid-template-columns: auto auto auto;
+
+
+
+            @media (max-width:768px){
+                grid-template-columns: auto;
+                padding-bottom: 48px;
+            }
+        }
+    }
+
+    }
+}
