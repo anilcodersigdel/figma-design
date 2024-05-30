@@ -345,7 +345,7 @@ select {
 
 .hero {
   position: relative;
-  padding: 32px 64px 0 64px;
+  padding: 32px 64px 64px 64px;
   display: flex;
   gap: 24px;
 }
@@ -361,10 +361,11 @@ select {
 }
 .hero .hero-section.first {
   min-height: 243px;
-  width: 50%;
   background: rgb(84, 166, 255) url("/assets/images/BG.png");
   background-repeat: no-repeat;
   border-radius: 10px;
+  background-size: contain;
+  background-position: bottom;
 }
 @media (max-width: 768px) {
   .hero .hero-section.first {
@@ -372,15 +373,15 @@ select {
     background-position: bottom;
     min-height: 243px;
     min-width: 100%;
-    aspect-ratio: 157/90;
   }
 }
 .hero .hero-section.second {
   min-height: 360px;
-  width: 50%;
   background: rgb(53, 99, 233) url("/assets/images/BG2.png");
   background-repeat: no-repeat;
   border-radius: 10px;
+  background-size: contain;
+  background-position: bottom;
 }
 @media (max-width: 768px) {
   .hero .hero-section.second {
@@ -530,7 +531,11 @@ select {
 }
 .content {
   display: flex;
-  justify-content: center;
+}
+@media (max-width: 768px) {
+  .content {
+    justify-content: center;
+  }
 }
 .content aside {
   width: 15%;
@@ -546,16 +551,18 @@ select {
 }
 @media (max-width: 768px) {
   .content .category {
-    width: auto;
+    width: 100%;
   }
 }
 .content .category .address {
   position: relative;
   padding: 24px;
+  gap: 2.8rem;
 }
 @media (max-width: 768px) {
   .content .category .address {
     width: auto;
+    justify-content: center;
   }
 }
 .content .category .address .location {
@@ -598,6 +605,13 @@ select {
   }
 }
 
+.content aside {
+  width: 20%;
+}
+.content .hero {
+  padding: 32px 32px 32px 32px;
+  width: 80%;
+}
 .catalogue-car {
   padding: 32px 64px 64px 64px;
 }
@@ -716,6 +730,9 @@ button {
 .car-item .car-class {
   color: rgb(144, 163, 191);
   font-weight: 700;
+}
+.car-item .yellow {
+  color: rgb(251, 173, 57);
 }
 .car-item .car-content {
   display: flex;
