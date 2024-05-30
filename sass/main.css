@@ -354,13 +354,8 @@ select {
     padding: 32px 24px 0 24px;
   }
 }
-@media (max-width: 468px) {
-  .hero {
-    padding: 32px 15px 0 24px;
-  }
-}
 .hero .hero-section.first {
-  min-height: 243px;
+  min-height: 360px;
   background: rgb(84, 166, 255) url("/assets/images/BG.png");
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -609,9 +604,35 @@ select {
   width: 20%;
 }
 .content .hero {
-  padding: 32px 32px 32px 32px;
+  padding: 32px;
   width: 80%;
+  display: flex;
+  flex-direction: column;
 }
+.content .hero > .hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.content .hero > .hero-section .second .title {
+  padding: 0;
+}
+.content .hero > .hero-section .third .car-item .car-class span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.content .hero > .hero-section .third .car-item .Nissan-car {
+  font-size: 20px;
+  padding: 32px 0;
+  font-weight: 400;
+  color: rgb(89, 103, 128);
+}
+.content .hero > .hero-section .third .car-item .car-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 16px;
+}
+
 .catalogue-car {
   padding: 32px 64px 64px 64px;
 }

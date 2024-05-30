@@ -2,22 +2,20 @@
 @import '../abstracts/mixins';
 
 .hero {
-   position: relative;
+    position: relative;
     padding: 32px 64px 64px 64px;
     display: flex;
     gap: 24px;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         padding: 32px 24px 0 24px;
     }
-    @media (max-width:468px){
-        padding: 32px 15px 0 24px;
-    }
 
 
-    .hero-section.first{  
-   
-        min-height: 243px;
+
+    .hero-section.first {
+
+        min-height: 360px;
         // width: 50%;      
         background: $secondary-color url("/assets/images/BG.png");
         background-repeat: no-repeat;
@@ -26,7 +24,7 @@
         background-position: bottom;
 
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             background-size: contain;
             background-position: bottom;
             min-height: 243px;
@@ -44,24 +42,24 @@
         @include radius;
         background-size: contain;
         background-position: bottom;
-    
 
-        @media (max-width: 768px){
+
+        @media (max-width: 768px) {
             display: none;
         }
     }
 
-    
+
 
     .hero-content {
         color: white;
         padding: 16px 0 0 24px;
 
-        .title{
-            padding-right: 200px;   
+        .title {
+            padding-right: 200px;
 
 
-            @media (max-width: 768px){
+            @media (max-width: 768px) {
                 padding-right: 71px;
             }
 
@@ -74,12 +72,13 @@
 
             .btn1 {
 
-                @media (max-width: 768px){
+                @media (max-width: 768px) {
                     position: relative;
                     padding: 10px 17px;
                     top: 50%;
-                 
+
                 }
+
                 background-color: $primary-color;
             }
 
@@ -88,11 +87,13 @@
             }
         }
 
+
+
     }
 
 
 
-    
+
 
 }
 
@@ -103,7 +104,7 @@
 
 
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         flex-direction: column;
         gap: 32px;
         padding: 32px 24px 0 24px;
@@ -111,12 +112,12 @@
 
 
     .location {
-       
+
         @include radius;
         padding: 24px 48px;
         background-color: $content-background-color;
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             // width: 327px;
             padding: 16px;
         }
@@ -127,7 +128,7 @@
             font-weight: $secondary-font-weight;
         }
 
-         .location-form{
+        .location-form {
             // @include flex-between;
             display: flex;
             gap: 24px;
@@ -156,16 +157,16 @@
                 }
             }
 
-            @media (max-width: 768px){
+            @media (max-width: 768px) {
                 display: none;
             }
-      
+
 
         }
 
-              
-        @media (min-width:768px){
-            .location-form-mobile{
+
+        @media (min-width:768px) {
+            .location-form-mobile {
                 display: none;
             }
         }
@@ -173,19 +174,19 @@
 
     }
 
-    .switch{
+    .switch {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50% , -50%);
+        transform: translate(-50%, -50%);
 
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             top: 57%;
             left: 50%;
-            transform: translate(-50% , -50%);
+            transform: translate(-50%, -50%);
         }
-        
+
         .arrow-btn {
             @include radius;
             background-color: $primary-color;
@@ -203,172 +204,207 @@
 
 
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    .address{
+    .address {
         justify-content: center;
 
-   
-
-.location-form-mobile{
-    position: relative;
-    display: flex;
-    gap: 20px;
 
 
-    .form-item{
-     padding-top: 10px;
-    border-right: 1px solid $border-color;
+        .location-form-mobile {
+            position: relative;
+            display: flex;
+            gap: 20px;
 
-    &.third{
-        border-right: none;
-    }
 
-        label{
-            font-weight: 600;
+            .form-item {
+                padding-top: 10px;
+                border-right: 1px solid $border-color;
 
+                &.third {
+                    border-right: none;
+                }
+
+                label {
+                    font-weight: 600;
+
+                }
+
+                select {
+                    font-weight: 400;
+                    color: rgba(144, 163, 191, 1);
+                }
+            }
         }
-        select{
-            font-weight: 400;
-            color: rgba(144, 163, 191, 1);
-        }
     }
-}
-}
 }
 
 // category car rent
 
-
-
-
-
-.content{
+.content {
     display: flex;
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
         justify-content: center;
     }
-    
 
-    aside{
+
+    aside {
         width: 15%;
         padding: 24px 0 0 24px;
 
 
-        @media (max-width:768px){
+        @media (max-width:768px) {
             display: none;
         }
     }
 
-    .category{
-       width: 85%;
+    .category {
+        width: 85%;
 
-       @media (max-width:768px){
-        width: 100%;
-       }
-
-
-        .address{
- 
-        position: relative;
-        padding: 24px;    
-        gap: 2.8rem;
-
-        @media (max-width:768px){
-          width: auto;
-          justify-content: center;
+        @media (max-width:768px) {
+            width: 100%;
         }
 
 
+        .address {
 
-        .location{
             position: relative;
             padding: 24px;
-            z-index: -1;
+            gap: 2.8rem;
 
-
-        @media (max-width:768px){
-            padding:18px 16px;
-        }
-           
-           
-           
-            .radio-input{
-                display: flex;
-                gap: 0.3rem;
+            @media (max-width:768px) {
+                width: auto;
+                justify-content: center;
             }
 
 
-        }
 
-        .switch{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50% , -50%);
+            .location {
+                position: relative;
+                padding: 24px;
+                z-index: -1;
 
 
-            @media (max-width:768px){
+                @media (max-width:768px) {
+                    padding: 18px 16px;
+                }
+
+
+
+                .radio-input {
+                    display: flex;
+                    gap: 0.3rem;
+                }
+
+
+            }
+
+            .switch {
+                position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50% , -50%);
+                transform: translate(-50%, -50%);
+
+
+                @media (max-width:768px) {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
         }
-    }
-
-
-   
-
-        .catalogue-car{
-          padding: 0 24px 64px 24px;
 
 
 
 
-        .recommendation-car-rent{
-            grid-template-columns: auto auto auto;
+        .catalogue-car {
+            padding: 0 24px 64px 24px;
 
 
 
-            @media (max-width:768px){
-                grid-template-columns: auto;
-                padding-bottom: 48px;
+
+            .recommendation-car-rent {
+                grid-template-columns: auto auto auto;
+
+
+
+                @media (max-width:768px) {
+                    grid-template-columns: auto;
+                    padding-bottom: 48px;
+                }
             }
         }
-    }
 
     }
 }
+
+
+
 
 
 // detail car rent
 
 
 
-.content{
+.content {
 
-    aside{
-
+    aside {
         width: 20%;
-
     }
 
-.hero{
-    padding: 32px 32px 32px 32px;
-
-    width: 80%;
-
-
-    .hero-section.second{
-        // padding: 24px;
-        // width: 100%;
-        // height: 50%;
+    .hero{
+        padding: 32px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
 
 
-     
+        & > .hero-section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem; 
+
+
+            & .second{
+
+                .title{
+                    padding: 0;
+                }
+            }
+
+            & .third{
+
+                .car-item{
+
+                    .car-class{
+
+                        span{
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+
+
+                    }
+
+                    .Nissan-car{
+                        font-size: 20px;
+                        padding: 32px 0;
+                        font-weight: 400;
+                        color: rgba(89, 103, 128, 1);
+                    }
+
+                    .car-content{
+                        display: grid;
+                        grid-template-columns: auto auto auto auto;
+                        gap: 16px;
+                    }
+                }
+            }
+          
+        }
     }
 
-}
+   
 
 }
