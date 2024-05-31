@@ -3,7 +3,7 @@
 
 .hero {
     position: relative;
-    padding: 32px 64px 64px 64px;
+    padding: 32px 64px 0 64px;
     display: flex;
     gap: 24px;
 
@@ -16,7 +16,6 @@
     .hero-section.first {
 
         min-height: 360px;
-        // width: 50%;      
         background: $secondary-color url("/assets/images/BG.png");
         background-repeat: no-repeat;
         @include radius;
@@ -36,7 +35,6 @@
 
     .hero-section.second {
         min-height: 360px;
-        // width: 50%;     
         background: $primary-color url("/assets/images/BG2.png");
         background-repeat: no-repeat;
         @include radius;
@@ -98,9 +96,11 @@
 }
 
 .address {
-    position: relative;
     padding: 32px 64px 0 64px;
-    @include flex-between;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    // @include flex-between;
 
 
 
@@ -112,13 +112,12 @@
 
 
     .location {
-
         @include radius;
         padding: 24px 48px;
         background-color: $content-background-color;
+        flex-grow: 1;
 
         @media (max-width: 768px) {
-            // width: 327px;
             padding: 16px;
         }
 
@@ -129,7 +128,6 @@
         }
 
         .location-form {
-            // @include flex-between;
             display: flex;
             gap: 24px;
             padding-top: 16px;
@@ -175,11 +173,6 @@
     }
 
     .switch {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
 
         @media (max-width: 768px) {
             top: 57%;
@@ -250,7 +243,7 @@
 
 
     aside {
-        width: 15%;
+        // width: 15%;
         padding: 24px 0 0 24px;
 
 
@@ -260,7 +253,7 @@
     }
 
     .category {
-        width: 85%;
+        // width: 85%;
 
         @media (max-width:768px) {
             width: 100%;
@@ -268,10 +261,10 @@
 
 
         .address {
-
-            position: relative;
+            // gap: 0rem;
             padding: 24px;
-            gap: 2.8rem;
+           
+      
 
             @media (max-width:768px) {
                 width: auto;
@@ -281,7 +274,6 @@
 
 
             .location {
-                position: relative;
                 padding: 24px;
                 z-index: -1;
 
@@ -301,10 +293,6 @@
             }
 
             .switch {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
 
 
                 @media (max-width:768px) {
@@ -421,7 +409,7 @@
 
 
 
-        .reviews{
+        .reviews {
             background-color: $content-background-color;
             padding: 24px;
         }

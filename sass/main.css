@@ -345,7 +345,7 @@ select {
 
 .hero {
   position: relative;
-  padding: 32px 64px 64px 64px;
+  padding: 32px 64px 0 64px;
   display: flex;
   gap: 24px;
 }
@@ -413,11 +413,10 @@ select {
 }
 
 .address {
-  position: relative;
   padding: 32px 64px 0 64px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 @media (max-width: 768px) {
   .address {
@@ -430,6 +429,7 @@ select {
   border-radius: 10px;
   padding: 24px 48px;
   background-color: rgb(255, 255, 255);
+  flex-grow: 1;
 }
 @media (max-width: 768px) {
   .address .location {
@@ -474,12 +474,6 @@ select {
   .address .location .location-form-mobile {
     display: none;
   }
-}
-.address .switch {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 @media (max-width: 768px) {
   .address .switch {
@@ -533,7 +527,6 @@ select {
   }
 }
 .content aside {
-  width: 15%;
   padding: 24px 0 0 24px;
 }
 @media (max-width: 768px) {
@@ -541,18 +534,13 @@ select {
     display: none;
   }
 }
-.content .category {
-  width: 85%;
-}
 @media (max-width: 768px) {
   .content .category {
     width: 100%;
   }
 }
 .content .category .address {
-  position: relative;
   padding: 24px;
-  gap: 2.8rem;
 }
 @media (max-width: 768px) {
   .content .category .address {
@@ -561,7 +549,6 @@ select {
   }
 }
 .content .category .address .location {
-  position: relative;
   padding: 24px;
   z-index: -1;
 }
@@ -573,12 +560,6 @@ select {
 .content .category .address .location .radio-input {
   display: flex;
   gap: 0.3rem;
-}
-.content .category .address .switch {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 @media (max-width: 768px) {
   .content .category .address .switch {
