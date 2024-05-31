@@ -353,33 +353,33 @@
         width: 20%;
     }
 
-    .hero{
+    .hero {
         padding: 32px;
         width: 80%;
         display: flex;
         flex-direction: column;
 
 
-        & > .hero-section{
+        &>.hero-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem; 
+            gap: 2rem;
 
 
-            & .second{
+            & .second {
 
-                .title{
+                .title {
                     padding: 0;
                 }
             }
 
-            & .third{
+            & .third {
 
-                .car-item{
+                .car-item {
 
-                    .car-class{
+                    .car-class {
 
-                        span{
+                        span {
                             font-size: 14px;
                             font-weight: 500;
                         }
@@ -387,24 +387,46 @@
 
                     }
 
-                    .Nissan-car{
+                    .Nissan-car {
                         font-size: 20px;
                         padding: 32px 0;
                         font-weight: 400;
-                        color: rgba(89, 103, 128, 1);
+                        color: $text-color
                     }
 
-                    .car-content{
+                    .car-content {
                         display: grid;
                         grid-template-columns: auto auto auto auto;
                         gap: 16px;
+
+
+                        .p-y {
+                            color: $text-color;
+                        }
+
+                        .p-x {
+                            color: $secondary-text-color;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .crosstext {
+                        text-decoration: line-through;
+                        color: $secondary-text-color;
                     }
                 }
             }
-          
+
+        }
+
+
+
+        .reviews{
+            background-color: $content-background-color;
+            padding: 24px;
         }
     }
 
-   
+
 
 }
