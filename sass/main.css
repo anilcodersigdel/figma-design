@@ -540,6 +540,7 @@ select {
   }
 }
 .content .category .address {
+  gap: 0rem;
   padding: 24px;
 }
 @media (max-width: 768px) {
@@ -592,41 +593,70 @@ select {
 }
 .content .hero > .hero-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-.content .hero > .hero-section .second .title {
+.content .hero > .hero-section .first-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.content .hero > .hero-section .first-col .second {
+  min-height: 300px;
+}
+.content .hero > .hero-section .first-col .second .title {
   padding: 0;
 }
-.content .hero > .hero-section .third .car-item .car-class span {
+.content .hero > .hero-section .first-col .view-car {
+  display: flex;
+  gap: 24px;
+}
+.content .hero > .hero-section .first-col .view-car .view-1 {
+  border: 2px solid rgb(53, 99, 233);
+  padding: 8px;
+  border-radius: 10px;
+}
+.content .hero > .hero-section .second-col {
+  display: flex;
+  align-items: stretch;
+}
+.content .hero > .hero-section .second-col .car-item .car-class span {
   font-size: 14px;
   font-weight: 500;
 }
-.content .hero > .hero-section .third .car-item .Nissan-car {
+.content .hero > .hero-section .second-col .car-item .Nissan-car {
   font-size: 20px;
-  padding: 32px 0;
+  padding: 24px 0;
   font-weight: 400;
   color: rgb(89, 103, 128);
 }
-.content .hero > .hero-section .third .car-item .car-content {
+.content .hero > .hero-section .second-col .car-item .car-content {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  gap: 16px;
+  gap: 20px;
 }
-.content .hero > .hero-section .third .car-item .car-content .p-y {
+.content .hero > .hero-section .second-col .car-item .car-content .p-y {
   color: rgb(89, 103, 128);
 }
-.content .hero > .hero-section .third .car-item .car-content .p-x {
+.content .hero > .hero-section .second-col .car-item .car-content .p-x {
   color: rgb(144, 163, 191);
   font-weight: 400;
 }
-.content .hero > .hero-section .third .car-item .crosstext {
+.content .hero > .hero-section .second-col .car-item .car-item-footer {
+  align-items: center;
+  padding-top: 60px;
+}
+.content .hero > .hero-section .second-col .car-item .crosstext {
   text-decoration: line-through;
   color: rgb(144, 163, 191);
 }
 .content .hero .reviews {
   background-color: rgb(255, 255, 255);
   padding: 24px;
+}
+.content .hero .reviews .total-reviews {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .catalogue-car {
