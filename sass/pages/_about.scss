@@ -76,3 +76,133 @@
 
 
 
+   // payment page
+
+   .payment-content{
+    padding: 32px;
+    grid-gap: 32px;
+    display: grid;
+    grid-template-columns: 2fr 1.25fr;
+    align-items: baseline;
+   
+    .payment{
+        display: flex; 
+        flex-direction: column; 
+        gap: 32px;
+        // width: 65%;
+
+    .billing-info{
+        @include radius;
+        padding: 24px;      
+        background-color: $content-background-color;
+
+        .bill{
+            @include content2;
+            line-height: 30px;
+        }
+        .wizard-1{
+            color: $icon-color;
+            @include flex-between;
+        }
+
+        form{
+            padding-top: 32px;           
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 24px;
+
+            .form-item{                       
+            display: grid;
+            grid-template-columns: auto;
+            gap: 16px;
+            
+            label{
+                font-size: 16px;
+                font-weight: 600;
+               color: rgba(26, 32, 44, 1);
+            }
+            input{
+                font-weight: 500;
+                line-height: 21px;
+                border: 1px solid rgba(246, 247, 249, 1);
+                @include radius;
+                padding: 16px 0 16px 32px;
+
+                &::placeholder{
+                    color: $icon-color;
+                }
+            }
+            }
+        }
+    }
+}
+    .rental-summary{
+        @include radius;
+        // width: 35%;
+        padding: 24px;
+        background-color: $content-background-color;
+
+        .rental{
+            @include content2;
+            line-height: 30px;
+        }
+        .rental-sum{
+            line-height: 21px;
+            color: $icon-color;
+            padding-top: 4px;
+        }
+
+        .car-review{
+            display: flex;
+             align-items: center;
+              gap: 16px;
+              padding: 32px 0;
+
+
+              .nissan-review{
+             
+
+                .yellow{
+                    color:$star-icon-color;
+                }
+                span{
+                    font-size: 14px;
+                    color: $text-color;
+                    font-weight: 500;
+                }
+              }
+        }
+
+        .line-border{
+            border: 1px solid rgba(195, 212, 233, 0.4);
+        }
+        .subtotal{
+            display: flex; 
+            justify-content: space-between;
+            padding: 32px 0 24px 0;
+            color: $icon-color;
+            font-weight: 500;
+
+            .price{
+                @include content1;
+                color: rgba(26, 32, 44, 1);
+            }
+        }
+
+        .tax{
+            display: flex; 
+            justify-content: space-between;
+            padding:0 0 24px 0;
+            color: $icon-color;
+            font-weight: 500;
+
+            .price{
+                @include content1;
+                color: rgba(26, 32, 44, 1);
+            }
+
+
+        }
+    
+    }
+   }

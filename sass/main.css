@@ -586,10 +586,11 @@ select {
   width: 20%;
 }
 .content .hero {
-  padding: 32px;
+  padding: 32px 32px 0 32px;
   width: 80%;
   display: flex;
   flex-direction: column;
+  gap: 32px;
 }
 .content .hero > .hero-section {
   display: grid;
@@ -609,7 +610,7 @@ select {
 }
 .content .hero > .hero-section .first-col .view-car {
   display: flex;
-  gap: 24px;
+  justify-content: space-between;
 }
 .content .hero > .hero-section .first-col .view-car .view-1 {
   border: 2px solid rgb(53, 99, 233);
@@ -625,7 +626,7 @@ select {
   font-weight: 500;
 }
 .content .hero > .hero-section .second-col .car-item .Nissan-car {
-  font-size: 20px;
+  font-size: 18px;
   padding: 24px 0;
   font-weight: 400;
   color: rgb(89, 103, 128);
@@ -646,6 +647,9 @@ select {
   align-items: center;
   padding-top: 60px;
 }
+.content .hero > .hero-section .second-col .car-item .car-item-footer button {
+  padding: 16px 32px;
+}
 .content .hero > .hero-section .second-col .car-item .crosstext {
   text-decoration: line-through;
   color: rgb(144, 163, 191);
@@ -653,10 +657,81 @@ select {
 .content .hero .reviews {
   background-color: rgb(255, 255, 255);
   padding: 24px;
+  border-radius: 10px;
 }
 .content .hero .reviews .total-reviews {
   font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 32px;
+}
+.content .hero .reviews .total-reviews button {
+  padding: 6px 12px;
+  background-color: rgb(53, 99, 233);
+}
+.content .hero .reviews img {
+  height: 56px;
+  width: 56px;
+}
+.content .hero .reviews .reviews-1 {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 24px;
+}
+.content .hero .reviews .reviews-2 {
+  display: flex;
+  gap: 1rem;
+}
+.content .hero .reviews .reviews-content .Name-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.content .hero .reviews .reviews-content .Name-date .name {
+  font-size: 20px;
   font-weight: 700;
+}
+.content .hero .reviews .reviews-content .Name-date .date {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(144, 163, 191);
+}
+.content .hero .reviews .reviews-content .position-star {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.content .hero .reviews .reviews-content .position-star .position {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(144, 163, 191);
+}
+.content .hero .reviews .reviews-content .position-star .yellow {
+  color: rgb(251, 173, 57);
+}
+.content .hero .reviews .reviews-content .ceo-message {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(89, 103, 128);
+}
+.content .hero .reviews .review-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 34px;
+}
+.content .hero .catalogue-car {
+  padding: 0;
+}
+.content .hero .catalogue-car .popular-car-rent {
+  grid-template-columns: auto auto auto;
+  padding: 32px 0;
 }
 
 .catalogue-car {
@@ -717,6 +792,120 @@ select {
   .catalogue-car .show-more {
     padding-top: 48px;
   }
+}
+
+.payment-content {
+  padding: 32px;
+  grid-gap: 32px;
+  display: grid;
+  grid-template-columns: 2fr 1.25fr;
+  align-items: baseline;
+}
+.payment-content .payment {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.payment-content .payment .billing-info {
+  border-radius: 10px;
+  padding: 24px;
+  background-color: rgb(255, 255, 255);
+}
+.payment-content .payment .billing-info .bill {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.payment-content .payment .billing-info .wizard-1 {
+  color: rgb(144, 163, 191);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment-content .payment .billing-info form {
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 24px;
+}
+.payment-content .payment .billing-info form .form-item {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 16px;
+}
+.payment-content .payment .billing-info form .form-item label {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(26, 32, 44);
+}
+.payment-content .payment .billing-info form .form-item input {
+  font-weight: 500;
+  line-height: 21px;
+  border: 1px solid rgb(246, 247, 249);
+  border-radius: 10px;
+  padding: 16px 0 16px 32px;
+}
+.payment-content .payment .billing-info form .form-item input::-moz-placeholder {
+  color: rgb(144, 163, 191);
+}
+.payment-content .payment .billing-info form .form-item input::placeholder {
+  color: rgb(144, 163, 191);
+}
+.payment-content .rental-summary {
+  border-radius: 10px;
+  padding: 24px;
+  background-color: rgb(255, 255, 255);
+}
+.payment-content .rental-summary .rental {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.payment-content .rental-summary .rental-sum {
+  line-height: 21px;
+  color: rgb(144, 163, 191);
+  padding-top: 4px;
+}
+.payment-content .rental-summary .car-review {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 0;
+}
+.payment-content .rental-summary .car-review .nissan-review .yellow {
+  color: rgb(251, 173, 57);
+}
+.payment-content .rental-summary .car-review .nissan-review span {
+  font-size: 14px;
+  color: rgb(89, 103, 128);
+  font-weight: 500;
+}
+.payment-content .rental-summary .line-border {
+  border: 1px solid rgba(195, 212, 233, 0.4);
+}
+.payment-content .rental-summary .subtotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0 24px 0;
+  color: rgb(144, 163, 191);
+  font-weight: 500;
+}
+.payment-content .rental-summary .subtotal .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(26, 32, 44);
+}
+.payment-content .rental-summary .tax {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 24px 0;
+  color: rgb(144, 163, 191);
+  font-weight: 500;
+}
+.payment-content .rental-summary .tax .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(26, 32, 44);
 }
 
 button {

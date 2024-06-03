@@ -341,10 +341,11 @@
     }
 
     .hero {
-        padding: 32px;
+        padding: 32px 32px  0 32px;
         width: 80%;
         display: flex;
         flex-direction: column;
+     gap: 32px;
 
 
         &>.hero-section {
@@ -368,8 +369,9 @@
 
             .view-car{
                 display: flex;
-                gap: 24px;
+                // gap: 24px;
 
+                justify-content: space-between;
                 .view-1{
                     border: 2px solid $primary-color;
                     padding: 8px;
@@ -396,7 +398,7 @@
                     }
 
                     .Nissan-car {
-                        font-size: 20px;
+                        font-size: 18px;
                         padding: 24px 0;
                         font-weight: 400;
                         color: $text-color;
@@ -421,6 +423,11 @@
                     .car-item-footer{
                         align-items: center;
                         padding-top: 60px;
+                        
+
+                        button{
+                            padding: 16px 32px;
+                        }
                     }
 
                     .crosstext {
@@ -437,9 +444,99 @@
         .reviews {
             background-color: $content-background-color;
             padding: 24px;
+            @include radius;
 
             .total-reviews{
                 @include content1;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding-bottom: 32px;
+                
+                button{
+                    padding: 6px 12px;
+                    background-color: $primary-color;
+                }
+            }
+
+         img{
+            height: 56px;
+            width: 56px;
+         }
+
+
+         .reviews-1{
+            display: flex;
+             gap: 1rem;
+             padding-bottom: 24px;
+         }
+
+        .reviews-2{
+            display: flex; 
+            gap: 1rem;
+        }
+
+        .reviews-content{
+            
+            .Name-date{
+                display: flex;
+                 justify-content: space-between;
+                 margin-bottom: 8px;
+
+                 .name{
+                    @include content2;
+                 }
+                 .date{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $icon-color;
+                 }
+            }
+
+            .position-star{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                .position{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $icon-color;
+                }
+
+                .yellow{
+                    color: $star-icon-color;
+                }
+            }
+
+            .ceo-message{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $text-color;
+            }
+        }
+           
+
+        .review-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            @include content1;
+            padding-top: 34px;
+        }
+
+        }
+
+
+
+        .catalogue-car{
+            padding: 0;
+
+            .popular-car-rent{
+                grid-template-columns: auto auto auto;
+                padding:32px 0;
             }
         }
     }
