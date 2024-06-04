@@ -82,7 +82,7 @@
     padding: 32px;
     grid-gap: 32px;
     display: grid;
-    grid-template-columns: 2fr 1.25fr;
+    grid-template-columns: 2fr 1.2fr;
     align-items: baseline;
    
     .payment{
@@ -91,7 +91,7 @@
         gap: 32px;
         // width: 65%;
 
-    .billing-info{
+    .info{
         @include radius;
         padding: 24px;      
         background-color: $content-background-color;
@@ -100,9 +100,11 @@
             @include content2;
             line-height: 30px;
         }
-        .wizard-1{
+        .wizard{
             color: $icon-color;
             @include flex-between;
+
+
         }
 
         form{
@@ -127,18 +129,204 @@
                 border: 1px solid rgba(246, 247, 249, 1);
                 @include radius;
                 padding: 16px 0 16px 32px;
+                background-color: $background-color;
 
                 &::placeholder{
                     color: $icon-color;
                 }
             }
             }
+        }   
+        
+        
+        &.rental{
+            .Pick-Up{
+                padding-top: 32px;
+                font-weight: 600;
+            }
+            .Drop-Off{
+                padding-top: 32px;
+                font-weight: 600;
+            }
+            form{
+                padding-top: 24px;
+                .form-item{
+                    select{
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 21px;
+                        border: 1px solid rgba(246, 247, 249, 1);
+                        @include radius;
+                        padding: 16px 0 16px 32px;
+                        background-color: $background-color;
+        
+                        &::placeholder{
+                            font-size: 14px;
+                            color: $icon-color;
+                        }
+                    }
+                }
+            }
+
+        }
+    
+
+        &.Payment{
+
+            .credit-card{
+                 background-color: $background-color;
+                 padding: 24px;
+                  margin-top: 32px;
+                  @include radius;
+
+           
+            .visa-credit{
+                // display: flex;
+                @include flex-between;
+
+                .input-radio{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                input[type="radio"] {
+                    width: 16px; 
+                    height: 16px; 
+                }
+                   
+                label{
+                    font-weight: 600;
+                }
+
+            }
+
+            form{
+                .form-item{
+
+                    input{
+                        font-weight: 500;
+                        line-height: 21px;
+                        border: 1px solid rgba(246, 247, 249, 1);
+                        @include radius;
+                        padding: 16px 0 16px 32px;
+                        background-color: $content-background-color;
+        
+                        &::placeholder{
+                            color: $icon-color;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .pay-pal{
+            margin-top: 24px;
+            padding: 16px 32px;
+            background-color: $background-color;
+            @include flex-between;
+            @include radius;
+
+            .input-radio{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                input[type="radio"] {
+                    width: 20px; 
+                    height: 20px; 
+                }
+
+                label{
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .bit-coin{
+            margin-top: 24px;
+            padding: 16px 32px;
+            background-color: $background-color;
+
+            // display: flex;
+            @include flex-between;
+            @include radius;
+
+            .input-radio{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+
+                input[type="radio"] {
+                    width: 20px; 
+                    height: 20px;
+                }
+
+                label{
+                    font-weight: 600;
+                }
+            }
         }
     }
+
+    &.confirmation{
+
+        .checkbox{
+            padding: 18px 34px;
+            margin-top: 32px;
+            background-color: $background-color;
+            @include radius;
+            display: flex;
+            gap: 20px;
+
+
+            input[type="checkbox"] {
+                width: 20px; /* Adjust width as needed */
+                height: 20px; /* Adjust height as needed */
+            }
+            label{
+                font-weight: 500;
+            }
+        }
+
+      .button-rental{
+        padding-top: 32px;
+
+        button{
+            background-color: $primary-color;
+        }
+
+      }  
+
+      .safe-data{
+        padding-top: 25px ;
+
+        .confirmation-footer{
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .con-f1{
+                font-weight: 600;
+            }
+            .con-f2{
+                color: $icon-color;
+            }
+        }
+      }
+     
 }
+    }
+}
+
+
+
+//    Rental summary information
+
     .rental-summary{
         @include radius;
-        // width: 35%;
         padding: 24px;
         background-color: $content-background-color;
 
@@ -203,6 +391,47 @@
 
 
         }
-    
+
+        .apply-now{
+            padding: 16px 32px;
+            border: 1px solid white;
+            display: flex; 
+            justify-content: space-between;
+            background-color: $background-color;
+            @include radius;
+
+            input{
+                border: none;
+                background-color: $background-color;
+        }
+
+            & a{
+                font-weight: 600;
+                color: black;
+            }
+        }
+
+        .total-price{
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            padding-top: 32px;
+
+            .rental-price{
+                @include content2;
+            }
+
+            .price{
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            .Overall{
+                font-size: 14px;
+                color: $icon-color;
+            }
+        }  
     }
-   }
+}
+
+   
