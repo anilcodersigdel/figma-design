@@ -1,6 +1,6 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
-
+@import '../base/typography';
 
 .catalogue-car{
     padding: 32px 64px 64px 64px;
@@ -84,6 +84,13 @@
     display: grid;
     grid-template-columns: 2fr 1.2fr;
     align-items: baseline;
+
+
+    @media (max-width:768px){
+        grid-template-columns: auto;
+        justify-content: center;
+        padding: 32px 24px;
+    }
    
     .payment{
         display: flex; 
@@ -91,10 +98,22 @@
         gap: 32px;
         // width: 65%;
 
+        @media (max-width:768px){
+            // width: 100%;
+            order:2;
+        }
+
+
+
     .info{
         @include radius;
         padding: 24px;      
         background-color: $content-background-color;
+
+
+        @media (max-width:768px){
+            padding: 16px;
+        }
 
         .bill{
             @include content2;
@@ -113,6 +132,11 @@
             grid-template-columns: auto auto;
             gap: 24px;
 
+
+            @media (max-width:768px){
+                grid-template-columns: auto;
+            }
+
             .form-item{                       
             display: grid;
             grid-template-columns: auto;
@@ -122,6 +146,11 @@
                 font-size: 16px;
                 font-weight: 600;
                color: rgba(26, 32, 44, 1);
+
+
+               @media (max-width:768px){
+                font-size: 14px;
+              }
             }
             input{
                 font-weight: 500;
@@ -133,6 +162,10 @@
 
                 &::placeholder{
                     color: $icon-color;
+                }
+
+                @media (max-width:768px){
+                  padding: 16px 0 16px 24px;
                 }
             }
             }
@@ -179,6 +212,10 @@
                   margin-top: 32px;
                   @include radius;
 
+                  @media (max-width:768px){
+                    padding: 16px;
+                  }
+
            
             .visa-credit{
                 // display: flex;
@@ -193,6 +230,11 @@
                 input[type="radio"] {
                     width: 16px; 
                     height: 16px; 
+
+                    @media (max-width:768px){
+                        width: 13.33px; 
+                        height: 13.33px; 
+                    }
                 }
                    
                 label{
@@ -228,19 +270,45 @@
             @include flex-between;
             @include radius;
 
+            @media (max-width:768px){
+                padding: 16px;
+            }
+
             .input-radio{
                 display: flex;
                 align-items: center;
                 gap: 20px;
 
+
+                @media (max-width:768px){
+                    gap: 8px;
+                }
+
                 input[type="radio"] {
                     width: 20px; 
                     height: 20px; 
+
+                    @media (max-width:768px){
+                        width: 13.33px; 
+                        height: 13.33px; 
+                    }
                 }
 
                 label{
                     font-weight: 600;
+
+                    
+                @media (max-width:768px){
+                    font-size: 14px;
+                  }
                 }
+            }
+
+
+            img{
+                // width: 96px;
+                height: 20px;
+                object-fit: contain;
             }
         }
 
@@ -249,7 +317,11 @@
             padding: 16px 32px;
             background-color: $background-color;
 
-            // display: flex;
+            
+            @media (max-width:768px){
+                padding: 16px;
+            }
+
             @include flex-between;
             @include radius;
 
@@ -258,14 +330,36 @@
                 gap: 20px;
                 align-items: center;
 
+
+                
+            @media (max-width:768px){
+                gap: 8px;
+            }
+
                 input[type="radio"] {
                     width: 20px; 
                     height: 20px;
+
+                    @media (max-width:768px){
+                        width: 13.33px; 
+                        height: 13.33px; 
+                    }
                 }
 
                 label{
                     font-weight: 600;
+
+                    @media (max-width:768px){
+                        font-size: 14px;
+                      }
                 }
+            }
+
+
+            img{
+                // width: 96px;
+                height: 20px;
+                object-fit: contain;
             }
         }
     }
@@ -278,15 +372,31 @@
             background-color: $background-color;
             @include radius;
             display: flex;
+            align-items: center;
             gap: 20px;
 
+
+            
+            @media (max-width:768px){
+               padding: 10px 16px;
+               gap: 16px;
+              }
 
             input[type="checkbox"] {
                 width: 20px; /* Adjust width as needed */
                 height: 20px; /* Adjust height as needed */
+
+            @media (max-width:768px){
+                width: 13.33px; 
+                height: 13.33px; 
+            }
             }
             label{
                 font-weight: 500;
+
+                @media (max-width:768px){
+                  font-size: 12px;
+                }
             }
         }
 
@@ -330,9 +440,18 @@
         padding: 24px;
         background-color: $content-background-color;
 
+        @media (max-width:768px){
+            padding: 16px;
+            order: 1;
+        }
+
         .rental{
             @include content2;
             line-height: 30px;
+
+            @media (max-width:768px){
+                font-size: 16px;
+            }
         }
         .rental-sum{
             line-height: 21px;
@@ -346,8 +465,23 @@
               gap: 16px;
               padding: 32px 0;
 
+              @media (max-width:768px){
+
+                img{
+                    width: 116px;
+                    height: 80px;
+                }             
+              }
+
 
               .nissan-review{
+
+                @media (max-width:768px){
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+                
              
 
                 .yellow{
@@ -424,11 +558,19 @@
             .price{
                 font-size: 25px;
                 font-weight: 700;
+
+                @media (max-width:768px){
+                    font-size: 20px;
+                }
             }
 
             .Overall{
                 font-size: 14px;
                 color: $icon-color;
+
+                @media (max-width:768px){
+                    font-size: 12px;
+                }
             }
         }  
     }

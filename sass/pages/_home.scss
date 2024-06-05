@@ -9,6 +9,7 @@
 
     @media (max-width: 768px) {
         padding: 32px 24px 0 24px;
+        overflow-x: auto;
     }
 
 
@@ -42,26 +43,34 @@
         background-position: bottom;
 
 
+     
         @media (max-width: 768px) {
-            display: none;
+            background-size: contain;
+            background-position: bottom;
+            min-height: 243px;
+            min-width: 100%;
         }
+
     }
+
+
+
 
 
 
     .hero-content {
         color: white;
-        padding: 16px 0 0 24px;
+        padding: 16px 24px 0 24px;
 
-        .title {
-            padding-right: 200px;
+        // .title {
+        //     // padding-right: 200px;
 
 
-            @media (max-width: 768px) {
-                padding-right: 71px;
-            }
+        //     // @media (max-width: 768px) {
+        //     //     padding-right: 71px;
+        //     // }
 
-        }
+        // }
 
 
         .btn {
@@ -107,6 +116,7 @@
         flex-direction: column;
         gap: 32px;
         padding: 32px 24px 0 24px;
+        position: relative;
     }
 
 
@@ -174,6 +184,7 @@
     .switch {
 
         @media (max-width: 768px) {
+            position: absolute;
             top: 57%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -260,12 +271,14 @@
 
 
         .address {
-            gap: 0rem;
+            position: relative;
+            gap: 3rem;
             padding: 24px;
            
       
 
             @media (max-width:768px) {
+                position: relative;
                 width: auto;
                 justify-content: center;
             }
@@ -292,9 +305,14 @@
             }
 
             .switch {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
 
 
                 @media (max-width:768px) {
+                    position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -345,14 +363,27 @@
         width: 80%;
         display: flex;
         flex-direction: column;
-     gap: 32px;
+        gap: 32px;
+
+
+
+        @media (max-width:768px){
+            width: 100%;
+            padding: 32px 24px  0 24px;
+        }
 
 
         &>.hero-section {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-          
+            grid-template-columns: repeat(2, 1fr);         
             gap: 2rem;
+
+            @media (max-width:768px){
+                grid-template-columns: 1fr;
+                // grid-row: inherit;
+                display: flex;
+                flex-direction: column;
+            }
 
            & .first-col{
             display: flex;
@@ -363,6 +394,20 @@
                min-height: 300px;
                 .title {
                     padding: 0;
+
+                    p{
+                        width: 70%;
+
+                        @media (max-width:768px){
+                            width: 80%;
+                         }
+                    }
+                }
+
+
+                @media (max-width:768px){
+                    width: 100px;
+                    min-height: 200px;
                 }
             }
 
@@ -370,12 +415,34 @@
             .view-car{
                 display: flex;
                 // gap: 24px;
-
+                align-items: center;
                 justify-content: space-between;
+
+            img{
+                border-radius: 10px;
+            }
+
                 .view-1{
                     border: 2px solid $primary-color;
                     padding: 8px;
                     @include radius;
+
+                   
+                @media (max-width:768px){
+                    // border: 1.5px solid $primary-color;
+                    padding: 4px;
+                }
+                }
+
+
+
+                @media (max-width:768px){
+                    img{
+                        border-radius: 8px;
+                        // height: 96px ;
+                        width: 76px;
+                        object-fit: contain;
+                    }
                 }
             }
 
@@ -384,6 +451,10 @@
             & .second-col{
                 display: flex;
                 align-items: stretch;
+
+                @media (max-width:768px){
+                    display: inline;
+                }
 
                 .car-item {
 
@@ -398,16 +469,25 @@
                     }
 
                     .Nissan-car {
-                        font-size: 18px;
+                        font-size: 20px;
                         padding: 24px 0;
                         font-weight: 400;
                         color: $text-color;
+
+                        @media (max-width:768px){
+                            font-size: 12px;
+                            color: $icon-color;
+                        }
                     }
 
                     .car-content {
                         display: grid;
                         grid-template-columns: auto auto auto auto;
                         gap: 20px;
+
+                        @media (max-width:768px){
+                            gap: 12px;
+                        }
 
 
                         .p-y {
@@ -423,10 +503,19 @@
                     .car-item-footer{
                         align-items: center;
                         padding-top: 60px;
+
+                        @media (max-width:768px){
+                            padding-top: 32px;
+                        }
                         
 
                         button{
                             padding: 16px 32px;
+
+
+                            @media (max-width:768px){
+                                padding: 10px 20px;
+                            }
                         }
                     }
 
@@ -446,12 +535,20 @@
             padding: 24px;
             @include radius;
 
+            @media (max-width:768px){
+                padding: 16px;
+            }
+
             .total-reviews{
                 @include content1;
                 display: flex;
                 align-items: center;
                 gap: 12px;
                 padding-bottom: 32px;
+
+                // @media (max-width:768px){
+                //     gap: 8px;
+                // }
                 
                 button{
                     padding: 6px 12px;
@@ -462,6 +559,11 @@
          img{
             height: 56px;
             width: 56px;
+
+            @media (max-width:768px){
+                height: 44px;
+                width: 44px;
+            }
          }
 
 
@@ -469,11 +571,19 @@
             display: flex;
              gap: 1rem;
              padding-bottom: 24px;
+
+             @media (max-width:768px){
+                gap: 8px;
+             }
          }
 
         .reviews-2{
             display: flex; 
             gap: 1rem;
+
+            @media (max-width:768px){
+                gap: 8px;
+             }
         }
 
         .reviews-content{
@@ -485,11 +595,19 @@
 
                  .name{
                     @include content2;
+                    @media (max-width:768px){
+                        font-size: 16px;
+                    }
+
                  }
                  .date{
                     font-size: 14px;
                     font-weight: 500;
                     color: $icon-color;
+
+                    @media (max-width:768px){
+                        font-size: 12px;
+                    }
                  }
             }
 
@@ -502,6 +620,10 @@
                     font-size: 14px;
                     font-weight: 500;
                     color: $icon-color;
+
+                    @media (max-width:768px){
+                        font-size: 12px;
+                    }
                 }
 
                 .yellow{
@@ -514,6 +636,11 @@
                 font-weight: 400;
                 line-height: 24px;
                 color: $text-color;
+
+
+                 @media (max-width:768px){
+                    color: $icon-color;
+                 }
             }
         }
            
