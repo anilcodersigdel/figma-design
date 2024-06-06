@@ -347,8 +347,7 @@ select {
 .hero {
   padding: 32px 64px 0 64px;
   display: flex;
-  gap: 24px;
-  flex-grow: 1;
+  gap: 32px;
 }
 @media (max-width: 768px) {
   .hero {
@@ -414,6 +413,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex: 1;
 }
 @media (max-width: 768px) {
   .address {
@@ -425,13 +425,74 @@ select {
 }
 .address .location {
   border-radius: 10px;
-  padding: 24px 35px;
+  padding: 24px 48px;
   background-color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
   .address .location {
     padding: 16px;
   }
+}
+.address .location .input-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* The container */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+.address .location .input-radio .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.address .location .input-radio .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.address .location .input-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.address .location .input-radio .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.address .location .input-radio .container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.address .location .input-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.address .location .input-radio .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.address .location .input-radio .container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
 .address .location .input-label {
   font-size: 16px;
@@ -447,7 +508,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-right: 20px;
+  padding-right: 24px;
   border-right: 1px solid rgba(195, 212, 233, 0.4);
 }
 .address .location .location-form .form-item.third {
@@ -483,7 +544,7 @@ select {
 .address .switch .arrow-btn {
   border-radius: 10px;
   background-color: rgb(53, 99, 233);
-  padding: 22px;
+  padding: 24px;
   display: flex;
 }
 .address .switch .arrow-btn i {
@@ -534,6 +595,7 @@ select {
 }
 @media (max-width: 768px) {
   .content .category {
+    padding: 0;
     width: 100%;
   }
 }
@@ -541,6 +603,8 @@ select {
   position: relative;
   gap: 3rem;
   padding: 24px;
+  display: flex;
+  flex-grow: 1;
 }
 @media (max-width: 768px) {
   .content .category .address {
@@ -550,7 +614,7 @@ select {
   }
 }
 .content .category .address .location {
-  padding: 24px;
+  padding: 32px;
   z-index: -1;
 }
 @media (max-width: 768px) {
@@ -1581,6 +1645,8 @@ button {
 .content aside {
   background-color: rgb(255, 255, 255);
   width: 20%;
+  /** FF*/
+  /* IE*/
 }
 .content aside .category-type {
   display: flex;
@@ -1589,7 +1655,6 @@ button {
   /* Custom styles for the checkbox when checked */
 }
 .content aside .category-type .type {
-  font-size: 12px;
   color: rgb(144, 163, 191);
 }
 .content aside .category-type label {
@@ -1603,35 +1668,75 @@ button {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 24px;
-  height: 24px;
-  border: 2px solid rgb(144, 163, 191);
-  border-radius: 4px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgb(144, 163, 191);
+  border-radius: 5px;
   cursor: pointer;
   position: relative;
 }
 .content aside .category-type input[type=checkbox]:checked {
-  background-color: blue;
+  background-color: rgb(53, 99, 233);
+  border: none;
+}
+.content aside .category-type input[type=checkbox]:focus {
+  outline: none;
 }
 .content aside .category-type input[type=checkbox]:checked::after {
   content: "";
   position: absolute;
   width: 6px;
-  height: 12px;
+  height: 15px;
   border: solid white;
   border-width: 0 2px 2px 0;
   top: 2px;
-  left: 6px;
+  left: 8px;
   transform: rotate(45deg);
 }
-.content aside .category-type .input-checkbox {
+.content aside .input-checkbox {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.content aside.person {
-  padding-top: 50px;
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .content aside input[type=range] {
+    overflow: hidden;
+    width: 200px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-color: #9a905d;
+    border-radius: 12px;
+  }
+  .content aside input[type=range]::-webkit-slider-runnable-track {
+    height: 20px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+    border-radius: 0 10px 0 0;
+  }
+  .content aside input[type=range]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    border: 4px solid white;
+    border-radius: 10px;
+    cursor: ew-resize;
+    background: #434343;
+    box-shadow: -80px 0 0 80px #43e5f7;
+  }
 }
-.content aside .slidecontainer {
-  width: 100%;
+.content aside input[type=range]::-moz-range-progress {
+  background-color: rgb(53, 99, 233);
+}
+.content aside input[type=range]::-moz-range-track {
+  background-color: black;
+}
+.content aside input[type=range]::-ms-fill-lower {
+  background-color: #43e5f7;
+}
+.content aside input[type=range]::-ms-fill-upper {
+  background-color: rgb(144, 163, 191);
+}
+.content.person {
+  padding-top: 50px;
 }/*# sourceMappingURL=main.css.map */
