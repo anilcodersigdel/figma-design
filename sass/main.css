@@ -345,10 +345,10 @@ select {
 }
 
 .hero {
-  position: relative;
   padding: 32px 64px 0 64px;
   display: flex;
   gap: 24px;
+  flex-grow: 1;
 }
 @media (max-width: 768px) {
   .hero {
@@ -390,7 +390,7 @@ select {
 }
 .hero .hero-content {
   color: white;
-  padding: 16px 24px 0 24px;
+  padding: 16px 144px 0 24px;
 }
 .hero .hero-content .btn {
   padding-top: 20px;
@@ -413,7 +413,7 @@ select {
   padding: 32px 64px 0 64px;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .address {
@@ -425,9 +425,8 @@ select {
 }
 .address .location {
   border-radius: 10px;
-  padding: 24px 48px;
+  padding: 24px 35px;
   background-color: rgb(255, 255, 255);
-  flex-grow: 1;
 }
 @media (max-width: 768px) {
   .address .location {
@@ -441,14 +440,14 @@ select {
 }
 .address .location .location-form {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   padding-top: 16px;
 }
 .address .location .location-form .form-item {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-right: 24px;
+  padding-right: 20px;
   border-right: 1px solid rgba(195, 212, 233, 0.4);
 }
 .address .location .location-form .form-item.third {
@@ -1582,4 +1581,57 @@ button {
 .content aside {
   background-color: rgb(255, 255, 255);
   width: 20%;
+}
+.content aside .category-type {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  /* Custom styles for the checkbox when checked */
+}
+.content aside .category-type .type {
+  font-size: 12px;
+  color: rgb(144, 163, 191);
+}
+.content aside .category-type label {
+  font-weight: 500;
+  font-size: 20px;
+}
+.content aside .category-type label span {
+  color: rgb(144, 163, 191);
+}
+.content aside .category-type input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgb(144, 163, 191);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.content aside .category-type input[type=checkbox]:checked {
+  background-color: blue;
+}
+.content aside .category-type input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 2px;
+  left: 6px;
+  transform: rotate(45deg);
+}
+.content aside .category-type .input-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.content aside.person {
+  padding-top: 50px;
+}
+.content aside .slidecontainer {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

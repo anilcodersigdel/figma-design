@@ -2,10 +2,10 @@
 @import '../abstracts/mixins';
 
 .hero {
-    position: relative;
     padding: 32px 64px 0 64px;
     display: flex;
     gap: 24px;
+    flex-grow: 1;
 
     @media (max-width: 768px) {
         padding: 32px 24px 0 24px;
@@ -60,7 +60,7 @@
 
     .hero-content {
         color: white;
-        padding: 16px 24px 0 24px;
+        padding: 16px 144px 0 24px;
 
         // .title {
         //     // padding-right: 200px;
@@ -108,7 +108,9 @@
     padding: 32px 64px 0 64px;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
+ 
+     
 
 
 
@@ -122,9 +124,9 @@
 
     .location {
         @include radius;
-        padding: 24px 48px;
+        padding: 24px 35px;
         background-color: $content-background-color;
-        flex-grow: 1;
+      
 
         @media (max-width: 768px) {
             padding: 16px;
@@ -138,14 +140,14 @@
 
         .location-form {
             display: flex;
-            gap: 24px;
+            gap: 20px;
             padding-top: 16px;
 
             .form-item {
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
-                padding-right: 24px;
+                padding-right: 20px;
                 border-right: 1px solid $border-color;
 
                 &.third {
@@ -253,7 +255,7 @@
 
 
     aside {
-        // width: 15%;
+        // width: 20%;
         padding: 24px 0 0 24px;
 
 
@@ -263,7 +265,7 @@
     }
 
     .category {
-        // width: 85%;
+        // width: 80%;
 
         @media (max-width:768px) {
             width: 100%;
