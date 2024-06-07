@@ -227,15 +227,15 @@
                     gap: 8px;
                 }
 
-                input[type="radio"] {
-                    width: 16px; 
-                    height: 16px; 
+                // input[type="radio"] {
+                //     width: 16px; 
+                //     height: 16px; 
 
-                    @media (max-width:768px){
-                        width: 13.33px; 
-                        height: 13.33px; 
-                    }
-                }
+                //     @media (max-width:768px){
+                //         width: 13.33px; 
+                //         height: 13.33px; 
+                //     }
+                // }
                    
                 label{
                     font-weight: 600;

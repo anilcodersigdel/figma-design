@@ -183,6 +183,17 @@ select {
   color: rgb(144, 163, 191);
 }
 
+input[type=radio] {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 768px) {
+  input[type=radio] {
+    width: 13.33px;
+    height: 13.33px;
+  }
+}
+
 footer {
   padding: 48px;
   background-color: rgb(255, 255, 255);
@@ -344,6 +355,17 @@ select {
   color: rgb(144, 163, 191);
 }
 
+input[type=radio] {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 768px) {
+  input[type=radio] {
+    width: 13.33px;
+    height: 13.33px;
+  }
+}
+
 .hero {
   padding: 32px 64px 0 64px;
   display: flex;
@@ -389,7 +411,8 @@ select {
 }
 .hero .hero-content {
   color: white;
-  padding: 16px 144px 0 24px;
+  padding: 16px 0 0 24px;
+  width: 80%;
 }
 .hero .hero-content .btn {
   padding-top: 20px;
@@ -437,66 +460,13 @@ select {
   display: flex;
   align-items: center;
   gap: 8px;
-  /* The container */
-  /* Hide the browser's default radio button */
-  /* Create a custom radio button */
-  /* On mouse-over, add a grey background color */
-  /* When the radio button is checked, add a blue background */
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  /* Show the indicator (dot/circle) when checked */
-  /* Style the indicator (dot/circle) */
 }
 .address .location .input-radio .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.address .location .input-radio .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-.address .location .input-radio .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-}
-.address .location .input-radio .container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-.address .location .input-radio .container input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-.address .location .input-radio .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.address .location .input-radio .container input:checked ~ .checkmark:after {
-  display: block;
-}
-.address .location .input-radio .container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}
-.address .location .input-label {
-  font-size: 16px;
-  color: rgb(26, 32, 44);
+.address .location .input-radio .container span {
   font-weight: 600;
 }
 .address .location .location-form {
@@ -593,18 +563,22 @@ select {
     display: none;
   }
 }
+.content .category {
+  padding: 32px 32px 64px 32px;
+}
 @media (max-width: 768px) {
   .content .category {
-    padding: 0;
+    padding: 32px;
     width: 100%;
   }
 }
 .content .category .address {
   position: relative;
   gap: 3rem;
-  padding: 24px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   flex-grow: 1;
+  padding: 0;
 }
 @media (max-width: 768px) {
   .content .category .address {
@@ -614,17 +588,25 @@ select {
   }
 }
 .content .category .address .location {
-  padding: 32px;
-  z-index: -1;
+  padding: 24px;
 }
 @media (max-width: 768px) {
   .content .category .address .location {
     padding: 18px 16px;
   }
 }
-.content .category .address .location .radio-input {
+.content .category .address .location .input-radio {
   display: flex;
-  gap: 0.3rem;
+  align-items: center;
+  gap: 8px;
+}
+.content .category .address .location .input-radio .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.content .category .address .location .input-radio .container span {
+  font-weight: 600;
 }
 .content .category .address .switch {
   position: absolute;
@@ -641,7 +623,8 @@ select {
   }
 }
 .content .category .catalogue-car {
-  padding: 0 24px 64px 24px;
+  margin-top: 32px;
+  padding: 0;
 }
 .content .category .catalogue-car .recommendation-car-rent {
   grid-template-columns: auto auto auto;
@@ -973,6 +956,17 @@ select {
   color: rgb(144, 163, 191);
 }
 
+input[type=radio] {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 768px) {
+  input[type=radio] {
+    width: 13.33px;
+    height: 13.33px;
+  }
+}
+
 .catalogue-car {
   padding: 32px 64px 64px 64px;
 }
@@ -1176,16 +1170,6 @@ select {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-.payment-content .payment .info.Payment .credit-card .visa-credit input[type=radio] {
-  width: 16px;
-  height: 16px;
-}
-@media (max-width: 768px) {
-  .payment-content .payment .info.Payment .credit-card .visa-credit input[type=radio] {
-    width: 13.33px;
-    height: 13.33px;
-  }
 }
 .payment-content .payment .info.Payment .credit-card .visa-credit label {
   font-weight: 600;
@@ -1645,8 +1629,6 @@ button {
 .content aside {
   background-color: rgb(255, 255, 255);
   width: 20%;
-  /** FF*/
-  /* IE*/
 }
 .content aside .category-type {
   display: flex;
@@ -1698,44 +1680,39 @@ button {
   align-items: center;
   gap: 4px;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .content aside input[type=range] {
-    overflow: hidden;
-    width: 200px;
-    -webkit-appearance: none;
-    cursor: pointer;
-    background-color: #9a905d;
-    border-radius: 12px;
-  }
-  .content aside input[type=range]::-webkit-slider-runnable-track {
-    height: 20px;
-    -webkit-appearance: none;
-    color: #13bba4;
-    margin-top: -1px;
-    border-radius: 0 10px 0 0;
-  }
-  .content aside input[type=range]::-webkit-slider-thumb {
-    width: 20px;
-    height: 20px;
-    -webkit-appearance: none;
-    border: 4px solid white;
-    border-radius: 10px;
-    cursor: ew-resize;
-    background: #434343;
-    box-shadow: -80px 0 0 80px #43e5f7;
-  }
+.content aside .slidecontainer {
+  width: 100%;
 }
-.content aside input[type=range]::-moz-range-progress {
-  background-color: rgb(53, 99, 233);
+.content aside .slidecontainer p {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 500;
 }
-.content aside input[type=range]::-moz-range-track {
-  background-color: black;
+.content aside .slider {
+  background: #90A3BF;
+  border-radius: 8px;
+  height: 10px;
+  width: 200px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
 }
-.content aside input[type=range]::-ms-fill-lower {
-  background-color: #43e5f7;
+.content aside .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(53, 99, 233);
+  cursor: pointer;
+  border: 4px solid white;
 }
-.content aside input[type=range]::-ms-fill-upper {
-  background-color: rgb(144, 163, 191);
+.content aside .slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: blue;
+  cursor: pointer;
 }
 .content.person {
   padding-top: 50px;

@@ -106,27 +106,26 @@
 
             <p class="type 3">PRICE</p>
 
+            
             <div class="slidecontainer">
-             
-                <input type="range" min="1" max="100" value="50">
-                <p>Max. $100.00</p>
-                
-        </div>
+                <input type="range" min="1.00" max="100.00" value="50.00" class="slider" id="myRange">
+                <p>Max. <span id="demo"></span></p>
+              </div>
 
         </aside>
 
         <section class="category">
 
-             <section class="address">
+             <section class="address category">
 
 
               <div class="location first">
 
                 <div class="input-radio">
 
-                    <label class="container">Pick-Up
+                      <label class="container">
                         <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
+                        <span class="checkmark">Pick-Up</span>
                       </label>
                     
                     
@@ -200,18 +199,18 @@
               <div class="location second">
 
 
-                <div class="input-radio">
+                 <div class="input-radio">
 
 
-                    <label class="container">Drop-Off
+                    <label class="container">
                         <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
+                        <span class="checkmark">Drop-Off</span>
                       </label>
                     <!-- <input type="radio" id="Drop-Off" name="Drop-Off" value="Drop-Off">
                     <label class="input-label" for="drop-off">Drop-Off</label> -->
-                </div>
+                 </div>
 
-                <form class="location-form">
+                 <form class="location-form">
 
                     <div class="form-item"> 
                                      
@@ -237,10 +236,10 @@
                         </select>
                     </div>
 
-                </form>
+                 </form>
 
 
-                <form class="location-form-mobile">
+                  <form class="location-form-mobile">
 
                     <div class="form-item">
 
@@ -265,9 +264,10 @@
                             <option value="Time">07.00</option>
                         </select>
                     </div>
-              </div>
+                  </form>
+             </div>
 
-              </div>
+              <!-- </div> -->
 
 
         
@@ -275,7 +275,7 @@
             </section>
 
     
-            <section class="catalogue-car">
+            <section class="catalogue-car category">
     
             <div class="recommendation-car-rent">
     
@@ -640,5 +640,7 @@
 
 
 </body>
+
+<script src="app.js"></script>
 
 </html>

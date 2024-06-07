@@ -60,7 +60,8 @@
 
     .hero-content {
         color: white;
-        padding: 16px 144px 0 24px;
+        padding: 16px 0 0 24px;
+        width: 80%;
 
         // .title {
         //     // padding-right: 200px;
@@ -139,81 +140,24 @@
             align-items: center;
             gap: 8px;
 
+            .container{
+                display: flex;
+                align-items: center;
+                gap: 8px;
 
-        /* The container */
-.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Hide the browser's default radio button */
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .container .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  }
-
-
+                span{
+    
+                    font-weight: 600;
+                }
+            }
 
         }
 
-        .input-label {
-            font-size: 16px;
-            color: rgba(26, 32, 44, 1);
-            font-weight: $secondary-font-weight;
-        }
+        // .input-label {
+        //     font-size: 16px;
+        //     color: rgba(26, 32, 44, 1);
+        //     font-weight: $secondary-font-weight;
+        // }
 
         .location-form {
             display: flex;
@@ -321,6 +265,9 @@
     }
 }
 
+
+
+
 // category car rent
 
 .content {
@@ -343,20 +290,22 @@
 
     .category {
         // width: 80%;
-        // padding: 32px;
+        // padding: 32px 32px 0 32px;
+        padding: 32px 32px 64px 32px;
 
         @media (max-width:768px) {
-            padding: 0;
+            padding: 32px;
             width: 100%;
         }
 
 
         .address {
             position: relative;
-            gap: 3rem;
-            padding: 24px;
-            display: flex;
-            flex-grow:1;
+            gap: 3rem;     
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex-grow: 1;
+            padding: 0;
            
       
 
@@ -369,8 +318,8 @@
 
 
             .location {
-                padding: 32px;
-                z-index: -1;
+                padding: 24px;
+            
 
 
                 @media (max-width:768px) {
@@ -379,12 +328,24 @@
 
 
 
-                .radio-input {
+                .input-radio{
                     display: flex;
-                    gap: 0.3rem;
+                    align-items: center;
+                    gap: 8px; 
+
+
+                    .container{
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        span{
+                            // font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+                    
                 }
-
-
             }
 
             .switch {
@@ -405,9 +366,10 @@
 
 
 
-
+     
         .catalogue-car {
-            padding: 0 24px 64px 24px;
+        margin-top: 32px;
+            padding: 0;
 
 
 
