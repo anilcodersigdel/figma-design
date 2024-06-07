@@ -583,6 +583,7 @@ input[type=radio] {
 @media (max-width: 768px) {
   .content .category .address {
     position: relative;
+    grid-template-columns: 1fr;
     width: auto;
     justify-content: center;
   }
@@ -1290,6 +1291,7 @@ input[type=radio] {
   display: flex;
   align-items: center;
   gap: 20px;
+  /* Custom styles for the checkbox when checked */
 }
 @media (max-width: 768px) {
   .payment-content .payment .info.confirmation .checkbox {
@@ -1297,139 +1299,164 @@ input[type=radio] {
     gap: 16px;
   }
 }
-.payment-content .payment .info.confirmation .checkbox input[type=checkbox] {
-  width: 20px; /* Adjust width as needed */
-  height: 20px; /* Adjust height as needed */
-}
 @media (max-width: 768px) {
-  .payment-content .payment .info.confirmation .checkbox input[type=checkbox] {
+  .payment-content .payment .info.confirmation .checkbox {
     width: 13.33px;
     height: 13.33px;
   }
 }
-.payment-content .payment .info.confirmation .checkbox label {
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 1px solid rgb(144, 163, 191);
+  cursor: pointer;
+  position: relative;
+}
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:checked {
+  background-color: rgb(53, 99, 233);
+  border: none;
+}
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:focus {
+  outline: none;
+}
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 2px;
+  left: 8px;
+  transform: rotate(45deg);
+}
+.payment-content .payment .info.confirmation label {
   font-weight: 500;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info.confirmation .checkbox label {
+  .payment-content .payment .info.confirmation label {
     font-size: 12px;
   }
 }
-.payment-content .payment .info.confirmation .button-rental {
+.payment-content .payment .info .button-rental {
   padding-top: 32px;
 }
-.payment-content .payment .info.confirmation .button-rental button {
+.payment-content .payment .info .button-rental button {
   background-color: rgb(53, 99, 233);
 }
-.payment-content .payment .info.confirmation .safe-data {
+.payment-content .payment .info .safe-data {
   padding-top: 25px;
 }
-.payment-content .payment .info.confirmation .safe-data .confirmation-footer {
+.payment-content .payment .info .safe-data .confirmation-footer {
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.payment-content .payment .info.confirmation .safe-data .confirmation-footer .con-f1 {
+.payment-content .payment .info .safe-data .confirmation-footer .con-f1 {
   font-weight: 600;
 }
-.payment-content .payment .info.confirmation .safe-data .confirmation-footer .con-f2 {
+.payment-content .payment .info .safe-data .confirmation-footer .con-f2 {
   color: rgb(144, 163, 191);
 }
-.payment-content .rental-summary {
+
+.rental-summary {
   border-radius: 10px;
   padding: 24px;
   background-color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary {
+  .rental-summary {
     padding: 16px;
     order: 1;
   }
 }
-.payment-content .rental-summary .rental {
+.rental-summary .rental {
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .rental {
+  .rental-summary .rental {
     font-size: 16px;
   }
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .rental {
+  .rental-summary .rental {
     font-size: 16px;
   }
 }
-.payment-content .rental-summary .rental-sum {
+.rental-summary .rental-sum {
   line-height: 21px;
   color: rgb(144, 163, 191);
   padding-top: 4px;
 }
-.payment-content .rental-summary .car-review {
+.rental-summary .car-review {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 32px 0;
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .car-review img {
+  .rental-summary .car-review img {
     width: 116px;
     height: 80px;
   }
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .car-review .nissan-review h1 {
+  .rental-summary .car-review .nissan-review h1 {
     font-size: 20px;
   }
 }
-.payment-content .rental-summary .car-review .nissan-review .yellow {
+.rental-summary .car-review .nissan-review .yellow {
   color: rgb(251, 173, 57);
 }
-.payment-content .rental-summary .car-review .nissan-review span {
+.rental-summary .car-review .nissan-review span {
   font-size: 14px;
   color: rgb(89, 103, 128);
   font-weight: 500;
 }
-.payment-content .rental-summary .line-border {
+.rental-summary .line-border {
   border: 1px solid rgba(195, 212, 233, 0.4);
 }
-.payment-content .rental-summary .subtotal {
+.rental-summary .subtotal {
   display: flex;
   justify-content: space-between;
   padding: 32px 0 24px 0;
   color: rgb(144, 163, 191);
   font-weight: 500;
 }
-.payment-content .rental-summary .subtotal .price {
+.rental-summary .subtotal .price {
   font-size: 20px;
   font-weight: 600;
   color: rgb(26, 32, 44);
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .subtotal .price {
+  .rental-summary .subtotal .price {
     font-size: 16px;
   }
 }
-.payment-content .rental-summary .tax {
+.rental-summary .tax {
   display: flex;
   justify-content: space-between;
   padding: 0 0 24px 0;
   color: rgb(144, 163, 191);
   font-weight: 500;
 }
-.payment-content .rental-summary .tax .price {
+.rental-summary .tax .price {
   font-size: 20px;
   font-weight: 600;
   color: rgb(26, 32, 44);
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .tax .price {
+  .rental-summary .tax .price {
     font-size: 16px;
   }
 }
-.payment-content .rental-summary .apply-now {
+.rental-summary .apply-now {
   padding: 16px 32px;
   border: 1px solid white;
   display: flex;
@@ -1437,44 +1464,44 @@ input[type=radio] {
   background-color: rgb(246, 247, 249);
   border-radius: 10px;
 }
-.payment-content .rental-summary .apply-now input {
+.rental-summary .apply-now input {
   border: none;
   background-color: rgb(246, 247, 249);
 }
-.payment-content .rental-summary .apply-now a {
+.rental-summary .apply-now a {
   font-weight: 600;
   color: black;
 }
-.payment-content .rental-summary .total-price {
+.rental-summary .total-price {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 32px;
 }
-.payment-content .rental-summary .total-price .rental-price {
+.rental-summary .total-price .rental-price {
   font-size: 20px;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .total-price .rental-price {
+  .rental-summary .total-price .rental-price {
     font-size: 16px;
   }
 }
-.payment-content .rental-summary .total-price .price {
+.rental-summary .total-price .price {
   font-size: 25px;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .total-price .price {
+  .rental-summary .total-price .price {
     font-size: 20px;
   }
 }
-.payment-content .rental-summary .total-price .Overall {
+.rental-summary .total-price .Overall {
   font-size: 14px;
   color: rgb(144, 163, 191);
 }
 @media (max-width: 768px) {
-  .payment-content .rental-summary .total-price .Overall {
+  .rental-summary .total-price .Overall {
     font-size: 12px;
   }
 }

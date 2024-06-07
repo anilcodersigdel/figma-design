@@ -311,6 +311,7 @@
 
             @media (max-width:768px) {
                 position: relative;
+                grid-template-columns: 1fr;
                 width: auto;
                 justify-content: center;
             }
