@@ -43,7 +43,7 @@
         background-position: bottom;
 
 
-     
+
         @media (max-width: 768px) {
             background-size: contain;
             background-position: bottom;
@@ -109,11 +109,11 @@
     padding: 32px 64px 0 64px;
     display: flex;
     align-items: center;
-    // gap: 44px;
-    justify-content: space-between;
-    flex:1;
- 
-     
+    gap: 44px;
+    // justify-content: space-between;
+  
+
+
 
 
 
@@ -127,26 +127,27 @@
 
     .location {
         @include radius;
-        padding: 24px 48px;
+        padding: 24px;
         background-color: $content-background-color;
-      
+        flex-grow: 1;
+
 
         @media (max-width: 768px) {
             padding: 16px;
         }
 
-        .input-radio{
+        .input-radio {
             display: flex;
             align-items: center;
             gap: 8px;
 
-            .container{
+            .container {
                 display: flex;
                 align-items: center;
                 gap: 8px;
 
-                span{
-    
+                span {
+
                     font-weight: 600;
                 }
             }
@@ -168,12 +169,12 @@
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
-                padding-right: 24px;
+                padding-right: 15px;
                 border-right: 1px solid $border-color;
 
                 &.third {
                     border-right: none;
-                    padding-right: 10px;
+                    padding-right: 15px;
                 }
 
                 &.second {
@@ -216,7 +217,7 @@
         .arrow-btn {
             @include radius;
             background-color: $primary-color;
-            padding: 24px;
+            padding: 18px;
             display: flex;
 
             i {
@@ -291,7 +292,8 @@
     .category {
         // width: 80%;
         // padding: 32px 32px 0 32px;
-        padding: 32px 32px 64px 32px;
+        padding: 32px 24px 64px 24px;
+
 
         @media (max-width:768px) {
             padding: 32px;
@@ -301,13 +303,13 @@
 
         .address {
             position: relative;
-            gap: 3rem;     
+            gap: 2rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            flex-grow: 1;
+            display: flex;
             padding: 0;
-           
-      
+
+
 
             @media (max-width:768px) {
                 position: relative;
@@ -316,11 +318,20 @@
                 justify-content: center;
             }
 
+            @media (max-width:1024px) {
+                position: relative;
+                grid-template-columns: 1fr;
+                width: auto;
+                justify-content: center;
+            }
+
+
 
 
             .location {
                 padding: 24px;
-            
+                flex-grow: 1;
+
 
 
                 @media (max-width:768px) {
@@ -329,23 +340,23 @@
 
 
 
-                .input-radio{
+                .input-radio {
                     display: flex;
                     align-items: center;
-                    gap: 8px; 
+                    gap: 8px;
 
 
-                    .container{
+                    .container {
                         display: flex;
                         align-items: center;
                         gap: 8px;
 
-                        span{
+                        span {
                             // font-size: 16px;
                             font-weight: 600;
                         }
                     }
-                    
+
                 }
             }
 
@@ -367,9 +378,9 @@
 
 
 
-     
+
         .catalogue-car {
-        margin-top: 32px;
+            margin-top: 32px;
             padding: 0;
 
 
@@ -405,7 +416,7 @@
     }
 
     .hero {
-        padding: 32px 32px  0 32px;
+        padding: 32px 32px 0 32px;
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -413,92 +424,93 @@
 
 
 
-        @media (max-width:768px){
+        @media (max-width:768px) {
             width: 100%;
-            padding: 32px 24px  0 24px;
+            padding: 32px 24px 0 24px;
         }
 
 
         &>.hero-section {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);         
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
 
-            @media (max-width:768px){
+            @media (max-width:768px) {
                 grid-template-columns: 1fr;
                 // grid-row: inherit;
                 display: flex;
                 flex-direction: column;
             }
 
-           & .first-col{
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-           
-            & .second {
-               min-height: 300px;
-                .title {
-                    padding: 0;
-
-                    p{
-                        width: 70%;
-
-                        @media (max-width:768px){
-                            width: 80%;
-                         }
-                    }
-                }
-
-
-                @media (max-width:768px){
-                    width: 100px;
-                    min-height: 200px;
-                }
-            }
-
-
-            .view-car{
+            & .first-col {
                 display: flex;
-                // gap: 24px;
-                align-items: center;
-                justify-content: space-between;
+                flex-direction: column;
+                gap: 24px;
 
-            img{
-                border-radius: 10px;
-            }
+                & .second {
+                    min-height: 300px;
 
-                .view-1{
-                    border: 2px solid $primary-color;
-                    padding: 8px;
-                    @include radius;
+                    .title {
+                        padding: 0;
 
-                   
-                @media (max-width:768px){
-                    // border: 1.5px solid $primary-color;
-                    padding: 4px;
-                }
-                }
+                        p {
+                            width: 70%;
+
+                            @media (max-width:768px) {
+                                width: 80%;
+                            }
+                        }
+                    }
 
 
-
-                @media (max-width:768px){
-                    img{
-                        border-radius: 8px;
-                        // height: 96px ;
-                        width: 76px;
-                        object-fit: contain;
+                    @media (max-width:768px) {
+                        width: 100px;
+                        min-height: 200px;
                     }
                 }
+
+
+                .view-car {
+                    display: flex;
+                    // gap: 24px;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    img {
+                        border-radius: 10px;
+                    }
+
+                    .view-1 {
+                        border: 2px solid $primary-color;
+                        padding: 8px;
+                        @include radius;
+
+
+                        @media (max-width:768px) {
+                            // border: 1.5px solid $primary-color;
+                            padding: 4px;
+                        }
+                    }
+
+
+
+                    @media (max-width:768px) {
+                        img {
+                            border-radius: 8px;
+                            // height: 96px ;
+                            width: 76px;
+                            object-fit: contain;
+                        }
+                    }
+                }
+
             }
 
-        }
-
-            & .second-col{
+            & .second-col {
                 display: flex;
                 align-items: stretch;
 
-                @media (max-width:768px){
+                @media (max-width:768px) {
                     display: inline;
                 }
 
@@ -520,7 +532,7 @@
                         font-weight: 400;
                         color: $text-color;
 
-                        @media (max-width:768px){
+                        @media (max-width:768px) {
                             font-size: 12px;
                             color: $icon-color;
                         }
@@ -531,7 +543,7 @@
                         grid-template-columns: auto auto auto auto;
                         gap: 20px;
 
-                        @media (max-width:768px){
+                        @media (max-width:768px) {
                             gap: 12px;
                         }
 
@@ -546,20 +558,20 @@
                         }
                     }
 
-                    .car-item-footer{
+                    .car-item-footer {
                         align-items: center;
                         padding-top: 60px;
 
-                        @media (max-width:768px){
+                        @media (max-width:768px) {
                             padding-top: 32px;
                         }
-                        
 
-                        button{
+
+                        button {
                             padding: 16px 32px;
 
 
-                            @media (max-width:768px){
+                            @media (max-width:768px) {
                                 padding: 10px 20px;
                             }
                         }
@@ -581,11 +593,11 @@
             padding: 24px;
             @include radius;
 
-            @media (max-width:768px){
+            @media (max-width:768px) {
                 padding: 16px;
             }
 
-            .total-reviews{
+            .total-reviews {
                 @include content1;
                 display: flex;
                 align-items: center;
@@ -595,121 +607,123 @@
                 // @media (max-width:768px){
                 //     gap: 8px;
                 // }
-                
-                button{
+
+                button {
                     padding: 6px 12px;
                     background-color: $primary-color;
                 }
             }
 
-         img{
-            height: 56px;
-            width: 56px;
+            img {
+                height: 56px;
+                width: 56px;
 
-            @media (max-width:768px){
-                height: 44px;
-                width: 44px;
-            }
-         }
-
-
-         .reviews-1{
-            display: flex;
-             gap: 1rem;
-             padding-bottom: 24px;
-
-             @media (max-width:768px){
-                gap: 8px;
-             }
-         }
-
-        .reviews-2{
-            display: flex; 
-            gap: 1rem;
-
-            @media (max-width:768px){
-                gap: 8px;
-             }
-        }
-
-        .reviews-content{
-            
-            .Name-date{
-                display: flex;
-                 justify-content: space-between;
-                 margin-bottom: 8px;
-
-                 .name{
-                    @include content2;
-                    @media (max-width:768px){
-                        font-size: 16px;
-                    }
-
-                 }
-                 .date{
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: $icon-color;
-
-                    @media (max-width:768px){
-                        font-size: 12px;
-                    }
-                 }
-            }
-
-            .position-star{
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 10px;
-
-                .position{
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: $icon-color;
-
-                    @media (max-width:768px){
-                        font-size: 12px;
-                    }
-                }
-
-                .yellow{
-                    color: $star-icon-color;
+                @media (max-width:768px) {
+                    height: 44px;
+                    width: 44px;
                 }
             }
 
-            .ceo-message{
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 24px;
-                color: $text-color;
 
+            .reviews-1 {
+                display: flex;
+                gap: 1rem;
+                padding-bottom: 24px;
 
-                 @media (max-width:768px){
-                    color: $icon-color;
-                 }
+                @media (max-width:768px) {
+                    gap: 8px;
+                }
             }
+
+            .reviews-2 {
+                display: flex;
+                gap: 1rem;
+
+                @media (max-width:768px) {
+                    gap: 8px;
+                }
+            }
+
+            .reviews-content {
+
+                .Name-date {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+
+                    .name {
+                        @include content2;
+
+                        @media (max-width:768px) {
+                            font-size: 16px;
+                        }
+
+                    }
+
+                    .date {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $icon-color;
+
+                        @media (max-width:768px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .position-star {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+
+                    .position {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $icon-color;
+
+                        @media (max-width:768px) {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .yellow {
+                        color: $star-icon-color;
+                    }
+                }
+
+                .ceo-message {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: $text-color;
+
+
+                    @media (max-width:768px) {
+                        color: $icon-color;
+                    }
+                }
+            }
+
+
+            .review-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                @include content1;
+                padding-top: 34px;
+            }
+
         }
-           
-
-        .review-btn{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            @include content1;
-            padding-top: 34px;
-        }
-
-        }
 
 
 
-        .catalogue-car{
+        .catalogue-car {
             padding: 0;
 
-            .popular-car-rent{
+            .popular-car-rent {
                 grid-template-columns: auto auto auto;
-                padding:32px 0;
+                padding: 32px 0;
             }
         }
     }

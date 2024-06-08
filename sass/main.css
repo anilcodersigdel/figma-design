@@ -184,14 +184,38 @@ select {
 }
 
 input[type=radio] {
-  width: 16px;
-  height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  outline: none;
+  border: 6px solid rgba(53, 99, 233, 0.3);
+  width: 20px;
+  height: 20px;
 }
-@media (max-width: 768px) {
-  input[type=radio] {
-    width: 13.33px;
-    height: 13.33px;
-  }
+
+input[type=radio]:checked {
+  background-color: white;
+  border-color: white;
+}
+
+input[type=radio]::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+/* Show the dot when the radio button is checked */
+input[type=radio]:checked::before {
+  visibility: visible;
 }
 
 footer {
@@ -356,14 +380,38 @@ select {
 }
 
 input[type=radio] {
-  width: 16px;
-  height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  outline: none;
+  border: 6px solid rgba(53, 99, 233, 0.3);
+  width: 20px;
+  height: 20px;
 }
-@media (max-width: 768px) {
-  input[type=radio] {
-    width: 13.33px;
-    height: 13.33px;
-  }
+
+input[type=radio]:checked {
+  background-color: white;
+  border-color: white;
+}
+
+input[type=radio]::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+/* Show the dot when the radio button is checked */
+input[type=radio]:checked::before {
+  visibility: visible;
 }
 
 .hero {
@@ -435,8 +483,7 @@ input[type=radio] {
   padding: 32px 64px 0 64px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex: 1;
+  gap: 44px;
 }
 @media (max-width: 768px) {
   .address {
@@ -448,8 +495,9 @@ input[type=radio] {
 }
 .address .location {
   border-radius: 10px;
-  padding: 24px 48px;
+  padding: 24px;
   background-color: rgb(255, 255, 255);
+  flex-grow: 1;
 }
 @media (max-width: 768px) {
   .address .location {
@@ -478,12 +526,12 @@ input[type=radio] {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-right: 24px;
+  padding-right: 15px;
   border-right: 1px solid rgba(195, 212, 233, 0.4);
 }
 .address .location .location-form .form-item.third {
   border-right: none;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 .address .location .location-form .form-item.second {
   padding-right: 15px;
@@ -514,7 +562,7 @@ input[type=radio] {
 .address .switch .arrow-btn {
   border-radius: 10px;
   background-color: rgb(53, 99, 233);
-  padding: 24px;
+  padding: 18px;
   display: flex;
 }
 .address .switch .arrow-btn i {
@@ -564,7 +612,7 @@ input[type=radio] {
   }
 }
 .content .category {
-  padding: 32px 32px 64px 32px;
+  padding: 32px 24px 64px 24px;
 }
 @media (max-width: 768px) {
   .content .category {
@@ -574,10 +622,10 @@ input[type=radio] {
 }
 .content .category .address {
   position: relative;
-  gap: 3rem;
+  gap: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  flex-grow: 1;
+  display: flex;
   padding: 0;
 }
 @media (max-width: 768px) {
@@ -588,8 +636,17 @@ input[type=radio] {
     justify-content: center;
   }
 }
+@media (max-width: 1024px) {
+  .content .category .address {
+    position: relative;
+    grid-template-columns: 1fr;
+    width: auto;
+    justify-content: center;
+  }
+}
 .content .category .address .location {
   padding: 24px;
+  flex-grow: 1;
 }
 @media (max-width: 768px) {
   .content .category .address .location {
@@ -958,14 +1015,38 @@ select {
 }
 
 input[type=radio] {
-  width: 16px;
-  height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  outline: none;
+  border: 6px solid rgba(53, 99, 233, 0.3);
+  width: 20px;
+  height: 20px;
 }
-@media (max-width: 768px) {
-  input[type=radio] {
-    width: 13.33px;
-    height: 13.33px;
-  }
+
+input[type=radio]:checked {
+  background-color: white;
+  border-color: white;
+}
+
+input[type=radio]::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+/* Show the dot when the radio button is checked */
+input[type=radio]:checked::before {
+  visibility: visible;
 }
 
 .catalogue-car {
@@ -1506,6 +1587,156 @@ input[type=radio] {
   }
 }
 
+.content aside {
+  width: 20%;
+}
+.content .admin-pannel {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+  flex-grow: 1;
+}
+.content .admin-pannel .admin-pannel-first-col {
+  padding: 24px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.content .admin-pannel .admin-pannel-first-col .map {
+  padding: 24px 0 32px 0;
+}
+.content .admin-pannel .admin-pannel-first-col .map img {
+  width: 100%;
+}
+.content .admin-pannel .admin-pannel-first-col .details {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .content .admin-pannel .admin-pannel-first-col .details {
+    font-size: 16px;
+  }
+}
+.content .admin-pannel .admin-pannel-first-col .car-review {
+  display: flex;
+  justify-content: space-between;
+}
+.content .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
+  display: flex;
+  gap: 16px;
+}
+.content .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
+  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.content .admin-pannel .admin-pannel-second-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content {
+  background-color: rgb(255, 255, 255);
+  padding: 24px;
+  border-radius: 10px;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .car-rental {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .content .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
+    font-size: 16px;
+  }
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart {
+  display: flex;
+  gap: 24px;
+  padding-top: 32px;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .Rental-car {
+  font-size: 14px;
+  color: rgb(144, 163, 191);
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart img {
+  height: 200px;
+  width: 200px;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside .number {
+  font-weight: 600;
+  font-size: 20px;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div .number {
+  font-size: 14px;
+  font-weight: 600;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot {
+  display: flex;
+  align-items: center;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot span {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(144, 163, 191);
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot i {
+  margin-right: 12px;
+  height: 12px;
+  width: 12px;
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color1 {
+  color: rgb(13, 53, 89);
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color2 {
+  color: rgb(23, 93, 156);
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color3 {
+  color: rgb(33, 133, 222);
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color4 {
+  color: rgb(99, 169, 232);
+}
+.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color5 {
+  color: rgb(166, 206, 242);
+}
+.content .admin-pannel .admin-pannel-second-col > .second-content {
+  padding: 24px;
+  background-color: rgb(255, 255, 255);
+}
+
 button {
   font-size: 16px;
   color: white;
@@ -1668,7 +1899,7 @@ button {
 }
 .content aside .category-type label {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
 }
 .content aside .category-type label span {
   color: rgb(144, 163, 191);
@@ -1719,7 +1950,7 @@ button {
   background: #90A3BF;
   border-radius: 8px;
   height: 10px;
-  width: 200px;
+  width: 170px;
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
