@@ -621,11 +621,106 @@
 //    Admin page 
 
 
-.content{
-    aside{
-        width: 20%;
+.content {
 
+    &.admin{
+    aside{
+        width: 25%;
+        padding-bottom: 24px;
+
+        .category-type-sport{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .type{
+                font-size: 14px;
+                font-weight: 600;
+                color: rgba(148, 167, 203, 0.4);
+            }
+
+            .menu-list{
+                border: 1px solid white;
+                padding: 16px 16px 16px 16px ;
+                border-radius: 10px;
+            width: 75%;
+            margin-right: auto;
+
+                
+                &:hover {
+                    background-color: rgba(53, 99, 233, 1);
+                    color: white;
+                }
+                &:hover i{
+                    color: white;
+
+                }
+                     &:hover span{
+                        color: white;
+
+                    }
+
+                    p{
+                        // width: 20%;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                    }
+            
+        
+
+        span{
+            color: rgba(144, 163, 191, 1);
+            font-size: 16px;
+        }
+
+        i{
+           font-size: 20px;
+        }
+        }
+          .two{
+            font-size: 14px;
+            margin-top: 60px;
+          }
+
+
+          .menu-list2{
+            padding-right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .dark-mode{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin-right: 20px;
+            }
+            .donotdisturb{
+                width: 25%;
+                display: flex;
+                justify-content: space-between;
+                border: 1px solid rgba(246, 247, 249, 1);
+                padding: 7px;
+                border-radius: 17px;
+
+                }
+            
+          }
+
+
+          .logout{
+            padding-top: 80px;
+
+            a{
+                font-size: 16px;
+                font-weight: 500;
+                color: $icon-color;
+            }
+          }
+       
     }
+}
     .admin-pannel{
         padding: 32px;
         display: grid;
@@ -651,19 +746,114 @@
              .car-review{
                 display: flex;
                 justify-content: space-between;
+
                 .car-review2{
                     display: flex;
                     // align-items: center;
                     gap: 16px;
 
                     .nissan-review{
-                        padding-top: 6px;
+                        padding: 6px 0;
                         display: flex;
                         flex-direction: column;
                         gap: 8px;
+
+                        .car-name{
+                            // color: #3D5278;
+                            font-weight: 700;
+                            font-size: 24px;
+                        }
+                        .car-brand{
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #3D5278;
+                        
+                        }
+                    }
+                }
+
+                p{
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+             }
+
+
+
+             .location{
+                padding-top: 46px;
+
+
+                .input-radio{
+
+                    .container{                        
+                       display: flex;
+                       align-items: center;
+                       gap: 4px;
+
+                    span{
+                       
+                        font-weight: 600;
+
+                    }
+                }
+
+                }
+
+                .location-form{
+                    display: flex;
+                    padding-top: 24px;
+
+                    .form-item{
+                        border-right: 1px solid rgba(195, 212, 233, 0.4);
+                        padding-right: 20px;
+                      
+
+                        label{
+                            font-weight: 700;
+                        }
+
+                        &.second{
+                            margin-left: 24px;
+
+                        }
+
+                    
+                    &.third{
+                        margin-left: 24px;
+                        border: none;
+                    }
                     }
                 }
              }
+
+             .border{
+                border-bottom: 1px solid rgba(195, 212, 233, 0.4);
+                margin: 40px 0 36px 0;
+             }
+
+
+        .total-price{
+            display: flex;
+            justify-content: space-between;
+
+
+            .rental-price{
+                @include content2;
+            }
+            .Overall{
+                font-size: 14px;
+                color: $icon-color;
+                font-weight: 500;
+            }
+
+            .price{
+                font-size: 32px;
+                font-weight: 700;
+            }
+        }
+
+
 
 
         }
@@ -795,12 +985,73 @@
 
               }
 
-            &> .second-content{
+            &> .two{
                 padding: 24px;
               background-color: $content-background-color;
+
+              .car-rental{
+                padding-bottom: 32px;
+
+
+                a{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $primary-color;
+                }
+              }
+
+
+                    .car-transaction{
+                       display: flex;
+                       justify-content: space-between;
+                       padding: 11px 0;
+                
+
+                       .review-transaction{
+                        display: flex;
+                        gap: 1rem;
+
+
+                        .nissan-review {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                        .car-name{
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+
+                            .car-brand{
+                                font-size: 12px;
+                                font-weight: 500;
+                                color: $icon-color;
+                            }
+
+                       }
+                    }
+
+                    .date{
+                        font-size: 12px;
+                        color: $icon-color;
+                        font-weight: 500;
+                    }
+                    .price{
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+
+                 }
+
+             .border{
+               border: 1px solid rgba(195, 212, 233, 0.4);  
+               margin: 26px 0;
+             }
+
           }
 
 
         }
     }
+}
 }

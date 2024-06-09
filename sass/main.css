@@ -181,41 +181,10 @@ select {
   font-size: 12px;
   line-height: 24px;
   color: rgb(144, 163, 191);
+  padding-right: 1rem;
 }
-
-input[type=radio] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 50%;
+select:focus {
   outline: none;
-  border: 6px solid rgba(53, 99, 233, 0.3);
-  width: 20px;
-  height: 20px;
-}
-
-input[type=radio]:checked {
-  background-color: white;
-  border-color: white;
-}
-
-input[type=radio]::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  visibility: hidden;
-}
-
-/* Show the dot when the radio button is checked */
-input[type=radio]:checked::before {
-  visibility: visible;
 }
 
 footer {
@@ -377,41 +346,10 @@ select {
   font-size: 12px;
   line-height: 24px;
   color: rgb(144, 163, 191);
+  padding-right: 1rem;
 }
-
-input[type=radio] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 50%;
+select:focus {
   outline: none;
-  border: 6px solid rgba(53, 99, 233, 0.3);
-  width: 20px;
-  height: 20px;
-}
-
-input[type=radio]:checked {
-  background-color: white;
-  border-color: white;
-}
-
-input[type=radio]::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  visibility: hidden;
-}
-
-/* Show the dot when the radio button is checked */
-input[type=radio]:checked::before {
-  visibility: visible;
 }
 
 .hero {
@@ -1012,41 +950,10 @@ select {
   font-size: 12px;
   line-height: 24px;
   color: rgb(144, 163, 191);
+  padding-right: 1rem;
 }
-
-input[type=radio] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 50%;
+select:focus {
   outline: none;
-  border: 6px solid rgba(53, 99, 233, 0.3);
-  width: 20px;
-  height: 20px;
-}
-
-input[type=radio]:checked {
-  background-color: white;
-  border-color: white;
-}
-
-input[type=radio]::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  visibility: hidden;
-}
-
-/* Show the dot when the radio button is checked */
-input[type=radio]:checked::before {
-  visibility: visible;
 }
 
 .catalogue-car {
@@ -1587,94 +1494,234 @@ input[type=radio]:checked::before {
   }
 }
 
-.content aside {
-  width: 20%;
+.content.admin aside {
+  width: 25%;
+  padding-bottom: 24px;
 }
-.content .admin-pannel {
+.content.admin aside .category-type-sport {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.content.admin aside .category-type-sport .type {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(148, 167, 203, 0.4);
+}
+.content.admin aside .category-type-sport .menu-list {
+  border: 1px solid white;
+  padding: 16px 16px 16px 16px;
+  border-radius: 10px;
+  width: 75%;
+  margin-right: auto;
+}
+.content.admin aside .category-type-sport .menu-list:hover {
+  background-color: rgb(53, 99, 233);
+  color: white;
+}
+.content.admin aside .category-type-sport .menu-list:hover i {
+  color: white;
+}
+.content.admin aside .category-type-sport .menu-list:hover span {
+  color: white;
+}
+.content.admin aside .category-type-sport .menu-list p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.content.admin aside .category-type-sport .menu-list span {
+  color: rgb(144, 163, 191);
+  font-size: 16px;
+}
+.content.admin aside .category-type-sport .menu-list i {
+  font-size: 20px;
+}
+.content.admin aside .category-type-sport .two {
+  font-size: 14px;
+  margin-top: 60px;
+}
+.content.admin aside .category-type-sport .menu-list2 {
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content.admin aside .category-type-sport .menu-list2 .dark-mode {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 20px;
+}
+.content.admin aside .category-type-sport .menu-list2 .donotdisturb {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(246, 247, 249);
+  padding: 7px;
+  border-radius: 17px;
+}
+.content.admin aside .category-type-sport .logout {
+  padding-top: 80px;
+}
+.content.admin aside .category-type-sport .logout a {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(144, 163, 191);
+}
+.content.admin .admin-pannel {
   padding: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 32px;
   flex-grow: 1;
 }
-.content .admin-pannel .admin-pannel-first-col {
+.content.admin .admin-pannel .admin-pannel-first-col {
   padding: 24px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
-.content .admin-pannel .admin-pannel-first-col .map {
+.content.admin .admin-pannel .admin-pannel-first-col .map {
   padding: 24px 0 32px 0;
 }
-.content .admin-pannel .admin-pannel-first-col .map img {
+.content.admin .admin-pannel .admin-pannel-first-col .map img {
   width: 100%;
 }
-.content .admin-pannel .admin-pannel-first-col .details {
+.content.admin .admin-pannel .admin-pannel-first-col .details {
   font-size: 20px;
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .content .admin-pannel .admin-pannel-first-col .details {
+  .content.admin .admin-pannel .admin-pannel-first-col .details {
     font-size: 16px;
   }
 }
-.content .admin-pannel .admin-pannel-first-col .car-review {
+.content.admin .admin-pannel .admin-pannel-first-col .car-review {
   display: flex;
   justify-content: space-between;
 }
-.content .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
+.content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
   display: flex;
   gap: 16px;
 }
-.content .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
-  padding-top: 6px;
+.content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
+  padding: 6px 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.content .admin-pannel .admin-pannel-second-col {
+.content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-name {
+  font-weight: 700;
+  font-size: 24px;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-brand {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3D5278;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .car-review p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .location {
+  padding-top: 46px;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .location .input-radio .container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .location .input-radio .container span {
+  font-weight: 600;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .location .location-form {
+  display: flex;
+  padding-top: 24px;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item {
+  border-right: 1px solid rgba(195, 212, 233, 0.4);
+  padding-right: 20px;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item label {
+  font-weight: 700;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.second {
+  margin-left: 24px;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.third {
+  margin-left: 24px;
+  border: none;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .border {
+  border-bottom: 1px solid rgba(195, 212, 233, 0.4);
+  margin: 40px 0 36px 0;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .total-price {
+  display: flex;
+  justify-content: space-between;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .total-price .rental-price {
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .total-price .rental-price {
+    font-size: 16px;
+  }
+}
+.content.admin .admin-pannel .admin-pannel-first-col .total-price .Overall {
+  font-size: 14px;
+  color: rgb(144, 163, 191);
+  font-weight: 500;
+}
+.content.admin .admin-pannel .admin-pannel-first-col .total-price .price {
+  font-size: 32px;
+  font-weight: 700;
+}
+.content.admin .admin-pannel .admin-pannel-second-col {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content {
   background-color: rgb(255, 255, 255);
   padding: 24px;
   border-radius: 10px;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .car-rental {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
   font-size: 20px;
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .content .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
+  .content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
     font-size: 16px;
   }
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart {
   display: flex;
   gap: 24px;
   padding-top: 32px;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .Rental-car {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .Rental-car {
   font-size: 14px;
   color: rgb(144, 163, 191);
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart img {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart img {
   height: 200px;
   width: 200px;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1684,57 +1731,101 @@ input[type=radio]:checked::before {
   align-items: center;
   gap: 4px;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside .number {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside .number {
   font-weight: 600;
   font-size: 20px;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div .number {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div .number {
   font-size: 14px;
   font-weight: 600;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot {
   display: flex;
   align-items: center;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot span {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot span {
   font-weight: 500;
   font-size: 14px;
   color: rgb(144, 163, 191);
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot i {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot i {
   margin-right: 12px;
   height: 12px;
   width: 12px;
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color1 {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color1 {
   color: rgb(13, 53, 89);
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color2 {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color2 {
   color: rgb(23, 93, 156);
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color3 {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color3 {
   color: rgb(33, 133, 222);
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color4 {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color4 {
   color: rgb(99, 169, 232);
 }
-.content .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color5 {
+.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color5 {
   color: rgb(166, 206, 242);
 }
-.content .admin-pannel .admin-pannel-second-col > .second-content {
+.content.admin .admin-pannel .admin-pannel-second-col > .two {
   padding: 24px;
   background-color: rgb(255, 255, 255);
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-rental {
+  padding-bottom: 32px;
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-rental a {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(53, 99, 233);
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction {
+  display: flex;
+  gap: 1rem;
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-brand {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(144, 163, 191);
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .date {
+  font-size: 12px;
+  color: rgb(144, 163, 191);
+  font-weight: 500;
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .price {
+  font-size: 16px;
+  font-weight: 700;
+}
+.content.admin .admin-pannel .admin-pannel-second-col > .two .border {
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  margin: 26px 0;
 }
 
 button {
