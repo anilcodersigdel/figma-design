@@ -26,10 +26,23 @@ header {
 }
 @media (max-width: 768px) {
   header {
-    padding: 12px 24px;
+    padding: 32px 25px;
     display: flex;
     flex-direction: column;
     gap: 32px;
+  }
+}
+header .category-detail {
+  padding: 32px 24px 0 24px;
+}
+@media (min-width: 768px) {
+  header .category-detail {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  header .category-detail {
+    padding: 0;
   }
 }
 header .nav-search-mobile {
@@ -53,6 +66,9 @@ header .nav-search-mobile .filters {
   border: 1px solid rgba(195, 212, 233, 0.4);
   padding: 12px;
   border-radius: 10px;
+}
+header .nav-search-mobile.payment {
+  display: none;
 }
 @media (min-width: 768px) {
   header .nav-search-mobile {
@@ -80,6 +96,35 @@ nav .nav-logo span a {
   nav .nav-logo span a {
     font-size: 24px;
   }
+}
+nav .nav-logo .hamburger-menu {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  padding-top: 8px;
+}
+nav .nav-logo .hamburger-menu div {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(89, 103, 128);
+  transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+  nav .nav-logo .hamburger-menu {
+    display: none;
+  }
+}
+nav .nav-logo .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+nav .nav-logo .logo span {
+  order: 2;
 }
 nav .nav-logo .nav-search {
   display: flex;
@@ -537,6 +582,11 @@ select:focus {
     color: rgb(144, 163, 191);
   }
 }
+header .category-detail {
+  display: flex;
+  align-items: flex-start;
+}
+
 .content {
   display: flex;
 }
@@ -594,19 +644,6 @@ select:focus {
   .content .category .address .location {
     padding: 18px 16px;
   }
-}
-.content .category .address .location .input-radio {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.content .category .address .location .input-radio .container {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.content .category .address .location .input-radio .container span {
-  font-weight: 600;
 }
 .content .category .address .switch {
   position: absolute;
@@ -1195,40 +1232,12 @@ select:focus {
     padding: 16px;
   }
 }
-.payment-content .payment .info.Payment .pay-pal .input-radio {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-@media (max-width: 768px) {
-  .payment-content .payment .info.Payment .pay-pal .input-radio {
-    gap: 8px;
-  }
-}
-.payment-content .payment .info.Payment .pay-pal .input-radio input[type=radio] {
-  width: 20px;
-  height: 20px;
-}
-@media (max-width: 768px) {
-  .payment-content .payment .info.Payment .pay-pal .input-radio input[type=radio] {
-    width: 13.33px;
-    height: 13.33px;
-  }
-}
-.payment-content .payment .info.Payment .pay-pal .input-radio label {
-  font-weight: 600;
-}
-@media (max-width: 768px) {
-  .payment-content .payment .info.Payment .pay-pal .input-radio label {
-    font-size: 14px;
-  }
-}
-.payment-content .payment .info.Payment .pay-pal img {
+.payment-content .payment .info.Payment img {
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.payment-content .payment .info.Payment .bit-coin {
+.payment-content .payment .info .bit-coin {
   margin-top: 24px;
   padding: 16px 32px;
   background-color: rgb(246, 247, 249);
@@ -1238,44 +1247,44 @@ select:focus {
   border-radius: 10px;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info.Payment .bit-coin {
+  .payment-content .payment .info .bit-coin {
     padding: 16px;
   }
 }
-.payment-content .payment .info.Payment .bit-coin .input-radio {
+.payment-content .payment .info .bit-coin .input-radio {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info.Payment .bit-coin .input-radio {
+  .payment-content .payment .info .bit-coin .input-radio {
     gap: 8px;
   }
 }
-.payment-content .payment .info.Payment .bit-coin .input-radio input[type=radio] {
+.payment-content .payment .info .bit-coin .input-radio input[type=radio] {
   width: 20px;
   height: 20px;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info.Payment .bit-coin .input-radio input[type=radio] {
+  .payment-content .payment .info .bit-coin .input-radio input[type=radio] {
     width: 13.33px;
     height: 13.33px;
   }
 }
-.payment-content .payment .info.Payment .bit-coin .input-radio label {
+.payment-content .payment .info .bit-coin .input-radio label {
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info.Payment .bit-coin .input-radio label {
+  .payment-content .payment .info .bit-coin .input-radio label {
     font-size: 14px;
   }
 }
-.payment-content .payment .info.Payment .bit-coin img {
+.payment-content .payment .info .bit-coin img {
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.payment-content .payment .info.confirmation .checkbox {
+.payment-content .payment.confirmation .checkbox {
   padding: 18px 34px;
   margin-top: 32px;
   background-color: rgb(246, 247, 249);
@@ -1286,18 +1295,18 @@ select:focus {
   /* Custom styles for the checkbox when checked */
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info.confirmation .checkbox {
+  .payment-content .payment.confirmation .checkbox {
     padding: 10px 16px;
     gap: 16px;
   }
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info.confirmation .checkbox {
+  .payment-content .payment.confirmation .checkbox {
     width: 13.33px;
     height: 13.33px;
   }
 }
-.payment-content .payment .info.confirmation .checkbox input[type=checkbox] {
+.payment-content .payment.confirmation .checkbox input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1307,14 +1316,14 @@ select:focus {
   cursor: pointer;
   position: relative;
 }
-.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:checked {
+.payment-content .payment.confirmation .checkbox input[type=checkbox]:checked {
   background-color: rgb(53, 99, 233);
   border: none;
 }
-.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:focus {
+.payment-content .payment.confirmation .checkbox input[type=checkbox]:focus {
   outline: none;
 }
-.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:checked::after {
+.payment-content .payment.confirmation .checkbox input[type=checkbox]:checked::after {
   content: "";
   position: absolute;
   width: 6px;
@@ -1325,33 +1334,33 @@ select:focus {
   left: 8px;
   transform: rotate(45deg);
 }
-.payment-content .payment .info.confirmation label {
+.payment-content .payment.confirmation label {
   font-weight: 500;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info.confirmation label {
+  .payment-content .payment.confirmation label {
     font-size: 12px;
   }
 }
-.payment-content .payment .info .button-rental {
+.payment-content .payment .button-rental {
   padding-top: 32px;
 }
-.payment-content .payment .info .button-rental button {
+.payment-content .payment .button-rental button {
   background-color: rgb(53, 99, 233);
 }
-.payment-content .payment .info .safe-data {
+.payment-content .payment .safe-data {
   padding-top: 25px;
 }
-.payment-content .payment .info .safe-data .confirmation-footer {
+.payment-content .payment .safe-data .confirmation-footer {
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.payment-content .payment .info .safe-data .confirmation-footer .con-f1 {
+.payment-content .payment .safe-data .confirmation-footer .con-f1 {
   font-weight: 600;
 }
-.payment-content .payment .info .safe-data .confirmation-footer .con-f2 {
+.payment-content .payment .safe-data .confirmation-footer .con-f2 {
   color: rgb(144, 163, 191);
 }
 
@@ -1553,6 +1562,11 @@ select:focus {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col {
+    padding: 16px;
+  }
+}
 .content.admin .admin-pannel .admin-pannel-first-col .map {
   padding: 24px 0 32px 0;
 }
@@ -1580,6 +1594,16 @@ select:focus {
 .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
   display: flex;
   gap: 16px;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
+    gap: 8px;
+  }
+  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 img {
+    height: 72px;
+    width: 100px;
+    aspect-ratio: 1/1;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
   padding: 6px 0;
@@ -1646,6 +1670,7 @@ select:focus {
     flex-direction: column;
     gap: 17px;
     border: none;
+    padding-right: 0;
   }
   .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item select {
     padding: 18px 16px 18px 24px;
@@ -1656,8 +1681,22 @@ select:focus {
 .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item label {
   font-weight: 700;
 }
+.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.second {
+  margin-left: 24px;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.second {
+    margin-left: 0;
+  }
+}
 .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.third {
+  margin-left: 24px;
   border: none;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.third {
+    margin-left: 0;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-first-col .border {
   border-bottom: 1px solid rgba(195, 212, 233, 0.4);
@@ -1704,6 +1743,11 @@ select:focus {
   background-color: rgb(255, 255, 255);
   padding: 24px;
   border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-second-col .first-content {
+    padding: 16px;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental {
   display: flex;
@@ -1805,6 +1849,11 @@ select:focus {
   padding: 24px;
   background-color: rgb(255, 255, 255);
 }
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-second-col > .two {
+    padding: 16px;
+  }
+}
 .content.admin .admin-pannel .admin-pannel-second-col > .two .car-rental {
   padding-bottom: 32px;
 }
@@ -1823,6 +1872,9 @@ select:focus {
   gap: 1rem;
 }
 @media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction {
+    gap: 8px;
+  }
   .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction img {
     height: 34px;
     width: 80px;

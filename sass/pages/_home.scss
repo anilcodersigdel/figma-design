@@ -271,6 +271,16 @@
 
 // category car rent
 
+
+header{
+    
+    .category-detail{
+        display: flex;
+        align-items: flex-start;
+    }
+
+}
+
 .content {
     display: flex;
 
@@ -296,6 +306,7 @@
 
 
         @media (max-width:768px) {
+            // padding: 0;
             padding: 32px;
             width: 100%;
         }
@@ -340,24 +351,20 @@
 
 
 
-                .input-radio {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
+                
 
+                    // .container {
+                        // display: flex;
+                        // align-items: center;
+                        // gap: 8px;
 
-                    .container {
-                        display: flex;
-                        align-items: center;
-                        gap: 8px;
-
-                        span {
+                        // span {
                             // font-size: 16px;
-                            font-weight: 600;
-                        }
-                    }
+                            // font-weight: 600;
+                        // }
+                    // }
 
-                }
+                // }
             }
 
             .switch {
@@ -728,6 +735,5 @@
         }
     }
 
-
-
 }
+

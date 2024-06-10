@@ -274,34 +274,37 @@
                 padding: 16px;
             }
 
-            .input-radio{
-                display: flex;
-                align-items: center;
-                gap: 20px;
+            // .input-radio{
+            //     display: flex;
+            //     align-items: center;
+            //     gap: 20px;
 
 
-                @media (max-width:768px){
-                    gap: 8px;
-                }
+            //     @media (max-width:768px){
+            //         gap: 8px;
+            //     }
 
-                input[type="radio"] {
-                    width: 20px; 
-                    height: 20px; 
 
-                    @media (max-width:768px){
-                        width: 13.33px; 
-                        height: 13.33px; 
-                    }
-                }
+               
 
-                label{
-                    font-weight: 600;
+                // input[type="radio"] {
+                //     width: 20px; 
+                //     height: 20px; 
+
+                //     @media (max-width:768px){
+                //         width: 13.33px; 
+                //         height: 13.33px; 
+                //     }
+                // }
+
+                // label{
+                //     font-weight: 600;
 
                     
-                @media (max-width:768px){
-                    font-size: 14px;
-                  }
-                }
+                // @media (max-width:768px){
+                //     font-size: 14px;
+                //   }
+                // }
             }
 
 
@@ -471,7 +474,7 @@
      
 }
     }
-}
+
 
 
 
@@ -689,6 +692,11 @@
             background-color: $content-background-color;
             @include radius;
 
+
+            @media (max-width:768px){
+                padding: 16px;
+            }
+
              .map{
                 padding: 24px 0 32px 0;
 
@@ -714,6 +722,16 @@
                     display: flex;
                     // align-items: center;
                     gap: 16px;
+
+
+                    @media (max-width:768px){
+                        gap: 8px;
+                        img{
+                            height: 72px;
+                            width: 100px;
+                            aspect-ratio: 1/1;
+                        }
+                    }
 
                     .nissan-review{
                         padding: 6px 0;
@@ -806,6 +824,7 @@
                             flex-direction: column;
                             gap: 17px;
                             border: none;
+                            padding-right: 0;
 
 
                             select{
@@ -823,14 +842,25 @@
                         }
 
                         &.second{
-                            // margin-left: 24px;
+                            margin-left: 24px;
+
+                            @media (max-width:768px){
+                              margin-left: 0;
+                            }
 
                         }
 
                     
                     &.third{
-                        // margin-left: 24px;
+                        margin-left: 24px;
                         border: none;
+
+
+                        @media (max-width:768px){
+                            margin-left: 0;
+                                
+                        }
+
                     }
                     }
                 }
@@ -889,6 +919,11 @@
                 background-color: $content-background-color;
                 padding: 24px;
                 @include radius;
+
+
+                @media (max-width:768px){
+                    padding: 16px;
+                }
 
            
 
@@ -1019,6 +1054,10 @@
                 padding: 24px;
               background-color: $content-background-color;
 
+              @media (max-width:768px){
+                padding: 16px;
+              }
+
               .car-rental{
                 padding-bottom: 32px;
 
@@ -1042,6 +1081,8 @@
                         gap: 1rem;
 
                         @media (max-width:768px){
+
+                            gap: 8px;
                             img{
                                 height: 34px;
                                 width: 80px;
