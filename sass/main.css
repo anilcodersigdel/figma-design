@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+ul li {
+  list-style-type: none;
+}
+
 header {
   background-color: rgb(255, 255, 255);
   padding: 40px 40px 40px 60px;
@@ -1495,79 +1499,41 @@ select:focus {
 }
 
 .content.admin aside {
-  width: 25%;
-  padding-bottom: 24px;
+  padding: 36px 0 42px 32px;
 }
-.content.admin aside .category-type-sport {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.content.admin aside a {
+  color: rgb(144, 163, 191);
 }
-.content.admin aside .category-type-sport .type {
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(148, 167, 203, 0.4);
+.content.admin aside .menu {
+  margin-bottom: 30px;
+  font-size: 12px;
+  padding: 0 0 0 16px;
 }
-.content.admin aside .category-type-sport .menu-list {
-  border: 1px solid white;
-  padding: 16px 16px 16px 16px;
+.content.admin aside ul li {
+  width: 80%;
+  padding: 16px 0 16px 16px;
   border-radius: 10px;
-  width: 75%;
-  margin-right: auto;
+  margin-bottom: 32px;
 }
-.content.admin aside .category-type-sport .menu-list:hover {
+.content.admin aside ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.content.admin aside ul li:hover {
   background-color: rgb(53, 99, 233);
   color: white;
 }
-.content.admin aside .category-type-sport .menu-list:hover i {
+.content.admin aside ul li:hover a {
   color: white;
 }
-.content.admin aside .category-type-sport .menu-list:hover span {
+.content.admin aside ul li:hover i {
   color: white;
 }
-.content.admin aside .category-type-sport .menu-list p {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.content.admin aside .category-type-sport .menu-list span {
-  color: rgb(144, 163, 191);
-  font-size: 16px;
-}
-.content.admin aside .category-type-sport .menu-list i {
-  font-size: 20px;
-}
-.content.admin aside .category-type-sport .two {
-  font-size: 14px;
-  margin-top: 60px;
-}
-.content.admin aside .category-type-sport .menu-list2 {
-  padding-right: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.content.admin aside .category-type-sport .menu-list2 .dark-mode {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-right: 20px;
-}
-.content.admin aside .category-type-sport .menu-list2 .donotdisturb {
-  width: 25%;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid rgb(246, 247, 249);
-  padding: 7px;
-  border-radius: 17px;
-}
-.content.admin aside .category-type-sport .logout {
-  padding-top: 80px;
-}
-.content.admin aside .category-type-sport .logout a {
-  font-size: 16px;
-  font-weight: 500;
-  color: rgb(144, 163, 191);
+.content.admin aside .logout {
+  margin-top: 40px;
 }
 .content.admin .admin-pannel {
   padding: 32px;
@@ -1575,6 +1541,12 @@ select:focus {
   grid-template-columns: 1fr 1fr;
   grid-gap: 32px;
   flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel {
+    padding: 24px;
+    grid-template-columns: 1fr;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-first-col {
   padding: 24px;
@@ -1600,6 +1572,11 @@ select:focus {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .car-review {
+    align-items: center;
+  }
+}
 .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
   display: flex;
   gap: 16px;
@@ -1610,14 +1587,29 @@ select:focus {
   flex-direction: column;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
+    padding: 15px 0;
+  }
+}
 .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-name {
   font-weight: 700;
   font-size: 24px;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-name {
+    font-size: 14px;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-brand {
   font-size: 14px;
   font-weight: 500;
   color: #3D5278;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-brand {
+    font-size: 12px;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-first-col .car-review p {
   font-size: 14px;
@@ -1638,18 +1630,33 @@ select:focus {
   display: flex;
   padding-top: 24px;
 }
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item {
   border-right: 1px solid rgba(195, 212, 233, 0.4);
   padding-right: 20px;
 }
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    border: none;
+  }
+  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item select {
+    padding: 18px 16px 18px 24px;
+    border-radius: 10px;
+    background-color: rgb(246, 247, 249);
+  }
+}
 .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item label {
   font-weight: 700;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.second {
-  margin-left: 24px;
-}
 .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.third {
-  margin-left: 24px;
   border: none;
 }
 .content.admin .admin-pannel .admin-pannel-first-col .border {
@@ -1674,9 +1681,19 @@ select:focus {
   color: rgb(144, 163, 191);
   font-weight: 500;
 }
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .total-price .Overall {
+    font-size: 12px;
+  }
+}
 .content.admin .admin-pannel .admin-pannel-first-col .total-price .price {
   font-size: 32px;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-first-col .total-price .price {
+    font-size: 20px;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-second-col {
   display: flex;
@@ -1706,6 +1723,11 @@ select:focus {
   display: flex;
   gap: 24px;
   padding-top: 32px;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart {
+    flex-direction: column;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart {
   position: relative;
@@ -1800,6 +1822,12 @@ select:focus {
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction img {
+    height: 34px;
+    width: 80px;
+  }
+}
 .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review {
   display: flex;
   flex-direction: column;
@@ -1808,6 +1836,11 @@ select:focus {
 .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-name {
   font-size: 20px;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-name {
+    font-size: 14px;
+  }
 }
 .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-brand {
   font-size: 12px;
