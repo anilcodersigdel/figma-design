@@ -1312,13 +1312,13 @@ input[type=radio]:checked::before {
   gap: 8px;
 }
 .payment-content .payment .info.Payment .credit-card .visa-credit input[type=radio] {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 @media (max-width: 768px) {
   .payment-content .payment .info.Payment .credit-card .visa-credit input[type=radio] {
-    width: 13.33px;
-    height: 13.33px;
+    width: 14.33px;
+    height: 14.33px;
   }
 }
 .payment-content .payment .info.Payment .credit-card .visa-credit label {
@@ -1433,61 +1433,102 @@ input[type=radio]:checked::before {
      object-fit: contain;
 }
 .payment-content .payment .info.confirmation .checkbox {
-  padding: 18px 34px;
+  padding: 18px 20px;
   margin-top: 32px;
-  background-color: rgb(246, 247, 249);
   border-radius: 10px;
   display: flex;
   align-items: center;
   gap: 20px;
+  /* Custom styles for the checkbox when checked */
 }
 @media (max-width: 768px) {
   .payment-content .payment .info.confirmation .checkbox {
-    padding: 10px 16px;
+    padding: 10px 7px;
     gap: 16px;
   }
 }
+.payment-content .payment .info.confirmation .checkbox ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.payment-content .payment .info.confirmation .checkbox ul li {
+  background-color: rgb(246, 247, 249);
+  padding: 18px;
+  border-radius: 10px;
+}
+.payment-content .payment .info.confirmation .checkbox ul li span {
+  margin-left: 26px;
+}
+@media (max-width: 768px) {
+  .payment-content .payment .info.confirmation .checkbox ul li {
+    padding: 10px;
+  }
+  .payment-content .payment .info.confirmation .checkbox ul li span {
+    margin-left: 30px;
+  }
+}
+.payment-content .payment .info.confirmation .checkbox ul li .container {
+  display: flex;
+  align-items: center;
+}
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 19px;
+  height: 18px;
+  border: 1px solid rgb(144, 163, 191);
+  border-radius: 2px;
+  cursor: pointer;
+  position: absolute;
+  margin-right: 5px;
+}
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:checked {
+  background-color: rgb(53, 99, 233);
+  border: none;
+}
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:focus {
+  outline: none;
+}
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 2px;
+  left: 8px;
+  transform: rotate(45deg);
+}
 .payment-content .payment .info.confirmation .checkbox label {
   display: flex;
-  gap: 20px;
-  font-weight: 500;
-  /* Custom styles for the checkbox when checked */
 }
 @media (max-width: 768px) {
   .payment-content .payment .info.confirmation .checkbox label {
     font-size: 12px;
   }
 }
-.payment-content .payment .info.confirmation .checkbox label input[type=checkbox] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 1.5px;
-  border: 1px solid rgb(144, 163, 191);
-  cursor: pointer;
-  position: relative;
-}
-.payment-content .payment .info .button-rental {
+.payment-content .payment .info.confirmation .button-rental {
   padding-top: 32px;
 }
-.payment-content .payment .info .button-rental button {
+.payment-content .payment .info.confirmation .button-rental button {
   background-color: rgb(53, 99, 233);
 }
-.payment-content .payment .info .safe-data {
+.payment-content .payment .info.confirmation .safe-data {
   padding-top: 25px;
 }
-.payment-content .payment .info .safe-data .confirmation-footer {
+.payment-content .payment .info.confirmation .safe-data .confirmation-footer {
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.payment-content .payment .info .safe-data .confirmation-footer .con-f1 {
+.payment-content .payment .info.confirmation .safe-data .confirmation-footer .con-f1 {
   font-weight: 600;
 }
-.payment-content .payment .info .safe-data .confirmation-footer .con-f2 {
+.payment-content .payment .info.confirmation .safe-data .confirmation-footer .con-f2 {
   color: rgb(144, 163, 191);
 }
 .payment-content .rental-summary {
