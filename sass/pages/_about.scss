@@ -157,8 +157,9 @@
                 line-height: 21px;
                 border: 1px solid rgba(246, 247, 249, 1);
                 @include radius;
-                padding: 16px 0 16px 32px;
+                padding: 16px 32px 16px 32px;
                 background-color: $background-color;
+
 
                 &::placeholder{
                     color: $icon-color;
@@ -383,32 +384,42 @@
             @media (max-width:768px){
                padding: 10px 16px;
                gap: 16px;
+
+
+
+               
               }
 
-            // input[type="checkbox"] {
-            //     width: 20px; /* Adjust width as needed */
-            //     height: 20px; /* Adjust height as needed */
 
-            @media (max-width:768px){
-                width: 13.33px; 
-                height: 13.33px; 
+              label{
+                display: flex;
+                gap: 20px;
+                font-weight: 500;
+
+                @media (max-width:768px){
+                  font-size: 12px;
+                }
             }
+          
 
             input[type="checkbox"] {
                 appearance: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                width: 23px;
-                height: 23px;
+                width: 20px;
+                height: 20px;
+                border-radius: 1.5px;
                 border: 1px solid rgba(144, 163, 191, 1);
                 // border-radius: 5px;
                 cursor: pointer;
                 position: relative;
+
+
     
     
             }
     
-            /* Custom styles for the checkbox when checked */
+             Custom styles for the checkbox when checked */
             input[type="checkbox"]:checked {
                 background-color: rgba(53, 99, 233, 1);
                 border: none;
@@ -423,8 +434,8 @@
             input[type="checkbox"]:checked::after {
                 content: '';
                 position: absolute;
-                width: 6px;
-                height: 15px;
+                width: 4px;
+                height: 12px;
                 border: solid white;
                 border-width: 0 2px 2px 0;
                 top: 2px;
@@ -435,14 +446,13 @@
 
 
 
-            }
-            label{
-                font-weight: 500;
+            
 
-                @media (max-width:768px){
-                  font-size: 12px;
-                }
+
+
+
             }
+        
         }
 
       .button-rental{
@@ -619,6 +629,7 @@
             }
         }  
     }
+}
 
 
 //    Admin page 
@@ -1047,7 +1058,7 @@
              }
              }
 
-
+            
               }
 
             &> .two{
@@ -1138,4 +1149,5 @@
     }
 }
 }
-   }
+   
+   

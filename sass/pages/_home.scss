@@ -32,6 +32,10 @@
         }
 
 
+        @media (min-width: 1536px){
+            width: 50%;
+        }
+
     }
 
     .hero-section.second {
@@ -49,6 +53,11 @@
             background-position: bottom;
             min-height: 243px;
             min-width: 100%;
+        }
+
+        
+        @media (min-width: 1536px){
+            width: 50%;
         }
 
     }
@@ -311,6 +320,11 @@ header{
             width: 100%;
         }
 
+        
+        @media (min-width: 1536px){
+            width: 100%;
+        }
+
 
 
 
@@ -458,6 +472,11 @@ header{
 
                 & .second {
                     min-height: 300px;
+
+                    
+        @media (min-width: 1536px){
+            width: 100%;
+        }
 
                     .title {
                         padding: 0;

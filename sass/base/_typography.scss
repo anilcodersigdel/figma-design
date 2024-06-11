@@ -61,27 +61,27 @@ input[type="radio"] {
     -moz-appearance: none;
     border-radius: 50%;
     outline: none;
-    border: 2px solid #ccc;
-    width: 20px;
-    height: 20px;
+    border: 5px solid #3563E94D;
+    width: 16px;
+    height: 16px;
     //  Border color 
 }
 
 // Style the visible part of the custom radio button 
-input[type="radio"]:checked {
-    background-color: #4318BF;
-    border-color: #4318BF;
+// input[type="radio"]:checked {
+    // background-color: #4318BF;
+    // border-color: rgba(144, 163, 191, 1);
     // Color when selected 
-}
+// }
 
 //  Style the dot inside the custom radio button 
 input[type="radio"]::before {
     content: '';
     display: block;
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $primary-color;
     position: relative;
     top: 50%;
     left: 50%;
