@@ -1938,6 +1938,7 @@ input[type=radio]:checked::before {
   background-color: rgb(255, 255, 255);
   padding: 24px;
   border-radius: 10px;
+  flex-grow: 1;
 }
 @media (max-width: 768px) {
   .content.admin .admin-pannel .admin-pannel-second-col .first-content {
@@ -2043,6 +2044,7 @@ input[type=radio]:checked::before {
 .content.admin .admin-pannel .admin-pannel-second-col > .two {
   padding: 24px;
   background-color: rgb(255, 255, 255);
+  flex-grow: 1;
 }
 @media (max-width: 768px) {
   .content.admin .admin-pannel .admin-pannel-second-col > .two {

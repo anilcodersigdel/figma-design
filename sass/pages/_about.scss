@@ -489,48 +489,7 @@
                   font-size: 12px;
                 }
             }
-          
-
-    //         input[type="checkbox"] {
-    //             appearance: none;
-    //             -webkit-appearance: none;
-    //             -moz-appearance: none;
-    //             width: 20px;
-    //             height: 20px;
-    //             border-radius: 1.5px;
-    //             border: 1px solid rgba(144, 163, 191, 1);
-    //             // border-radius: 5px;
-    //             cursor: pointer;
-    //             position: relative;
-    //         }
-    
-    //          Custom styles for the checkbox when checked */
-    //         input[type="checkbox"]:checked {
-    //             background-color: rgba(53, 99, 233, 1);
-    //             border: none;
-    //         }
-    
-    
-    //         input[type="checkbox"]:focus {
-    //              outline: none;
-    //                }
-    
-    
-    //         input[type="checkbox"]:checked::after {
-    //             content: '';
-    //             position: absolute;
-    //             width: 4px;
-    //             height: 12px;
-    //             border: solid white;
-    //             border-width: 0 2px 2px 0;
-    //             top: 2px;
-    //             left: 8px;
-    //             transform: rotate(45deg);
-                
-    // }
-
-
-    
+             
             }
         
         
@@ -1011,6 +970,7 @@
                 background-color: $content-background-color;
                 padding: 24px;
                 @include radius;
+                flex-grow: 1;
 
 
                 @media (max-width:768px){
@@ -1145,6 +1105,7 @@
             &> .two{
                 padding: 24px;
               background-color: $content-background-color;
+              flex-grow: 1;
 
               @media (max-width:768px){
                 padding: 16px;
