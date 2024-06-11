@@ -236,6 +236,41 @@ select:focus {
   outline: none;
 }
 
+input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid #ccc;
+  width: 20px;
+  height: 20px;
+}
+
+input[type=radio]:checked {
+  background-color: #4318BF;
+  border-color: #4318BF;
+}
+
+input[type=radio]::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+/* Show the dot when the radio button is checked */
+input[type=radio]:checked::before {
+  visibility: visible;
+}
+
 footer {
   padding: 48px;
   background-color: rgb(255, 255, 255);
@@ -401,6 +436,41 @@ select:focus {
   outline: none;
 }
 
+input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid #ccc;
+  width: 20px;
+  height: 20px;
+}
+
+input[type=radio]:checked {
+  background-color: #4318BF;
+  border-color: #4318BF;
+}
+
+input[type=radio]::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+/* Show the dot when the radio button is checked */
+input[type=radio]:checked::before {
+  visibility: visible;
+}
+
 .hero {
   padding: 32px 64px 0 64px;
   display: flex;
@@ -470,7 +540,7 @@ select:focus {
   padding: 32px 64px 0 64px;
   display: flex;
   align-items: center;
-  gap: 44px;
+  gap: 32px;
 }
 @media (max-width: 768px) {
   .address {
@@ -997,6 +1067,41 @@ select:focus {
   outline: none;
 }
 
+input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid #ccc;
+  width: 20px;
+  height: 20px;
+}
+
+input[type=radio]:checked {
+  background-color: #4318BF;
+  border-color: #4318BF;
+}
+
+input[type=radio]::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+/* Show the dot when the radio button is checked */
+input[type=radio]:checked::before {
+  visibility: visible;
+}
+
 .catalogue-car {
   padding: 32px 64px 64px 64px;
 }
@@ -1201,6 +1306,16 @@ select:focus {
   align-items: center;
   gap: 8px;
 }
+.payment-content .payment .info.Payment .credit-card .visa-credit input[type=radio] {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 768px) {
+  .payment-content .payment .info.Payment .credit-card .visa-credit input[type=radio] {
+    width: 13.33px;
+    height: 13.33px;
+  }
+}
 .payment-content .payment .info.Payment .credit-card .visa-credit label {
   font-weight: 600;
 }
@@ -1232,12 +1347,40 @@ select:focus {
     padding: 16px;
   }
 }
-.payment-content .payment .info.Payment img {
+.payment-content .payment .info.Payment .pay-pal .input-radio {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .payment-content .payment .info.Payment .pay-pal .input-radio {
+    gap: 8px;
+  }
+}
+.payment-content .payment .info.Payment .pay-pal .input-radio input[type=radio] {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 768px) {
+  .payment-content .payment .info.Payment .pay-pal .input-radio input[type=radio] {
+    width: 13.33px;
+    height: 13.33px;
+  }
+}
+.payment-content .payment .info.Payment .pay-pal .input-radio label {
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .payment-content .payment .info.Payment .pay-pal .input-radio label {
+    font-size: 14px;
+  }
+}
+.payment-content .payment .info.Payment .pay-pal img {
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.payment-content .payment .info .bit-coin {
+.payment-content .payment .info.Payment .bit-coin {
   margin-top: 24px;
   padding: 16px 32px;
   background-color: rgb(246, 247, 249);
@@ -1247,44 +1390,44 @@ select:focus {
   border-radius: 10px;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info .bit-coin {
+  .payment-content .payment .info.Payment .bit-coin {
     padding: 16px;
   }
 }
-.payment-content .payment .info .bit-coin .input-radio {
+.payment-content .payment .info.Payment .bit-coin .input-radio {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info .bit-coin .input-radio {
+  .payment-content .payment .info.Payment .bit-coin .input-radio {
     gap: 8px;
   }
 }
-.payment-content .payment .info .bit-coin .input-radio input[type=radio] {
+.payment-content .payment .info.Payment .bit-coin .input-radio input[type=radio] {
   width: 20px;
   height: 20px;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info .bit-coin .input-radio input[type=radio] {
+  .payment-content .payment .info.Payment .bit-coin .input-radio input[type=radio] {
     width: 13.33px;
     height: 13.33px;
   }
 }
-.payment-content .payment .info .bit-coin .input-radio label {
+.payment-content .payment .info.Payment .bit-coin .input-radio label {
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .payment-content .payment .info .bit-coin .input-radio label {
+  .payment-content .payment .info.Payment .bit-coin .input-radio label {
     font-size: 14px;
   }
 }
-.payment-content .payment .info .bit-coin img {
+.payment-content .payment .info.Payment .bit-coin img {
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.payment-content .payment.confirmation .checkbox {
+.payment-content .payment .info.confirmation .checkbox {
   padding: 18px 34px;
   margin-top: 32px;
   background-color: rgb(246, 247, 249);
@@ -1295,18 +1438,18 @@ select:focus {
   /* Custom styles for the checkbox when checked */
 }
 @media (max-width: 768px) {
-  .payment-content .payment.confirmation .checkbox {
+  .payment-content .payment .info.confirmation .checkbox {
     padding: 10px 16px;
     gap: 16px;
   }
 }
 @media (max-width: 768px) {
-  .payment-content .payment.confirmation .checkbox {
+  .payment-content .payment .info.confirmation .checkbox {
     width: 13.33px;
     height: 13.33px;
   }
 }
-.payment-content .payment.confirmation .checkbox input[type=checkbox] {
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1316,14 +1459,14 @@ select:focus {
   cursor: pointer;
   position: relative;
 }
-.payment-content .payment.confirmation .checkbox input[type=checkbox]:checked {
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:checked {
   background-color: rgb(53, 99, 233);
   border: none;
 }
-.payment-content .payment.confirmation .checkbox input[type=checkbox]:focus {
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:focus {
   outline: none;
 }
-.payment-content .payment.confirmation .checkbox input[type=checkbox]:checked::after {
+.payment-content .payment .info.confirmation .checkbox input[type=checkbox]:checked::after {
   content: "";
   position: absolute;
   width: 6px;
@@ -1334,130 +1477,129 @@ select:focus {
   left: 8px;
   transform: rotate(45deg);
 }
-.payment-content .payment.confirmation label {
+.payment-content .payment .info.confirmation label {
   font-weight: 500;
 }
 @media (max-width: 768px) {
-  .payment-content .payment.confirmation label {
+  .payment-content .payment .info.confirmation label {
     font-size: 12px;
   }
 }
-.payment-content .payment .button-rental {
+.payment-content .payment .info .button-rental {
   padding-top: 32px;
 }
-.payment-content .payment .button-rental button {
+.payment-content .payment .info .button-rental button {
   background-color: rgb(53, 99, 233);
 }
-.payment-content .payment .safe-data {
+.payment-content .payment .info .safe-data {
   padding-top: 25px;
 }
-.payment-content .payment .safe-data .confirmation-footer {
+.payment-content .payment .info .safe-data .confirmation-footer {
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.payment-content .payment .safe-data .confirmation-footer .con-f1 {
+.payment-content .payment .info .safe-data .confirmation-footer .con-f1 {
   font-weight: 600;
 }
-.payment-content .payment .safe-data .confirmation-footer .con-f2 {
+.payment-content .payment .info .safe-data .confirmation-footer .con-f2 {
   color: rgb(144, 163, 191);
 }
-
-.rental-summary {
+.payment-content .rental-summary {
   border-radius: 10px;
   padding: 24px;
   background-color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
-  .rental-summary {
+  .payment-content .rental-summary {
     padding: 16px;
     order: 1;
   }
 }
-.rental-summary .rental {
+.payment-content .rental-summary .rental {
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
 }
 @media (max-width: 768px) {
-  .rental-summary .rental {
+  .payment-content .rental-summary .rental {
     font-size: 16px;
   }
 }
 @media (max-width: 768px) {
-  .rental-summary .rental {
+  .payment-content .rental-summary .rental {
     font-size: 16px;
   }
 }
-.rental-summary .rental-sum {
+.payment-content .rental-summary .rental-sum {
   line-height: 21px;
   color: rgb(144, 163, 191);
   padding-top: 4px;
 }
-.rental-summary .car-review {
+.payment-content .rental-summary .car-review {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 32px 0;
 }
 @media (max-width: 768px) {
-  .rental-summary .car-review img {
+  .payment-content .rental-summary .car-review img {
     width: 116px;
     height: 80px;
   }
 }
 @media (max-width: 768px) {
-  .rental-summary .car-review .nissan-review h1 {
+  .payment-content .rental-summary .car-review .nissan-review h1 {
     font-size: 20px;
   }
 }
-.rental-summary .car-review .nissan-review .yellow {
+.payment-content .rental-summary .car-review .nissan-review .yellow {
   color: rgb(251, 173, 57);
 }
-.rental-summary .car-review .nissan-review span {
+.payment-content .rental-summary .car-review .nissan-review span {
   font-size: 14px;
   color: rgb(89, 103, 128);
   font-weight: 500;
 }
-.rental-summary .line-border {
+.payment-content .rental-summary .line-border {
   border: 1px solid rgba(195, 212, 233, 0.4);
 }
-.rental-summary .subtotal {
+.payment-content .rental-summary .subtotal {
   display: flex;
   justify-content: space-between;
   padding: 32px 0 24px 0;
   color: rgb(144, 163, 191);
   font-weight: 500;
 }
-.rental-summary .subtotal .price {
+.payment-content .rental-summary .subtotal .price {
   font-size: 20px;
   font-weight: 600;
   color: rgb(26, 32, 44);
 }
 @media (max-width: 768px) {
-  .rental-summary .subtotal .price {
+  .payment-content .rental-summary .subtotal .price {
     font-size: 16px;
   }
 }
-.rental-summary .tax {
+.payment-content .rental-summary .tax {
   display: flex;
   justify-content: space-between;
   padding: 0 0 24px 0;
   color: rgb(144, 163, 191);
   font-weight: 500;
 }
-.rental-summary .tax .price {
+.payment-content .rental-summary .tax .price {
   font-size: 20px;
   font-weight: 600;
   color: rgb(26, 32, 44);
 }
 @media (max-width: 768px) {
-  .rental-summary .tax .price {
+  .payment-content .rental-summary .tax .price {
     font-size: 16px;
   }
 }
-.rental-summary .apply-now {
+.payment-content .rental-summary .apply-now {
   padding: 16px 32px;
   border: 1px solid white;
   display: flex;
@@ -1465,86 +1607,85 @@ select:focus {
   background-color: rgb(246, 247, 249);
   border-radius: 10px;
 }
-.rental-summary .apply-now input {
+.payment-content .rental-summary .apply-now input {
   border: none;
   background-color: rgb(246, 247, 249);
 }
-.rental-summary .apply-now a {
+.payment-content .rental-summary .apply-now a {
   font-weight: 600;
   color: black;
 }
-.rental-summary .total-price {
+.payment-content .rental-summary .total-price {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 32px;
 }
-.rental-summary .total-price .rental-price {
+.payment-content .rental-summary .total-price .rental-price {
   font-size: 20px;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  .rental-summary .total-price .rental-price {
+  .payment-content .rental-summary .total-price .rental-price {
     font-size: 16px;
   }
 }
-.rental-summary .total-price .price {
+.payment-content .rental-summary .total-price .price {
   font-size: 25px;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  .rental-summary .total-price .price {
+  .payment-content .rental-summary .total-price .price {
     font-size: 20px;
   }
 }
-.rental-summary .total-price .Overall {
+.payment-content .rental-summary .total-price .Overall {
   font-size: 14px;
   color: rgb(144, 163, 191);
 }
 @media (max-width: 768px) {
-  .rental-summary .total-price .Overall {
+  .payment-content .rental-summary .total-price .Overall {
     font-size: 12px;
   }
 }
-
-.content.admin aside {
+.payment-content .content.admin aside {
   padding: 36px 0 42px 32px;
 }
-.content.admin aside a {
+.payment-content .content.admin aside a {
   color: rgb(144, 163, 191);
 }
-.content.admin aside .menu {
+.payment-content .content.admin aside .menu {
   margin-bottom: 30px;
   font-size: 12px;
   padding: 0 0 0 16px;
 }
-.content.admin aside ul li {
+.payment-content .content.admin aside ul li {
   width: 80%;
   padding: 16px 0 16px 16px;
   border-radius: 10px;
   margin-bottom: 32px;
 }
-.content.admin aside ul li a {
+.payment-content .content.admin aside ul li a {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 18px;
   font-weight: 500;
 }
-.content.admin aside ul li:hover {
+.payment-content .content.admin aside ul li:hover {
   background-color: rgb(53, 99, 233);
   color: white;
 }
-.content.admin aside ul li:hover a {
+.payment-content .content.admin aside ul li:hover a {
   color: white;
 }
-.content.admin aside ul li:hover i {
+.payment-content .content.admin aside ul li:hover i {
   color: white;
 }
-.content.admin aside .logout {
+.payment-content .content.admin aside .logout {
   margin-top: 40px;
 }
-.content.admin .admin-pannel {
+.payment-content .content.admin .admin-pannel {
   padding: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1552,242 +1693,242 @@ select:focus {
   flex-grow: 1;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel {
+  .payment-content .content.admin .admin-pannel {
     padding: 24px;
     grid-template-columns: 1fr;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col {
   padding: 24px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col {
     padding: 16px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .map {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .map {
   padding: 24px 0 32px 0;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .map img {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .map img {
   width: 100%;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .details {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .details {
   font-size: 20px;
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .details {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .details {
     font-size: 16px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .car-review {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .car-review {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review {
     align-items: center;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
   display: flex;
   gap: 16px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 {
     gap: 8px;
   }
-  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 img {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 img {
     height: 72px;
     width: 100px;
     aspect-ratio: 1/1;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
   padding: 6px 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review {
     padding: 15px 0;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-name {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-name {
   font-weight: 700;
   font-size: 24px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-name {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-name {
     font-size: 14px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-brand {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-brand {
   font-size: 14px;
   font-weight: 500;
   color: #3D5278;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-brand {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review .car-review2 .nissan-review .car-brand {
     font-size: 12px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .car-review p {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .car-review p {
   font-size: 14px;
   font-weight: 500;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .location {
   padding-top: 46px;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location .input-radio .container {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .input-radio .container {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location .input-radio .container span {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .input-radio .container span {
   font-weight: 600;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location .location-form {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form {
   display: flex;
   padding-top: 24px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form {
     flex-direction: column;
     gap: 20px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item {
   border-right: 1px solid rgba(195, 212, 233, 0.4);
   padding-right: 20px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item {
     display: flex;
     flex-direction: column;
     gap: 17px;
     border: none;
     padding-right: 0;
   }
-  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item select {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item select {
     padding: 18px 16px 18px 24px;
     border-radius: 10px;
     background-color: rgb(246, 247, 249);
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item label {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item label {
   font-weight: 700;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.second {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.second {
   margin-left: 24px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.second {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.second {
     margin-left: 0;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.third {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.third {
   margin-left: 24px;
   border: none;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.third {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .location .location-form .form-item.third {
     margin-left: 0;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .border {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .border {
   border-bottom: 1px solid rgba(195, 212, 233, 0.4);
   margin: 40px 0 36px 0;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .total-price {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .total-price {
   display: flex;
   justify-content: space-between;
 }
-.content.admin .admin-pannel .admin-pannel-first-col .total-price .rental-price {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .total-price .rental-price {
   font-size: 20px;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .total-price .rental-price {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .total-price .rental-price {
     font-size: 16px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .total-price .Overall {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .total-price .Overall {
   font-size: 14px;
   color: rgb(144, 163, 191);
   font-weight: 500;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .total-price .Overall {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .total-price .Overall {
     font-size: 12px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-first-col .total-price .price {
+.payment-content .content.admin .admin-pannel .admin-pannel-first-col .total-price .price {
   font-size: 32px;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-first-col .total-price .price {
+  .payment-content .content.admin .admin-pannel .admin-pannel-first-col .total-price .price {
     font-size: 20px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-second-col {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content {
   background-color: rgb(255, 255, 255);
   padding: 24px;
   border-radius: 10px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-second-col .first-content {
+  .payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content {
     padding: 16px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
   font-size: 20px;
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
+  .payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .car-rental .car-rentalp {
     font-size: 16px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart {
   display: flex;
   gap: 24px;
   padding-top: 32px;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart {
+  .payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart {
     flex-direction: column;
   }
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .Rental-car {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .Rental-car {
   font-size: 14px;
   color: rgb(144, 163, 191);
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart img {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart img {
   height: 200px;
   width: 200px;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1797,118 +1938,118 @@ select:focus {
   align-items: center;
   gap: 4px;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside .number {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart .bar-inside .number {
   font-weight: 600;
   font-size: 20px;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div .number {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data > div .number {
   font-size: 14px;
   font-weight: 600;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot {
   display: flex;
   align-items: center;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot span {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot span {
   font-weight: 500;
   font-size: 14px;
   color: rgb(144, 163, 191);
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot i {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot i {
   margin-right: 12px;
   height: 12px;
   width: 12px;
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color1 {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color1 {
   color: rgb(13, 53, 89);
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color2 {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color2 {
   color: rgb(23, 93, 156);
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color3 {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color3 {
   color: rgb(33, 133, 222);
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color4 {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color4 {
   color: rgb(99, 169, 232);
 }
-.content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color5 {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col .first-content .chart .bar-chart-data .sport-dot .color5 {
   color: rgb(166, 206, 242);
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two {
   padding: 24px;
   background-color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-second-col > .two {
+  .payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two {
     padding: 16px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-rental {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-rental {
   padding-bottom: 32px;
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-rental a {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-rental a {
   font-size: 14px;
   font-weight: 500;
   color: rgb(53, 99, 233);
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction {
   display: flex;
   justify-content: space-between;
   padding: 11px 0;
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction {
   display: flex;
   gap: 1rem;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction {
+  .payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction {
     gap: 8px;
   }
-  .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction img {
+  .payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction img {
     height: 34px;
     width: 80px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-name {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-name {
   font-size: 20px;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-name {
+  .payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-name {
     font-size: 14px;
   }
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-brand {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .review-transaction .nissan-review .car-brand {
   font-size: 12px;
   font-weight: 500;
   color: rgb(144, 163, 191);
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .date {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .date {
   font-size: 12px;
   color: rgb(144, 163, 191);
   font-weight: 500;
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .price {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .car-transaction .price {
   font-size: 16px;
   font-weight: 700;
 }
-.content.admin .admin-pannel .admin-pannel-second-col > .two .border {
+.payment-content .content.admin .admin-pannel .admin-pannel-second-col > .two .border {
   border: 1px solid rgba(195, 212, 233, 0.4);
   margin: 26px 0;
 }

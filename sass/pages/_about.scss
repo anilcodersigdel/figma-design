@@ -227,15 +227,15 @@
                     gap: 8px;
                 }
 
-                // input[type="radio"] {
-                //     width: 16px; 
-                //     height: 16px; 
+                input[type="radio"] {
+                    width: 16px; 
+                    height: 16px; 
 
-                //     @media (max-width:768px){
-                //         width: 13.33px; 
-                //         height: 13.33px; 
-                //     }
-                // }
+                    @media (max-width:768px){
+                        width: 13.33px; 
+                        height: 13.33px; 
+                    }
+                }
                    
                 label{
                     font-weight: 600;
@@ -274,37 +274,37 @@
                 padding: 16px;
             }
 
-            // .input-radio{
-            //     display: flex;
-            //     align-items: center;
-            //     gap: 20px;
+            .input-radio{
+                display: flex;
+                align-items: center;
+                gap: 20px;
 
 
-            //     @media (max-width:768px){
-            //         gap: 8px;
-            //     }
+                @media (max-width:768px){
+                    gap: 8px;
+                }
 
 
                
 
-                // input[type="radio"] {
-                //     width: 20px; 
-                //     height: 20px; 
+                input[type="radio"] {
+                    width: 20px; 
+                    height: 20px; 
 
-                //     @media (max-width:768px){
-                //         width: 13.33px; 
-                //         height: 13.33px; 
-                //     }
-                // }
+                    @media (max-width:768px){
+                        width: 13.33px; 
+                        height: 13.33px; 
+                    }
+                }
 
-                // label{
-                //     font-weight: 600;
+                label{
+                    font-weight: 600;
 
                     
-                // @media (max-width:768px){
-                //     font-size: 14px;
-                //   }
-                // }
+                @media (max-width:768px){
+                    font-size: 14px;
+                  }
+                }
             }
 
 
@@ -1138,3 +1138,4 @@
     }
 }
 }
+   }

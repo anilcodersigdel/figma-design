@@ -54,3 +54,44 @@ select{
 }
 
 
+//  Hide default radio button
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 50%;
+    outline: none;
+    border: 2px solid #ccc;
+    width: 20px;
+    height: 20px;
+    //  Border color 
+}
+
+// Style the visible part of the custom radio button 
+input[type="radio"]:checked {
+    background-color: #4318BF;
+    border-color: #4318BF;
+    // Color when selected 
+}
+
+//  Style the dot inside the custom radio button 
+input[type="radio"]::before {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    // Hide by default 
+}
+
+/* Show the dot when the radio button is checked */
+input[type="radio"]:checked::before {
+    visibility: visible;
+}
+
