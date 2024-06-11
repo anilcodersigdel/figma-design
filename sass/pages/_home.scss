@@ -178,6 +178,13 @@
             gap: 20px;
             padding-top: 16px;
 
+
+
+            @media(min-width:768px){
+                display: flex;
+                justify-content: space-between;
+            }
+
             .form-item {
                 display: flex;
                 flex-direction: column;

@@ -886,6 +886,14 @@
                             }
                           
                         }
+
+
+                        @media (min-width:1536px){
+                            display: flex;
+                            flex-direction: column;
+                            gap: 7px;
+                            padding-right: 75px;
+                        }
                       
 
                         label{
