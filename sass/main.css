@@ -464,12 +464,13 @@ input[type=radio]:checked::before {
 .hero {
   padding: 32px 64px 0 64px;
   display: flex;
-  gap: 32px;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .hero {
     padding: 32px 24px 0 24px;
     overflow-x: auto;
+    gap: 32px;
   }
 }
 .hero .hero-section.first {
