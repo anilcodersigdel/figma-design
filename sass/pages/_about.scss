@@ -177,10 +177,23 @@
             .Pick-Up{
                 padding-top: 32px;
                 font-weight: 600;
+
+                .container{
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
             }
             .Drop-Off{
                 padding-top: 32px;
                 font-weight: 600;
+
+                .container{
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                }
             }
             form{
                 padding-top: 24px;
@@ -282,6 +295,7 @@
 
 
                 @media (max-width:768px){
+                    align-items: center;
                     gap: 8px;
                 }
 
